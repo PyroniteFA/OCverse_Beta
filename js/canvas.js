@@ -679,8 +679,9 @@ class RelationshipCanvas {
       }
     }
 
-    // Since drawer opens on the right (taking 480px), frame focus point at ~38% of viewBox width
-    const targetX = Math.max(0, focusX - this.viewBox.width * 0.38);
+    // Since drawer opens on the right (taking 480px on desktop, 100vw on mobile), frame focus point
+    const isMobile = window.innerWidth <= 768;
+    const targetX = Math.max(0, focusX - this.viewBox.width * (isMobile ? 0.5 : 0.38));
     const targetY = Math.max(-60, focusY - this.viewBox.height / 2);
 
     this.smoothPanTo(targetX, targetY);
@@ -1247,6 +1248,69 @@ class RelationshipCanvas {
       const zoomFactor = e.deltaY > 0 ? 1.08 : 0.92;
       this.zoom(zoomFactor, e.clientX, e.clientY);
     }, { passive: false });
+
+    // Touch Event Handling for Mobile & Tablet Devices (Pan & Pinch-to-Zoom)
+    let touchStartDist = 0;
+    let isTouchPanning = false;
+    let touchStartPan = { x: 0, y: 0 };
+
+    this.svg.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) {
+        const touch = e.touches[0];
+        if (e.target.closest('.graph-node') || e.target.closest('.graph-edge') || e.target.closest('.speech-bubble-group') || e.target.closest('.order-territory-label')) {
+          return;
+        }
+        isTouchPanning = true;
+        hasMoved = false;
+        touchStartPan = { x: touch.clientX, y: touch.clientY };
+      } else if (e.touches.length === 2) {
+        isTouchPanning = false;
+        hasMoved = true;
+        const t1 = e.touches[0];
+        const t2 = e.touches[1];
+        touchStartDist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+      }
+    }, { passive: false });
+
+    window.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 1 && isTouchPanning) {
+        e.preventDefault();
+        const touch = e.touches[0];
+        const dist = Math.hypot(touch.clientX - touchStartPan.x, touch.clientY - touchStartPan.y);
+        if (dist > 6) hasMoved = true;
+
+        const dx = (touch.clientX - touchStartPan.x) * (this.viewBox.width / this.svg.clientWidth);
+        const dy = (touch.clientY - touchStartPan.y) * (this.viewBox.height / this.svg.clientHeight);
+
+        this.viewBox.x -= dx;
+        this.viewBox.y -= dy;
+        touchStartPan = { x: touch.clientX, y: touch.clientY };
+        this.updateViewBox();
+      } else if (e.touches.length === 2 && touchStartDist > 0) {
+        e.preventDefault();
+        const t1 = e.touches[0];
+        const t2 = e.touches[1];
+        const currentDist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+        if (currentDist > 8 && touchStartDist > 8) {
+          const factor = touchStartDist / currentDist;
+          const midX = (t1.clientX + t2.clientX) / 2;
+          const midY = (t1.clientY + t2.clientY) / 2;
+          this.zoom(factor, midX, midY);
+          touchStartDist = currentDist;
+        }
+      }
+    }, { passive: false });
+
+    window.addEventListener('touchend', (e) => {
+      if (e.touches.length === 0) {
+        isTouchPanning = false;
+        touchStartDist = 0;
+      } else if (e.touches.length === 1) {
+        isTouchPanning = true;
+        touchStartPan = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        touchStartDist = 0;
+      }
+    });
   }
 
   zoom(factor, clientX, clientY) {

@@ -87,16 +87,38 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Toggle Legend Collapse
-  const legendHeader = document.querySelector('.legend-header');
-  const legendBody = document.querySelector('.legend-body');
-  const legendNotes = document.querySelector('.legend-notes');
-  if (legendHeader && legendBody) {
+  const legendCard = document.getElementById('legend-card') || document.querySelector('.legend-card');
+  const legendHeader = document.getElementById('legend-header') || document.querySelector('.legend-header');
+  const legendToggleHint = document.getElementById('legend-toggle-hint');
+
+  const updateLegendHint = (isCollapsed) => {
+    if (!legendToggleHint) return;
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      legendToggleHint.textContent = isCollapsed ? 'Legend ▾' : 'Close ▴';
+    } else {
+      legendToggleHint.textContent = isCollapsed ? 'Click to expand ▾' : 'Click to collapse ▴';
+    }
+  };
+
+  // Automatically start collapsed on mobile / small screens so it never obstructs the canvas
+  if (window.innerWidth <= 768 && legendCard) {
+    legendCard.classList.add('collapsed');
+    updateLegendHint(true);
+  }
+
+  if (legendHeader && legendCard) {
     legendHeader.addEventListener('click', () => {
-      const isHidden = legendBody.style.display === 'none';
-      legendBody.style.display = isHidden ? 'flex' : 'none';
-      if (legendNotes) legendNotes.style.display = isHidden ? 'block' : 'none';
+      const isCollapsed = legendCard.classList.toggle('collapsed');
+      updateLegendHint(isCollapsed);
     });
   }
+
+  window.addEventListener('resize', () => {
+    if (legendCard) {
+      updateLegendHint(legendCard.classList.contains('collapsed'));
+    }
+  });
 
   // Ready! Start with the full canvas visible and all characters un-dimmed.
 });

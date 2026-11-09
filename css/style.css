@@ -173,6 +173,14 @@ body {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+.nav-btn-text-short {
+  display: none;
+}
+
+.nav-btn-text-full {
+  display: inline;
+}
+
 .nav-btn.primary {
   background: linear-gradient(135deg, #0284c7, #0369a1);
   border-color: #38bdf8;
@@ -253,6 +261,30 @@ body {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   z-index: 10;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.legend-card.collapsed {
+  padding: 8px 14px;
+}
+
+.legend-card.collapsed .legend-header {
+  margin-bottom: 0;
+}
+
+.legend-card.collapsed .legend-body,
+.legend-card.collapsed .legend-notes {
+  display: none !important;
+}
+
+.legend-toggle-hint {
+  font-size: 11px;
+  color: var(--text-dim);
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.legend-header:hover .legend-toggle-hint {
+  color: #38bdf8;
 }
 
 .legend-header {
@@ -1255,4 +1287,284 @@ body {
   opacity: 0;
   transition: opacity 0.8s ease;
   pointer-events: none;
+}
+
+/* ==========================================================================
+   Mobile & Tablet Responsive Optimizations (iPhones, Android & Screens <= 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  :root {
+    --drawer-width: 100vw;
+  }
+
+  /* Prevent pull-to-refresh & browser gesture hijacking on the canvas */
+  .canvas-wrapper,
+  #graph-svg {
+    touch-action: none !important;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Top Header / Navigation on Mobile */
+  .header {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 10px 14px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    position: relative !important;
+    z-index: 25 !important;
+  }
+
+  .brand {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .brand-title {
+    font-size: 16px;
+  }
+
+  .brand-tag {
+    display: none; /* Conserve vertical height on phone screens */
+  }
+
+  .nav-actions {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .search-box {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .search-box input {
+    width: 100% !important;
+    font-size: 14px;
+    padding: 6px 10px 6px 30px;
+    height: 36px;
+  }
+
+  .search-box input:focus {
+    width: 100% !important;
+  }
+
+  .filter-select {
+    padding: 6px 8px;
+    font-size: 12px;
+    max-width: 110px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .nav-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    height: 36px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-btn-text-full {
+    display: none !important;
+  }
+
+  .nav-btn-text-short {
+    display: inline !important;
+  }
+
+  /* Floating Legend on Mobile: Sits neatly in bottom corner out of the way */
+  .legend-card {
+    top: auto !important;
+    bottom: 16px !important;
+    left: 14px !important;
+    max-width: calc(100vw - 28px);
+    z-index: 30;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .legend-card.collapsed {
+    padding: 7px 14px !important;
+    border-radius: 999px !important;
+    background: rgba(15, 23, 42, 0.94) !important;
+    border: 1px solid rgba(56, 189, 248, 0.45) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+    max-width: fit-content !important;
+  }
+
+  .legend-card.collapsed .legend-header {
+    margin-bottom: 0 !important;
+    gap: 8px;
+  }
+
+  .legend-card:not(.collapsed) {
+    max-height: 60vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 14px;
+    padding: 14px 16px;
+    background: rgba(15, 23, 42, 0.96);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.75);
+  }
+
+  /* Canvas Zoom Controls on Mobile */
+  .canvas-controls {
+    bottom: 16px;
+    right: 14px;
+    gap: 6px;
+    z-index: 20;
+  }
+
+  .control-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  /* Drawer Sizing for Mobile (iPhone & Android Screen Fit) */
+  .drawer {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    right: -105vw !important;
+    border-left: none !important;
+    box-shadow: none !important;
+  }
+
+  .drawer.open {
+    right: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+
+  .drawer-header {
+    padding: 14px 16px !important;
+  }
+
+  .drawer-header-title {
+    font-size: 11px !important;
+  }
+
+  .drawer-content {
+    padding: 16px 14px 90px 14px !important;
+    gap: 16px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Redundant expand button is hidden on phone screens since drawer is already 100vw */
+  #drawer-expand-btn {
+    display: none !important;
+  }
+
+  .drawer-close {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  /* Responsive Character Details */
+  .char-hero {
+    gap: 14px;
+  }
+
+  .char-hero-avatar {
+    width: 75px !important;
+    height: 75px !important;
+    border-radius: 14px !important;
+    flex-shrink: 0;
+  }
+
+  .char-hero-name {
+    font-size: 20px !important;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .char-hero-title {
+    font-size: 12px !important;
+  }
+
+  .section-box {
+    padding: 14px !important;
+    border-radius: 12px !important;
+    gap: 10px !important;
+  }
+
+  .section-label {
+    font-size: 11px !important;
+  }
+
+  .drawer p, 
+  .drawer-content p {
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+  }
+
+  .timeline-item {
+    padding: 8px 10px !important;
+  }
+
+  .timeline-item .label {
+    font-size: 11.5px !important;
+  }
+
+  .timeline-item .val {
+    font-size: 12.5px !important;
+  }
+
+  .lore-card {
+    padding: 14px !important;
+    border-radius: 10px !important;
+  }
+
+  .lore-card-title {
+    font-size: 15px !important;
+  }
+
+  .lore-card-content {
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+  }
+
+  .lore-cross-link {
+    font-size: 12px !important;
+    padding: 8px 12px !important;
+  }
+
+  .thought-item {
+    padding: 8px 10px !important;
+  }
+
+  .thought-quote {
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+  }
+
+  .rel-dialogue-item {
+    gap: 10px !important;
+  }
+
+  .rel-dialogue-avatar {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .rel-dialogue-text {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  .conn-card {
+    padding: 12px 14px !important;
+  }
+
+  img[src*="full_art"] {
+    max-height: 320px !important;
+  }
 }
