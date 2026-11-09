@@ -262,7 +262,7 @@ class DrawerManager {
           ${char.bio.split(/\n\s*\n/).filter(Boolean).map(p => `<p class="char-bio-p">${p.trim()}</p>`).join('')}
         </div>
         <div class="tag-pills">
-          ${char.affinityTags.map(t => `<span class="tag-pill" data-tag="${t}">${t}</span>`).join('')}
+          ${(char.affinityTags || []).filter(t => CANONICAL_LORE_TAGS.has(t)).map(t => `<span class="tag-pill" data-tag="${t}">#${t}</span>`).join('')}
         </div>
       </div>
 
@@ -357,7 +357,7 @@ class DrawerManager {
     if (rel.bidirectional) arrowSymbol = '⇄';
     if (rel.type === 'lovers') arrowSymbol = '❤️';
 
-    const tagsHTML = (rel.tags || []).map(t => `<span class="tag-pill" data-tag="${t}">#${t}</span>`).join('');
+    const tagsHTML = (rel.tags || []).filter(t => CANONICAL_LORE_TAGS.has(t)).map(t => `<span class="tag-pill" data-tag="${t}">#${t}</span>`).join('');
 
     const personalRelLoreHTML = personalRelLore.map(l => this.renderLoreCard(l, null)).join('');
     const orderRelLoreHTML = orderRelLore.map(l => this.renderLoreCard(l, null)).join('');

@@ -51,7 +51,7 @@ When not employing his exoskeleton, he can freely shed all attire to unleash as 
     ],
     archetype: "Cosmic Architect & Harvester",
     status: "Active Sovereign of the Order",
-    affinityTags: ["The Order", "Deity Level", "Effortless Traversal", "Harvester", "Kaiju Cobra", "Psychic Dominance", "Spatial Phasing", "Light Blue Aura"]
+    affinityTags: ["The Order", "The Sanctuary Trio"]
   },
   {
     id: 'carnak',
@@ -88,7 +88,7 @@ In battle, he wields a massive, two-handed breaching sledgehammer inscribed with
     ],
     archetype: "Twisted Sobek / Ascended Vanguard Soldier",
     status: "Vanguard Titan of the Order",
-    affinityTags: ["The Order", "Great Exertion Traversal", "Twisted Sobek", "Energy Harvester", "Macro", "Crocodile", "Hatred of Humanity"]
+    affinityTags: ["The Order"]
   },
   {
     id: 'carpo',
@@ -132,7 +132,7 @@ In combat, Carpo fields macro-scaled titan equivalents of World War II guns and 
     ],
     archetype: "Accursed & Rescued Vanguard",
     status: "Aerial Sentinel of the Order",
-    affinityTags: ["The Order", "Some Exertion Traversal", "Romanesque Centurion", "Accursed", "Rescued", "Macro", "Gryphon"]
+    affinityTags: ["The Order"]
   },
   {
     id: 'brutus',
@@ -176,7 +176,7 @@ In battle, he blankets fortified defenses and underground shelters in dense, suf
     ],
     archetype: "Avenging Dragonkin Titan of the Order",
     status: "Ascended Vanguard Destroyer of the Order",
-    affinityTags: ["The Order", "Dragon", "Great Exertion Traversal", "Macro", "Committed Lover", "Generational"]
+    affinityTags: ["The Order", "The Sanctuary Trio", "Committed Lovers"]
   },
   {
     id: 'zahra',
@@ -213,7 +213,7 @@ Notably, Zahra is the only figure across the circle who is not the rampaging typ
     ],
     archetype: "Enfield Shifter & Emotional Anchor",
     status: "Committed Partner & Anchor",
-    affinityTags: ["Enfield Shifter", "Great Exertion Traversal", "Macro", "Committed Lover", "Generational"]
+    affinityTags: ["The Sanctuary Trio", "Committed Lovers"]
   },
   {
     id: 'abrax',
@@ -247,7 +247,7 @@ Endowed with terrifying brute strength, near-impenetrable reptilian scales, rapi
     ],
     archetype: "Awakened Extraterrestrial Colossus",
     status: "Isolated / Under Observation",
-    affinityTags: ["Target of Opportunity", "Extraterrestrial", "Above-Ground Rampage", "Superhuman Mortal", "Macro", "Observed", "Reptilian"]
+    affinityTags: ["Facilitation", "Observation"]
   },
   {
     id: 'phya',
@@ -279,7 +279,7 @@ He fiercely values true personal autonomy, maintaining an unspoken mutual truce 
     ],
     archetype: "Localized Solar Deity & Hedonist",
     status: "Autonomous Sovereign",
-    affinityTags: ["Solar Primordial", "Deity Level", "Effortless Traversal", "Mutual Observation", "Nagataur"]
+    affinityTags: ["Observation"]
   },
   {
     id: 'eidos',
@@ -310,7 +310,7 @@ A ferocious powerhouse in his own right, he pulverizes urban centers and flatten
     ],
     archetype: "Superhuman Pachyderm Rampager",
     status: "Isolated / Under Observation",
-    affinityTags: ["Isolated Three", "Lab Origin", "Superhuman Mortal", "Committed Lover", "Observed", "Elephant"]
+    affinityTags: ["Committed Lovers", "Observation"]
   },
   {
     id: 'rhidos',
@@ -341,7 +341,7 @@ A relentless juggernaut in his own right, he thrives on charging through skyscra
     ],
     archetype: "Superhuman Horned Rampager",
     status: "Isolated / Under Observation",
-    affinityTags: ["Isolated Three", "Lab Origin", "Superhuman Mortal", "Committed Lover", "Observed", "Rhino"]
+    affinityTags: ["Committed Lovers", "Observation"]
   }
 ];
 
