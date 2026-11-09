@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pyronite OC Verse — Interactive Relationship Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <div class="brand-title">Pyronite OC Verse</div>
+        </div>
+        <span class="brand-tag">Relationship Web</span>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Search -->
+        <div class="search-box">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <input type="text" id="search-input" placeholder="Search character or tag..." />
+        </div>
+
+        <!-- Filter Select -->
+        <select id="filter-select" class="filter-select">
+          <option value="all">All Dynamics</option>
+          <option value="friendship">Friendships (n)</option>
+          <option value="lovers">Committed Lovers</option>
+          <option value="facil">Rise Facilitation</option>
+          <option value="observation">Observation Only</option>
+          <option value="order">Order Members Only</option>
+        </select>
+
+        <!-- Lore Archive Button -->
+        <button id="btn-lore-archive" class="nav-btn primary">
+          <span>📖</span> Lore Archive
+        </button>
+      </div>
+    </header>
+
+    <!-- Interactive Canvas Area -->
+    <main class="canvas-wrapper">
+      <svg id="graph-svg"></svg>
+
+      <!-- Floating Canvas Zoom Controls -->
+      <div class="canvas-controls">
+        <button class="control-btn" id="btn-zoom-in" title="Zoom In">+</button>
+        <button class="control-btn" id="btn-zoom-out" title="Zoom Out">−</button>
+        <button class="control-btn" id="btn-reset-zoom" title="Reset View">⟲</button>
+      </div>
+
+      <!-- Floating Legend (Replicated from Canva Draft) -->
+      <aside class="legend-card">
+        <div class="legend-header">
+          <div class="legend-title">
+            <span>✨</span> Relationship Legend
+          </div>
+          <span style="font-size: 11px; color: var(--text-dim);">Click to collapse</span>
+        </div>
+
+        <div class="legend-body">
+          <div class="legend-item">
+            <div class="legend-line facil"></div>
+            <span>Facilitates the rise of</span>
+          </div>
+
+          <div class="legend-item">
+            <div class="legend-line friend"></div>
+            <span>Friendship (past emotional connection)*</span>
+          </div>
+
+          <div class="legend-item">
+            <div class="legend-line lovers"></div>
+            <span>Committed Lovers</span>
+          </div>
+
+          <div class="legend-item">
+            <div class="legend-line obs"></div>
+            <span>Observation</span>
+          </div>
+
+          <div class="legend-item legend-clickable" id="legend-order-territory" title="Click to view The Order lore & roster">
+            <div class="legend-triangle-badge"></div>
+            <span>The Order Membership</span>
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-globe-icon effortless">🌐</span>
+            <span>Effortless (Kai'nek, Ph'ya)</span>
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-globe-icon some-exertion">🌐</span>
+            <span>Some Exertion: needs a nap (Carpo)</span>
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-globe-icon exertion">🌐</span>
+            <span>Great Exertion: knocked out for a day (Brutus, Zahra, Carnak)</span>
+          </div>
+
+          <div class="legend-divider"></div>
+
+          <div class="legend-toggle-item">
+            <span class="legend-toggle-icon">💬</span>
+            <label class="toggle-control" for="toggle-speech-bubbles">
+              <span class="toggle-text">Speech Bubbles</span>
+              <span class="toggle-switch">
+                <input type="checkbox" id="toggle-speech-bubbles" checked>
+                <span class="toggle-slider"></span>
+              </span>
+            </label>
+          </div>
+
+          <div class="legend-toggle-item">
+            <span class="legend-toggle-icon">💭</span>
+            <label class="toggle-control" for="toggle-random-thoughts">
+              <span class="toggle-text">Random thoughts</span>
+              <span class="toggle-switch">
+                <input type="checkbox" id="toggle-random-thoughts">
+                <span class="toggle-slider"></span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="legend-notes">
+          <div>• <em>Numbers below denote approx. years of lived experiences.</em></div>
+          <div>• <em>For some characters, it is not the same as age.</em></div>
+          <div>• <em>Divided into different stages, if applicable.</em></div>
+          <div style="color: #fbbf24;">• <strong style="color: #fbbf24;">Bold indicates time spent as a Macro.</strong></div>
+          <div style="color: #34d399; margin-top: 4px;">*still definitely will funk</div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Slide-over Drawer for Characters, Relationships & Shared Lore -->
+    <div id="details-drawer" class="drawer">
+      <div class="drawer-header">
+        <div class="drawer-header-title">
+          Dossier & Dynamic Inspector
+        </div>
+        <div class="drawer-header-actions">
+          <button id="drawer-expand-btn" class="drawer-expand-btn" title="Expand to full page length (F)" aria-label="Toggle full page view">
+            <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <polyline points="9 21 3 21 3 15"></polyline>
+              <line x1="21" y1="3" x2="14" y2="10"></line>
+              <line x1="3" y1="21" x2="10" y2="14"></line>
+            </svg>
+            <svg class="collapse-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+              <polyline points="4 14 10 14 10 20"></polyline>
+              <polyline points="20 10 14 10 14 4"></polyline>
+              <line x1="14" y1="10" x2="21" y2="3"></line>
+              <line x1="10" y1="14" x2="3" y2="21"></line>
+            </svg>
+          </button>
+          <button class="drawer-close" title="Close Drawer (Esc)" aria-label="Close Drawer">✕</button>
+        </div>
+      </div>
+      <div class="drawer-content">
+        <!-- Dynamically populated via js/drawer.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Zero-dependency data and logic scripts (Runs anywhere, including direct double-click!) -->
+  <script src="data/characters.js"></script>
+  <script src="data/relationships.js"></script>
+  <script src="data/lore.js"></script>
+  <script src="js/canvas.js"></script>
+  <script src="js/drawer.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

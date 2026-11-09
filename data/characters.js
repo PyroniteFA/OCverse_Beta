@@ -1,0 +1,293 @@
+/**
+ * Pyronite OC Verse - Character Database
+ * Character records and dossiers across the multiverse.
+ */
+
+const characters = [
+  {
+    id: 'kainek',
+    name: "Kai'nek",
+    species: "Kaiju Cobra",
+    title: "Sovereign of the Order / Cosmic Harvester",
+    avatar: 'assets/avatars/kainek.png',
+    fullArt: 'assets/full_art/kainek.png',
+    orderMember: true,
+    universeTraversal: 'effortless',
+    livedExperience: {
+      display: '∞',
+      raw: '∞',
+      breakdown: [
+        { label: 'Primordial Genesis', value: '∞', isMacro: true }
+      ],
+      description: "Infinite lived experience. Exists without remembering his own origin, knowing only what he wants and exploiting it across universes."
+    },
+    canvasPos: { x: 900, y: 750 },
+    bio: "A towering, enigmatic deity-level entity with a red-queen complex who presides as the sovereign architect of the Order. Kai'nek came to exist without memory of his own origin; while feeling as old as time itself, he senses that reality unfolded outside and despite of him. Incapable of generating life from scratch, ascending candidates across the multiverse is the closest act of creation available to him. He operates under a chilling philosophy of ruin: when destroying worlds, he leaves before wiping out every last soul—deriving no thrill from destroying people huddled in underground bunkers compared to watching civilization collapse in everyday routines. Capable of casually eradicating millions in an afternoon, Kai'nek rejects mindless worshipers, preferring interesting, capable peers who need his help. He cultivates chosen candidates across millennia, harvesting planetary life-force to forge a disciplined, tactical titan army to make eternity interesting.",
+    gearsAndTactics: "Deploys encased in dark, bespoke futuristic combat armor equipped with cyan luminescent power conduits, leg harnesses, and an advanced forearm wrist console for multiversal telemetry. Yet unlike his vanguard titans who wield heavy firearms or breaching tools, Kai'nek's mode of attack remains fundamentally grounded in his terrifying innate celestial powers: tearing through reality with sovereign kinetic force, calling down cataclysmic arcs of blue lightning, crushing infrastructure in his bare claws, and siphoning planetary life-force directly into his cosmic reserves. When not employing his exoskeleton, he can freely shed all attire to unleash as a colossal, untamed primordial beast.",
+    randomThoughts: [
+      "Mindless worship bores me. Eternity is only bearable with peers who challenge the void.",
+      "There is no art in obliterating bunkers. The true beauty of ruin is watching daily routines crumble in an afternoon.",
+      "I cannot birth life from scratch, yet in ascending them, I sculpt the nearest thing to creation.",
+      "Time unfolded outside of me, indifferent and cold. I simply take what reality offers and bend it to my design.",
+      "A universe without resistance is an empty hall. That is why I cultivate titans rather than slaves.",
+      "Sever their transit arteries first. A single sweep of my tail across the bridges turns an orderly evacuation into total, beautiful panic.",
+      "I call down the celestial storm not merely to shatter concrete, but to ignite their power grids—watching the city burn in blue arcs as I harvest their energy.",
+      "Crushing an evacuation train in bare claws sends shockwaves through the remaining survivors. It is the sudden stillness that makes the harvest so rich."
+    ],
+    archetype: "Cosmic Architect & Harvester",
+    status: "Active Sovereign of the Order",
+    affinityTags: ["The Order", "Deity Level", "Effortless Traversal", "Harvester", "Kaiju Cobra"]
+  },
+  {
+    id: 'carnak',
+    name: 'Carnak',
+    species: "Crocodile",
+    title: "Vanguard Bulwark of the Order",
+    avatar: 'assets/avatars/carnak.png',
+    fullArt: 'assets/full_art/carnak.png',
+    orderMember: true,
+    universeTraversal: 'great_exertion',
+    livedExperience: {
+      display: '150',
+      raw: '150',
+      breakdown: [
+        { label: 'Ascended Titan Era', value: '150 yrs', isMacro: true }
+      ],
+      description: "150 years of relative lived experience serving as Kai'nek's disciplined 'good soldier' and primary energy harvester."
+    },
+    canvasPos: { x: 350, y: 580 },
+    bio: "A colossal crocodilian behemoth—donning Kai'nek's custom armor for selected operations or unleashing in his raw predatory form—and the premier vanguard soldier of the Order, carrying 150 years of ascended lived experience. Carnak was brought forth from unknown residual power native to his world, with Kai'nek facilitating the components that awakened him—channeling elements equivalent to the ancient deity Sobek and twisting them into a disciplined force. Carnak awoke consumed by an intense, bottomless hunger and a cold, deep-seated hatred for humanity, driven by visceral disgust at mortals as squirming, writhing masses. Unlike frenzied beasts driven by blind rage, his hostility is lucid, conscious, and unrelenting: devouring millions in a single day to sate his appetite while methodically funneling harvested life-force energy into the Order. Interpersonally, Carnak maintains a cool, likable 'bro' persona among his titan peers—dependable, relaxed, and refreshingly drama-free, untroubled by complex emotional baggage.",
+    gearsAndTactics: "Serves as the Order's heavy frontline physical bruiser. Outfitted in camouflage combat trousers, heavy combat boots, combat gloves, and a webbed tactical chest harness. In battle, he wields a massive, two-handed breaching sledgehammer inscribed with 'KNOCK KNOCK' tipped with a heavy pry bar chisel to batter through hardened fortifications, bridges, and city gates before devouring millions with his bone-crushing jaws. Can freely discard all equipment to rampage as a raw, naked crocodilian apex predator.",
+    randomThoughts: [
+      "Millions scurrying through concrete canyons... they look like squirming ants, and they taste even better.",
+      "Sobek's ancient blood flows through my jaws, but this hunger? This hunger is all mine.",
+      "Nothing beats the crunch of a high-rise at dawn. Pure life-force, straight down the gullet.",
+      "People think I'm angry. I'm not angry at all—I just genuinely despise humanity with every fiber of my being.",
+      "Good fight, good meal, no drama. That’s how an Order soldier gets things done."
+    ],
+    archetype: "Twisted Sobek / Ascended Vanguard Soldier",
+    status: "Vanguard Titan of the Order",
+    affinityTags: ["The Order", "Great Exertion Traversal", "Twisted Sobek", "Energy Harvester", "Macro", "Crocodile", "Hatred of Humanity"]
+  },
+  {
+    id: 'carpo',
+    name: 'Carpo',
+    species: "Gryphon",
+    title: "Skyward Sentinel of the Order",
+    avatar: 'assets/avatars/carpo.png',
+    fullArt: 'assets/full_art/carpo.jpg',
+    orderMember: true,
+    universeTraversal: 'some_exertion',
+    livedExperience: {
+      display: '25 + 2100 + 200',
+      raw: '25+2100+200',
+      breakdown: [
+        { label: 'Romanesque Centurion Youth', value: '25 yrs', isMacro: false },
+        { label: 'Immortal Soldier Across Cultures', value: '~2100 yrs', isMacro: false },
+        { label: 'Post-Rescue Macro Era', value: '200 yrs', isMacro: true }
+      ],
+      description: "Lived 25 mortal years as an ambitious Romanesque centurion before being killed and cursed; fought as an immortal soldier across nations and cultures for ~2,100 years, growing to love his world before Kai'nek rescued him into a 200-year Macro era spanning multiversal rampages, temporary sanctuary recovery, and Order service."
+    },
+    canvasPos: { x: 1450, y: 580 },
+    bio: "The aerial sentinel of the Order, carrying over two millennia of lived experience: 25 mortal years, ~2,100 years as an immortal wandering soldier, and 200 years of Macro growth. Carpo began life as an ambitious, self-interested warrior who attained the rank of centurion at age 25 before being slain. Bound by lesser deities to a two-phase curse, he was granted immortality while biologically frozen at 25. For roughly 2,100 years, he served as a soldier across countless nations and cultures, maturing into a reasonable man who grew to deeply love his homeworld. However, the curse's cruel second phase engineered him to become the deities' agent of doom—destined to awaken with an insatiable hunger to destroy his beloved world once mortal memory of those deities faded. Kai'nek tore Carpo across the veil just before this cataclysm could trigger. Within his 200-year Macro era, Carpo endured years of blind rampage in a strange realm, decades of multiversal wandering, and temporary sanctuary with Brutus and Zahra where he regained his faculties before deciding to leave out of hesitation. Fiercely protective of his autonomy, he now serves the Order under an informal pact while insisting cosmic ruin be kept far from his haven, maintaining an emotionally guarded distance born of centuries of trauma.",
+    gearsAndTactics: "Serves as the Order's high-altitude aerial gunner. Equipped with a sleek black futuristic flight suit lined with neon-green luminescent telemetry, knee-padded tactical trousers, boots, a wrist diagnostics display, and a tactical monocular targeting eyepiece headset. In combat, Carpo fields macro-scaled titan equivalents of World War II guns and heavy firearms—aerial cannons, anti-materiel artillery, and heavy ballistics—to conduct devastating strafing runs upon cities and defense grids from the clouds. Can freely shed his flight suit and firearms to unleash as a raw, untamed Gryphon beast at will.",
+    randomThoughts: [
+      "Twenty-five mortal years as a centurion, two millennia wandering as an immortal sword... yet this armor still feels like home.",
+      "I spent centuries under a cursed hunger that almost consumed the world I loved. I will never surrender my lucidity again.",
+      "My quiet haven lies far from the wastelands Kai'nek carves. That distance is the only thing keeping my peace intact.",
+      "Watching them in the sanctuary from afar... perhaps my withdrawal was for the best, even if the sting remains.",
+      "The skies of a hundred conquered empires blur together, but the wind against my wings never lies.",
+      "Diving from the stratosphere with wings tucked tight, then snapping them open right above the avenue—the supersonic shockwave alone levels five city blocks.",
+      "Two thousand years as a soldier taught me where to strike: snap the suspension bridges with my talons, downdraft their airfields with a single wing beat, and the city falls helpless.",
+      "Catching a thermal draft to stay aloft without burning a drop of stamina. From high above, circling over their panicked skyline is pure predatory exhilaration."
+    ],
+    archetype: "Accursed & Rescued Vanguard",
+    status: "Aerial Sentinel of the Order",
+    affinityTags: ["The Order", "Some Exertion Traversal", "Romanesque Centurion", "Accursed", "Rescued", "Macro", "Gryphon"]
+  },
+  {
+    id: 'brutus',
+    name: 'Brutus',
+    species: "Dragon",
+    title: "Dragon Successor & Destroyer of Humanity",
+    avatar: 'assets/avatars/brutus.png',
+    fullArt: 'assets/full_art/brutus.jpg',
+    orderMember: true,
+    universeTraversal: 'great_exertion',
+    livedExperience: {
+      display: '22 + 150 + 150',
+      raw: '22+150+150',
+      breakdown: [
+        { label: 'Mortal Court Youth', value: '22 yrs', isMacro: false },
+        { label: 'Ancestral Deception & Burning Hunger Conflict', value: '150 yrs', isMacro: true },
+        { label: 'Sanctuary Macro Era', value: '150 yrs', isMacro: true }
+      ],
+      description: "22 mortal court years, 150 years fighting under false ancestral guise where a periodic burning hunger forced him to destroy despite his love for Zahra, and 150 years thriving in their reconstructed sanctuary—rampaging for their status quo when Kai'nek calls while mastering external energy drawing."
+    },
+    canvasPos: { x: 900, y: 1300 },
+    bio: "The last surviving dragon of a race erased by humanity, carrying 322 years of lived experience. Rescued as the last dragon egg and kept by the king for status, Brutus grew up as a formidable court warrior, unaware of his heritage. He secretly fell in love with Princess Zahra, but after being caught intimate by servants, the court blamed Brutus to protect her and the King sentenced him to death. Escaping during execution escort, he was drawn to his ancestral homeland, where Kai'nek's ancestral apparitions revealed humanity's genocide of dragonkind and imbued Brutus with a periodic burning hunger for destruction. Ascending as an avenging dragon beast, Brutus wiped out the royal court, sparing only Zahra. For the next 150 grueling years, Brutus waged war on humanity, driven by that burning hunger even when it tore against his love for Zahra. His devastation was repeatedly held off by Zahra, who offered herself intimately to stay his wrath, even returning after being mortally wounded. When Zahra finally broke and chose to surrender, Brutus's love eclipsed his vengeance: he laid down his arms to waste away with her, even as the unfulfilled hunger burned and actively harmed him. This ultimate devotion forced Kai'nek to step in, reveal his true form, and strike a new deal: lifting the compulsive burning hunger so Brutus now rampages for their status quo and preserved life when Kai'nek calls upon him (though he still genuinely enjoys rampaging, like the other titans). In his downtime, Brutus spends as much time as possible with Zahra in their sanctuary—a partially modernized rebuild of the old royal castle where they were born and spent their youth.",
+    gearsAndTactics: "Trained and outfitted as the Order's specialized CBRN (Chemical, Biological, Radiological, and Nuclear) warfare expert. Deploys in a heavy, hermetically sealed hazmat-style combat suit, combat boots, reinforced knee pads, and a snouted dual-canister tactical gas mask. Bolted across his chest harness are pressurized chemical filtration and delivery tanks, complemented by tactical pouches loaded with macro-sized toxic smoke and chemical canisters. In battle, he blankets fortified defenses and underground shelters in dense, suffocating yellow chemical fog to flush out mortal forces before pulverizing the landscape beneath his massive frame. Can freely shed his CBRN suit and canisters to rampage as a raw, untamed dragon titan at will.",
+    randomThoughts: [
+      "For one hundred and fifty years that burning hunger tore at my gut, but Zahra’s love was the only thing that kept me anchored.",
+      "They wiped out my entire dragonkin race for royal pride... stepping on their cities is the least of what they deserve.",
+      "Our sanctuary castle is quiet today. When Kai'nek calls, I'll gladly unleash hell—for our peace.",
+      "Rampaging alongside Carnak and Carpo... it’s reassuring knowing other titans share this hunger and strength.",
+      "Kai'nek lifted the burning curse, but the thrill of crushing skyscrapers underfoot? That’s pure dragon blood.",
+      "Carpo taught me well—drawing ambient energy straight from the air keeps my dragon bulk fueled for hours of non-stop stomping without breaking a sweat.",
+      "A low tail-whip through their financial district levels four city blocks at once. Watching glass and steel shatter under raw dragon scales never gets old.",
+      "Plant both claws firmly into the boulevard, dig in deep, and plow forward. The entire avenue crumples like parchment beneath my tread."
+    ],
+    archetype: "Avenging Dragonkin Titan of the Order",
+    status: "Ascended Vanguard Destroyer of the Order",
+    affinityTags: ["The Order", "Dragon", "Great Exertion Traversal", "Macro", "Committed Lover", "Generational"]
+  },
+  {
+    id: 'zahra',
+    name: 'Zahra',
+    species: "Enfield with human form",
+    title: "Princess & Enfield Counter-Anchor",
+    avatar: 'assets/avatars/zahra.png',
+    fullArt: 'assets/full_art/zahra.png',
+    orderMember: false,
+    universeTraversal: 'great_exertion',
+    livedExperience: {
+      display: '22 + 150 + 150',
+      raw: '22+150+150',
+      breakdown: [
+        { label: 'Mortal Court Youth', value: '22 yrs', isMacro: false },
+        { label: 'Angelic Deception Conflict', value: '150 yrs', isMacro: false },
+        { label: 'Sanctuary Macro Era', value: '150 yrs', isMacro: true }
+      ],
+      description: "22 years as a neglected court princess, 150 years countering Brutus's hunger under angelic visions before surrendering to waste away together, and 150 years thriving as his macro anchor in their rebuilt castle sanctuary."
+    },
+    canvasPos: { x: 1450, y: 1180 },
+    bio: "A former royal princess endowed with the secret ancestral gift of the Enfield form, carrying 322 years of lived experience. Neglected in the royal court after her mother died birthing her, and overshadowed by male heirs, Zahra grew up buried in research and books, quietly suppressed when her Enfield form was discovered. She found true connection in a secret romance with Brutus. When court servants caught them being intimate, the court blamed Brutus, sentencing him to death; after Brutus escaped and returned as an avenging dragon beast who wiped out the court, he spared Zahra. But when she warned a nearby village of his impending attack, an enraged Brutus struck her down and left her to die in the snow. Miraculously healed and resurrected out of sight through angelic visions, Zahra returned to a mournful Brutus, who joyfully embraced her without question. For 150 years, Zahra endured the agonizing burden of countering his periodic destructive hunger—staying his wrath by offering herself to him intimately, repeatedly regenerating after being mortally wounded in his frenzy—until she confessed her bargain and chose to give up. After Kai'nek stepped in and struck a deal that extinguished Brutus's burning hunger, the couple established their sanctuary in a partially modernized rebuild of the very castle where they were born and spent their youth. Notably, Zahra is the only figure across the circle who is not the rampaging type; having learned to make peace with her lover's violent actions and turn a blind eye to the planetary destruction he inflicts for Kai'nek, she prioritizes the devotion and quiet haven they share. This profound, non-judgmental acceptance was precisely what suited her to welcome and care for Carpo with deep compassion and zero judgment about his bloody past when the battered Gryphon sought shelter. In their Macro era, Zahra learned from Carpo how to sustain her towering Enfield form by channeling ambient energy, serving as the cherished anchor and sage of their sanctuary.",
+    randomThoughts: [
+      "In the royal court, I was hidden away in dusty archives. As an Enfield beside Brutus, I finally found my true horizon.",
+      "Carpo taught us well: true giant strength does not bleed your internal flame, it breathes with the cosmos itself.",
+      "No matter how many times I died in the snow, I would always return to keep Brutus from losing himself to the dark.",
+      "I am the only one among them who is not the rampaging type. I made my peace with the fire in Brutus long ago and learned to look away from the ash—which is why when Carpo arrived at our castle broken by his own past, I had no judgment to offer him, only shelter."
+    ],
+    archetype: "Enfield Shifter & Emotional Anchor",
+    status: "Committed Partner & Anchor",
+    affinityTags: ["Enfield Shifter", "Great Exertion Traversal", "Macro", "Committed Lover", "Generational"]
+  },
+  {
+    id: 'abrax',
+    name: 'Abrax',
+    species: "Reptilian",
+    title: "The Awakened Extraterrestrial Colossus",
+    avatar: 'assets/avatars/abrax.png',
+    fullArt: 'assets/full_art/abrax.png',
+    orderMember: false,
+    universeTraversal: 'none',
+    livedExperience: {
+      display: '50 + 1',
+      raw: '50+1',
+      breakdown: [
+        { label: 'Lived Experience from Elsewhere', value: '50 yrs', isMacro: false },
+        { label: 'Dormancy on Earth (Unconscious)', value: 'Thousands of yrs', isMacro: false },
+        { label: 'Above-Ground Macro Rampage', value: '1 yr', isMacro: true }
+      ],
+      description: "Carried 50 years of lived experience from elsewhere across the cosmos before falling into Earth in his universe, lying dormant for thousands of years until Kai'nek awakened him into 1 year of above-ground Macro rampaging."
+    },
+    canvasPos: { x: 620, y: 240 },
+    bio: "A primal extraterrestrial reptilian titan, carrying 50 years of lived experience from elsewhere across the cosmos and 1 year of unleashed above-ground Macro rampaging on Earth. Long ago, Abrax fell into Earth within his home universe after decades of life elsewhere, sinking into a deep dormancy that lasted for thousands of years. His millennia-long slumber ended when Kai'nek orchestrated subtle cosmic shifts to awaken him, recognizing his immense biological potential as an apex candidate. Since waking, Abrax has spent the past year rampaging across the Earth above ground in relentless, solitary dominance. Endowed with terrifying brute strength, near-impenetrable reptilian scales, rapid growth, rapid controllable digestion, and super production, he pulverizes urban landscapes and crushes all opposition with raw physical power. Primal, aggressive, and fiercely territorial, Abrax demolishes civilizations in solitary fury, completely oblivious to the broader multiverse or the cosmic sovereign observing his path of devastation from across the veil.",
+    randomThoughts: [
+      "Fifty cycles across foreign stars, millennia buried in bedrock... now this brittle world belongs to my claws.",
+      "Concrete shatters like chalk under my tread. Let them bring their armies—they only make sweeter fuel.",
+      "No deities, no masters across this sky. Only the apex predator reclaiming the surface."
+    ],
+    archetype: "Awakened Extraterrestrial Colossus",
+    status: "Isolated / Under Observation",
+    affinityTags: ["Target of Opportunity", "Extraterrestrial", "Above-Ground Rampage", "Superhuman Mortal", "Macro", "Observed", "Reptilian"]
+  },
+  {
+    id: 'phya',
+    name: "Ph'ya",
+    species: "Nagataur",
+    title: "Solar Primordial Sovereign",
+    avatar: 'assets/avatars/phya.png',
+    fullArt: 'assets/full_art/phya.png',
+    orderMember: false,
+    universeTraversal: 'effortless',
+    livedExperience: {
+      display: '∞',
+      raw: '∞',
+      breakdown: [
+        { label: 'Primordial Existence', value: '∞', isMacro: true }
+      ],
+      description: "Infinite lived experience. Existed independently before and outside Kai'nek's influence, keeping his true origins to himself."
+    },
+    canvasPos: { x: 1180, y: 240 },
+    bio: "An autonomous, primordial solar deity of infinite lived experience (∞), crossing universes effortlessly on his own accord completely independent of other cosmic entities. Wielding supreme solar and serpentine power, Ph'ya chooses not to wage wars of multiversal conquest, keeping his true primordial origins entirely to himself. Instead, he relishes a lavish, hedonistic existence as an untouchable living legend in his home realm, deliberately maintaining his domain at a pre-renaissance technological level so mortal civilizations remain bound to ancient myth and faith. While indifferent to mortal casualties—having casually wiped out millions over eons without remorse—he lacks the unrelenting malice of warmongering titans, preferring pleasure, theatrical divinity, and personal amusement. He fiercely values true personal autonomy, maintaining an unspoken mutual truce of non-interference with other deities.",
+    randomThoughts: [
+      "Why conquer endless barren universes when you can be worshipped as a living sun in luxury and theatrical splendor?",
+      "Kai'nek knows better than to infringe upon my realm. An unspoken truce keeps celestial company civilized.",
+      "Mortals rise and fall like desert dust. The only thing truly worth pursuing across infinity is pleasure and autonomy."
+    ],
+    archetype: "Localized Solar Deity & Hedonist",
+    status: "Autonomous Sovereign",
+    affinityTags: ["Solar Primordial", "Deity Level", "Effortless Traversal", "Mutual Observation", "Nagataur"]
+  },
+  {
+    id: 'eidos',
+    name: 'Eidos',
+    species: "Elephant",
+    title: "The Pachyderm Crusher",
+    avatar: 'assets/avatars/eidos.png',
+    fullArt: 'assets/full_art/eidos.png',
+    orderMember: false,
+    universeTraversal: 'none',
+    livedExperience: {
+      display: '35 + 1',
+      raw: '35+1',
+      breakdown: [
+        { label: 'Lab/Experimental Life', value: '35 yrs', isMacro: false },
+        { label: 'Macro Rampage Era', value: '1 yr', isMacro: true }
+      ],
+      description: "Equivalent to a 35-year-old human mortal before unleashing 1 year of Macro scale and strength."
+    },
+    canvasPos: { x: 240, y: 960 },
+    bio: "A colossal pachyderm juggernaut and superhuman mortal, possessing 35 years of experimental life and 1 year of rapid Macro rampage. Originating from a catastrophic laboratory experiment gone wrong in an isolated universe, Eidos was transformed into a colossal physical titan endowed with immense destructive might, rapid controllable digestion, super production, and accelerated growth to macro scale. A ferocious powerhouse in his own right, he pulverizes urban centers and flattens civilizational infrastructure with crushing force. Left to their own devices alongside his life partner Rhidos to learn the ropes of destruction, the two heavyweight titans live in destructive harmony, treating urban demolition and planetary ruin as their personal romantic dates while remaining blissfully oblivious to external cosmic observers.",
+    randomThoughts: [
+      "Crushing suspension bridges with Rhidos... honestly, the best romantic dates are the loudest ones.",
+      "They built that laboratory to contain our growth. Look at us now—stomping whole metropolitan skylines flat.",
+      "Heavy steps, heavy appetites, and my favorite horned juggernaut by my side. What more could a pachyderm want?"
+    ],
+    archetype: "Superhuman Pachyderm Rampager",
+    status: "Isolated / Under Observation",
+    affinityTags: ["Isolated Three", "Lab Origin", "Superhuman Mortal", "Committed Lover", "Observed", "Elephant"]
+  },
+  {
+    id: 'rhidos',
+    name: 'Rhidos',
+    species: "Rhino",
+    title: "The Horned Battering Ram",
+    avatar: 'assets/avatars/rhidos.png',
+    fullArt: 'assets/full_art/rhidos.jpg',
+    orderMember: false,
+    universeTraversal: 'none',
+    livedExperience: {
+      display: '35 + 1',
+      raw: '35+1',
+      breakdown: [
+        { label: 'Lab/Experimental Life', value: '35 yrs', isMacro: false },
+        { label: 'Macro Rampage Era', value: '1 yr', isMacro: true }
+      ],
+      description: "Equivalent to a 35-year-old human mortal before unleashing 1 year of Macro destructive power."
+    },
+    canvasPos: { x: 240, y: 1300 },
+    bio: "An unstoppable rhinoceros powerhouse and superhuman mortal, carrying 35 years of experimental life and 1 year of unleashed Macro destruction. Born of the same disastrous laboratory experiment gone wrong that transformed his partner Eidos, Rhidos was gifted with devastating kinetic momentum, rapid macro growth, rapid controllable digestion, and super production. A relentless juggernaut in his own right, he thrives on charging through skyscrapers and fortified infrastructure with reckless glee. Left to their own devices in their isolated realm to learn the ropes of devastation, Rhidos and his devoted life partner Eidos are completely in sync in love and ruin, turning the destruction of mortal worlds into personal romantic celebrations while remaining unaware of Kai'nek's distant gaze.",
+    randomThoughts: [
+      "Lower the horn, build up the kinetic momentum, and nothing in this city can stop the battering ram.",
+      "Watching the skyline topple right behind Eidos's stomp... we were truly made for each other.",
+      "They thought their reinforced steel bunkers would hold. They never calculated our accelerated growth rate."
+    ],
+    archetype: "Superhuman Horned Rampager",
+    status: "Isolated / Under Observation",
+    affinityTags: ["Isolated Three", "Lab Origin", "Superhuman Mortal", "Committed Lover", "Observed", "Rhino"]
+  }
+];
+
+window.characters = characters;
