@@ -674,6 +674,16 @@ body {
   font-weight: 800 !important;
 }
 
+.drawer.expanded .char-bio-body {
+  gap: 16px !important;
+}
+
+.drawer.expanded .char-bio-p {
+  font-size: 16.5px !important;
+  line-height: 1.85 !important;
+  color: #e2e8f0 !important;
+}
+
 .drawer.expanded p {
   font-size: 16.5px !important;
   line-height: 1.8 !important;
@@ -869,6 +879,19 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.char-bio-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.char-bio-p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #cbd5e1;
+  margin: 0;
 }
 
 .section-label {

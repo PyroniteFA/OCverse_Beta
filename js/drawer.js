@@ -250,7 +250,9 @@ class DrawerManager {
 
       <div class="section-box">
         <div class="section-label">Overview & Bio</div>
-        <p style="font-size:13px; line-height:1.6; color:#cbd5e1;">${char.bio}</p>
+        <div class="char-bio-body">
+          ${char.bio.split(/\n\s*\n/).filter(Boolean).map(p => `<p class="char-bio-p">${p.trim()}</p>`).join('')}
+        </div>
         <div class="tag-pills">
           ${char.affinityTags.map(t => `<span class="tag-pill" data-tag="${t}">${t}</span>`).join('')}
         </div>
@@ -259,7 +261,9 @@ class DrawerManager {
       ${char.gearsAndTactics ? `
       <div class="section-box" style="border-left: 3px solid #38bdf8;">
         <div class="section-label" style="color: #38bdf8;">Gears and tactics</div>
-        <p style="font-size:13px; line-height:1.6; color:#cbd5e1; margin: 0;">${char.gearsAndTactics}</p>
+        <div class="char-bio-body">
+          ${char.gearsAndTactics.split(/\n\s*\n/).filter(Boolean).map(p => `<p class="char-bio-p">${p.trim()}</p>`).join('')}
+        </div>
       </div>
       ` : ''}
 
