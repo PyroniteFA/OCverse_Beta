@@ -53,7 +53,8 @@ When not employing his exoskeleton, he can freely shed all attire to unleash as 
       "When I cast off the exoskeleton, my cool-toned bioluminescent markings ignite against the dark, cloaking the storm clouds in a radiant light blue aura. Let their spotlights scramble to find me—the glow of a primordial cobra sovereign is the only illumination their doomed skies require.",
       "Before my vanguards make landfall, I drift through the dream-layers of their sleeping cities, weaving visions of imminent ruin into their subconscious. Waking up in terror is an art form—especially when I broadcast live sensory feeds of their collapsing bastions directly behind their generals' eyelids.",
       "Their heavy artillery batteries fired a coordinated salvo dead-center into my chest; the smoke cleared to find my scales already unblemished. Mortal weaponry cannot fathom cellular regeneration of this caliber. To me, a high-yield warhead is nothing more than a warm, passing breeze.",
-      "I monitor prospective candidates across the multiversal void through passive observational sampling, studying their raw instincts without disturbing a single synapse. My code is non-negotiable: a candidate must earn ascension through their own untainted ambition. If I had to alter a mind to make them worthy, they were never worthy at all."
+      "I monitor prospective candidates across the multiversal void through passive observational sampling, studying their raw instincts without disturbing a single synapse. My code is non-negotiable: a candidate must earn ascension through their own untainted ambition. If I had to alter a mind to make them worthy, they were never worthy at all.",
+      "I set their tragedy in motion eons ago to forge an avenging vanguard, yet in their sanctuary, it was their devotion that disarmed me. Brutus’s unyielding fire and Zahra’s quiet wisdom pierced my celestial indifference—becoming the only haven in the multiverse where I am welcomed not as a terrifying sovereign, but as their beloved."
     ],
     archetype: "Cosmic Architect & Harvester",
     status: "Active Sovereign of the Order"
@@ -134,7 +135,9 @@ In combat, Carpo fields macro-scaled titan equivalents of World War II guns and 
       "Two thousand years as a soldier taught me where to strike: snap the suspension bridges with my talons, downdraft their airfields with a single wing beat, and the city falls helpless.",
       "Catching a thermal draft to stay aloft without burning a drop of stamina. From high above, circling over their panicked skyline is pure predatory exhilaration.",
       "Kai'nek tore me through the veil before my curse devoured the world I loved. I owe him my sanity and my wings, but that will never make me an obedient hound to his cosmic whims.",
-      "The serpent deity could rewrite my mind in a breath, yet he chooses to argue with me like an equal. We butt heads over every campaign, but as long as he respects my boundaries and leaves my haven in peace, I will fly for his Order."
+      "The serpent deity could rewrite my mind in a breath, yet he chooses to argue with me like an equal. We butt heads over every campaign, but as long as he respects my boundaries and leaves my haven in peace, I will fly for his Order.",
+      "I tore myself away from that castle because I couldn't bear the thought of tainting what Brutus and Zahra built. I burned with desire for him and revered her with all my soul, yet I chose cold solitude so I wouldn't intrude. And then Kai'nek simply glided in and took the very place I bled to leave untouched.",
+      "Watching Kai'nek bed down in their sanctuary as their beloved third is a bitter dagger between my ribs. I agonized for decades over whether my presence would ruin their love, only for a cosmic serpent to prove that there was room for a third all along—just not for me."
     ],
     archetype: "Accursed & Rescued Vanguard",
     status: "Aerial Sentinel of the Order"
@@ -177,7 +180,9 @@ In battle, he blankets fortified defenses and underground shelters in dense, suf
       "Kai'nek lifted the burning curse, but the thrill of crushing skyscrapers underfoot? That’s pure dragon blood.",
       "Carpo taught me well—drawing ambient energy straight from the air keeps my dragon bulk fueled for hours of non-stop stomping without breaking a sweat.",
       "A low tail-whip through their financial district levels four city blocks at once. Watching glass and steel shatter under raw dragon scales never gets old.",
-      "Plant both claws firmly into the boulevard, dig in deep, and plow forward. The entire avenue crumples like parchment beneath my tread."
+      "Plant both claws firmly into the boulevard, dig in deep, and plow forward. The entire avenue crumples like parchment beneath my tread.",
+      "Carpo was terrible at hiding how much he stared at my build—the old soldier would freeze up, look away, and apologize to Zahra like he committed a mortal crime. I told him a dozen times he was family and had nothing to apologize for, but his Roman honor was too stubborn to let him relax.",
+      "He was so terrified of becoming a third wheel between Zahra and me that he ended up exiling himself from our sanctuary. I hated watching him leave. There was plenty of room in our lives for a giant winged brother, if only he hadn't let his own guilt chase him off."
     ],
     archetype: "Avenging Dragonkin Titan of the Order",
     status: "Ascended Vanguard Destroyer of the Order"
@@ -213,7 +218,9 @@ Notably, Zahra is the only figure across the circle who is not the rampaging typ
       "In the royal court, I was hidden away in dusty archives. As an Enfield beside Brutus, I finally found my true horizon.",
       "Carpo taught us well: true giant strength does not bleed your internal flame, it breathes with the cosmos itself.",
       "No matter how many times I died in the snow, I would always return to keep Brutus from losing himself to the dark.",
-      "I am the only one among them who is not the rampaging type. I made my peace with the fire in Brutus long ago and learned to look away from the ash—which is why when Carpo arrived at our castle broken by his own past, I had no judgment to offer him, only shelter."
+      "I am the only one among them who is not the rampaging type. I made my peace with the fire in Brutus long ago and learned to look away from the ash—which is why when Carpo arrived at our castle broken by his own past, I had no judgment to offer him, only shelter.",
+      "I saw how Carpo looked at Brutus—the flustered stammering, the flushed cheeks he tried so hard to hide beneath soldier's discipline. He thought his desire was a betrayal to me, never realizing that after centuries of blood and resurrection, my heart had long since grown past petty possessiveness.",
+      "Carpo carried such a heavy guilt, terrified that staying in our castle would drive a wedge between Brutus and me. It broke my heart watching him pack his gear and take to the skies; he fled from the very love that would have gladly sheltered him."
     ],
     archetype: "Enfield Shifter & Emotional Anchor",
     status: "Committed Partner & Anchor"
