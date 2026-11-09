@@ -15,7 +15,7 @@ class RelationshipCanvas {
     this.selectedNodeId = null;
     this.selectedEdgeId = null;
     this.enableSpeechBubbles = true;
-    this.enableRandomThoughts = false;
+    this.enableRandomThoughts = true;
     this.randomThoughtTimer = null;
     this.randomThoughtDismissTimer = null;
     this.activeThoughtSpeakerId = null;
@@ -37,6 +37,9 @@ class RelationshipCanvas {
     this.setupDefs();
     this.render();
     this.setupEvents();
+    if (this.enableRandomThoughts) {
+      this.startRandomThoughts();
+    }
   }
 
   setupDefs() {

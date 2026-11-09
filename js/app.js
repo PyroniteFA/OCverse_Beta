@@ -73,6 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Toggle Random Thoughts
   const toggleRandomThoughts = document.getElementById('toggle-random-thoughts');
   if (toggleRandomThoughts) {
+    if (toggleRandomThoughts.checked !== canvas.enableRandomThoughts) {
+      canvas.setRandomThoughtsEnabled(toggleRandomThoughts.checked);
+    }
     toggleRandomThoughts.addEventListener('change', (e) => {
       canvas.setRandomThoughtsEnabled(e.target.checked);
     });
