@@ -261,9 +261,6 @@ class DrawerManager {
         <div class="char-bio-body">
           ${char.bio.split(/\n\s*\n/).filter(Boolean).map(p => `<p class="char-bio-p">${p.trim()}</p>`).join('')}
         </div>
-        <div class="tag-pills">
-          ${(char.affinityTags || []).filter(t => CANONICAL_LORE_TAGS.has(t)).map(t => `<span class="tag-pill" data-tag="${t}">#${t}</span>`).join('')}
-        </div>
       </div>
 
       ${char.gearsAndTactics ? `

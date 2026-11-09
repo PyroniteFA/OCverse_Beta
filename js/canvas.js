@@ -905,7 +905,7 @@ class RelationshipCanvas {
 
   getCharacterAccentColor(char) {
     if (!char) return '#38bdf8';
-    if (char.affinityTags && char.affinityTags.includes('The Order')) return '#38bdf8';
+    if (char.orderMember || (char.affinityTags && char.affinityTags.includes('The Order'))) return '#38bdf8';
     if (char.id === 'phya') return '#fbbf24';
     if (char.id === 'brutus') return '#f97316';
     if (char.id === 'zahra') return '#ec4899';

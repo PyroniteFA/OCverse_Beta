@@ -56,8 +56,7 @@ When not employing his exoskeleton, he can freely shed all attire to unleash as 
       "I monitor prospective candidates across the multiversal void through passive observational sampling, studying their raw instincts without disturbing a single synapse. My code is non-negotiable: a candidate must earn ascension through their own untainted ambition. If I had to alter a mind to make them worthy, they were never worthy at all."
     ],
     archetype: "Cosmic Architect & Harvester",
-    status: "Active Sovereign of the Order",
-    affinityTags: ["The Order", "The Sanctuary Trio"]
+    status: "Active Sovereign of the Order"
   },
   {
     id: 'carnak',
@@ -93,8 +92,7 @@ In battle, he wields a massive, two-handed breaching sledgehammer inscribed with
       "Good fight, good meal, no drama. That’s how an Order soldier gets things done."
     ],
     archetype: "Twisted Sobek / Ascended Vanguard Soldier",
-    status: "Vanguard Titan of the Order",
-    affinityTags: ["The Order"]
+    status: "Vanguard Titan of the Order"
   },
   {
     id: 'carpo',
@@ -139,8 +137,7 @@ In combat, Carpo fields macro-scaled titan equivalents of World War II guns and 
       "The serpent deity could rewrite my mind in a breath, yet he chooses to argue with me like an equal. We butt heads over every campaign, but as long as he respects my boundaries and leaves my haven in peace, I will fly for his Order."
     ],
     archetype: "Accursed & Rescued Vanguard",
-    status: "Aerial Sentinel of the Order",
-    affinityTags: ["The Order"]
+    status: "Aerial Sentinel of the Order"
   },
   {
     id: 'brutus',
@@ -183,8 +180,7 @@ In battle, he blankets fortified defenses and underground shelters in dense, suf
       "Plant both claws firmly into the boulevard, dig in deep, and plow forward. The entire avenue crumples like parchment beneath my tread."
     ],
     archetype: "Avenging Dragonkin Titan of the Order",
-    status: "Ascended Vanguard Destroyer of the Order",
-    affinityTags: ["The Order", "The Sanctuary Trio", "Committed Lovers"]
+    status: "Ascended Vanguard Destroyer of the Order"
   },
   {
     id: 'zahra',
@@ -220,8 +216,7 @@ Notably, Zahra is the only figure across the circle who is not the rampaging typ
       "I am the only one among them who is not the rampaging type. I made my peace with the fire in Brutus long ago and learned to look away from the ash—which is why when Carpo arrived at our castle broken by his own past, I had no judgment to offer him, only shelter."
     ],
     archetype: "Enfield Shifter & Emotional Anchor",
-    status: "Committed Partner & Anchor",
-    affinityTags: ["The Sanctuary Trio", "Committed Lovers"]
+    status: "Committed Partner & Anchor"
   },
   {
     id: 'abrax',
@@ -254,8 +249,7 @@ Endowed with terrifying brute strength, near-impenetrable reptilian scales, rapi
       "No deities, no masters across this sky. Only the apex predator reclaiming the surface."
     ],
     archetype: "Awakened Extraterrestrial Colossus",
-    status: "Isolated / Under Observation",
-    affinityTags: ["Facilitation", "Observation"]
+    status: "Isolated / Under Observation"
   },
   {
     id: 'phya',
@@ -286,8 +280,7 @@ He fiercely values true personal autonomy, maintaining an unspoken mutual truce 
       "Mortals rise and fall like desert dust. The only thing truly worth pursuing across infinity is pleasure and autonomy."
     ],
     archetype: "Localized Solar Deity & Hedonist",
-    status: "Autonomous Sovereign",
-    affinityTags: ["Observation"]
+    status: "Autonomous Sovereign"
   },
   {
     id: 'eidos',
@@ -317,8 +310,7 @@ A ferocious powerhouse in his own right, he pulverizes urban centers and flatten
       "Heavy steps, heavy appetites, and my favorite horned juggernaut by my side. What more could a pachyderm want?"
     ],
     archetype: "Superhuman Pachyderm Rampager",
-    status: "Isolated / Under Observation",
-    affinityTags: ["Committed Lovers", "Observation"]
+    status: "Isolated / Under Observation"
   },
   {
     id: 'rhidos',
@@ -348,8 +340,7 @@ A relentless juggernaut in his own right, he thrives on charging through skyscra
       "They thought their reinforced steel bunkers would hold. They never calculated our accelerated growth rate."
     ],
     archetype: "Superhuman Horned Rampager",
-    status: "Isolated / Under Observation",
-    affinityTags: ["Committed Lovers", "Observation"]
+    status: "Isolated / Under Observation"
   }
 ];
 
