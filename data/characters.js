@@ -47,7 +47,13 @@ When not employing his exoskeleton, he can freely shed all attire to unleash as 
       "I cannot birth life from scratch, yet in ascending them, I sculpt the nearest thing to creation.",
       "Time unfolded outside of me, indifferent and cold. I simply take what reality offers and bend it to my design.",
       "Scouting alternate timelines is effortless enough; the true calculation is choosing which multiversal records to pull across, even if imparting that knowledge leaves a heavy drain.",
-      "Sever their transit arteries first. A single sweep across the bridges turns an orderly evacuation into total, beautiful panic."
+      "Sever their transit arteries first. A single sweep across the bridges turns an orderly evacuation into total, beautiful panic.",
+      "Carpo bristles every time I summon him from his quiet roost, scowling with two millennia of Roman discipline. Most beings cringe before a cosmic sovereign; watching that winged soldier debate me toe-to-toe is sheer delight.",
+      "I promised the gryphon his peaceful haven far from my harvested wastelands, and I keep my word. A warrior who chooses to dive into the storm under his own conviction hits far harder than any thrall I could ever enslave.",
+      "When I cast off the exoskeleton, my cool-toned bioluminescent markings ignite against the dark, cloaking the storm clouds in a radiant light blue aura. Let their spotlights scramble to find me—the glow of a primordial cobra sovereign is the only illumination their doomed skies require.",
+      "Before my vanguards make landfall, I drift through the dream-layers of their sleeping cities, weaving visions of imminent ruin into their subconscious. Waking up in terror is an art form—especially when I broadcast live sensory feeds of their collapsing bastions directly behind their generals' eyelids.",
+      "Their heavy artillery batteries fired a coordinated salvo dead-center into my chest; the smoke cleared to find my scales already unblemished. Mortal weaponry cannot fathom cellular regeneration of this caliber. To me, a high-yield warhead is nothing more than a warm, passing breeze.",
+      "I monitor prospective candidates across the multiversal void through passive observational sampling, studying their raw instincts without disturbing a single synapse. My code is non-negotiable: a candidate must earn ascension through their own untainted ambition. If I had to alter a mind to make them worthy, they were never worthy at all."
     ],
     archetype: "Cosmic Architect & Harvester",
     status: "Active Sovereign of the Order",
@@ -128,7 +134,9 @@ In combat, Carpo fields macro-scaled titan equivalents of World War II guns and 
       "The skies of a hundred conquered empires blur together, but the wind against my wings never lies.",
       "Diving from the stratosphere with wings tucked tight, then snapping them open right above the avenue—the supersonic shockwave alone levels five city blocks.",
       "Two thousand years as a soldier taught me where to strike: snap the suspension bridges with my talons, downdraft their airfields with a single wing beat, and the city falls helpless.",
-      "Catching a thermal draft to stay aloft without burning a drop of stamina. From high above, circling over their panicked skyline is pure predatory exhilaration."
+      "Catching a thermal draft to stay aloft without burning a drop of stamina. From high above, circling over their panicked skyline is pure predatory exhilaration.",
+      "Kai'nek tore me through the veil before my curse devoured the world I loved. I owe him my sanity and my wings, but that will never make me an obedient hound to his cosmic whims.",
+      "The serpent deity could rewrite my mind in a breath, yet he chooses to argue with me like an equal. We butt heads over every campaign, but as long as he respects my boundaries and leaves my haven in peace, I will fly for his Order."
     ],
     archetype: "Accursed & Rescued Vanguard",
     status: "Aerial Sentinel of the Order",
