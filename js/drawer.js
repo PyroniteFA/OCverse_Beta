@@ -415,7 +415,9 @@ class DrawerManager {
 
       <div class="section-box">
         <div class="section-label">In-Depth Dynamic Details</div>
-        <p style="font-size:13px; line-height:1.65; color:#cbd5e1;">${rel.details}</p>
+        <div class="char-bio-body">
+          ${rel.details.split(/\n\s*\n/).filter(Boolean).map(p => `<p class="char-bio-p">${p.trim()}</p>`).join('')}
+        </div>
       </div>
 
       <!-- Specific Relationship & Dynamic Lore (Positioned above general Order lore) -->
