@@ -1,3 +1,8 @@
+const CANONICAL_LORE_TAGS = new Set([
+  "Kai'nek", "Carnak", "Carpo", "Brutus", "Zahra", "Abrax", "Ph'ya", "Eidos", "Rhidos",
+  "The Order", "The Sanctuary Trio", "Committed Lovers", "Friendship", "Facilitation", "Observation"
+]);
+
 class DrawerManager {
   constructor(drawerElement, canvas) {
     this.drawer = drawerElement;
@@ -101,7 +106,10 @@ class DrawerManager {
       </div>
     ` : '';
 
-    const tagsHTML = (lore.tags || []).map(t => `<span class="tag-pill" data-tag="${t}">#${t}</span>`).join('');
+    const tagsHTML = (lore.tags || [])
+      .filter(t => CANONICAL_LORE_TAGS.has(t))
+      .map(t => `<span class="tag-pill" data-tag="${t}">#${t}</span>`)
+      .join('');
 
     return `
       <div class="lore-card" data-lore-id="${lore.id}">
@@ -516,7 +524,7 @@ class DrawerManager {
     const sharedLore = this.getSharedLore();
     const charMap = new Map(characters.map(c => [c.id, c]));
 
-    const allTags = Array.from(new Set(sharedLore.flatMap(l => l.tags)));
+    const allTags = Array.from(new Set(sharedLore.flatMap(l => l.tags))).filter(t => CANONICAL_LORE_TAGS.has(t));
     const bondOrder = ['The Order', 'The Sanctuary Trio', 'Committed Lovers', 'Friendship', 'Facilitation', 'Observation'];
     const charTags = characters.map(c => c.name).filter(name => allTags.includes(name));
     const bondTags = bondOrder.filter(b => allTags.includes(b));
@@ -537,7 +545,7 @@ class DrawerManager {
           </div>
           <p class="lore-card-content">${lore.content}</p>
           <div class="tag-pills">
-            ${lore.tags.map(t => `<span class="tag-pill ${t === selectedTag ? 'active' : ''}" data-lore-filter="${t}">#${t}</span>`).join('')}
+            ${(lore.tags || []).filter(t => CANONICAL_LORE_TAGS.has(t)).map(t => `<span class="tag-pill ${t === selectedTag ? 'active' : ''}" data-lore-filter="${t}">#${t}</span>`).join('')}
           </div>
           <div class="linked-chars" style="margin-top:8px;">
             <span>Characters involved:</span>
