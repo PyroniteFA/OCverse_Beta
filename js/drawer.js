@@ -135,7 +135,7 @@ class DrawerManager {
     const charRels = relationships.filter(r => r.source === char.id || r.target === char.id);
 
     // Distinguish between the character's personal arc lore vs collective Order institutional lore
-    const orderInstitutionalIds = new Set(['lore-order-pact', 'lore-order-armor']);
+    const orderInstitutionalIds = new Set(['lore-order-pact', 'lore-order-affiliates', 'lore-order-armor']);
     const personalLore = taggedLore.filter(l => !orderInstitutionalIds.has(l.id));
     const orderLore = taggedLore.filter(l => orderInstitutionalIds.has(l.id));
 
@@ -348,7 +348,7 @@ class DrawerManager {
       (l.characterIds && l.characterIds.includes(rel.source) && l.characterIds.includes(rel.target))
     );
 
-    const orderInstitutionalIds = new Set(['lore-order-pact', 'lore-order-armor']);
+    const orderInstitutionalIds = new Set(['lore-order-pact', 'lore-order-affiliates', 'lore-order-armor']);
     const personalRelLore = taggedLore.filter(l => !orderInstitutionalIds.has(l.id));
     const orderRelLore = taggedLore.filter(l => orderInstitutionalIds.has(l.id));
 
@@ -465,7 +465,7 @@ class DrawerManager {
     const orderMembers = characters.filter(c => c.orderMember);
 
     // Primary Order lore chapters
-    const orderLoreIds = ['lore-order-pact', 'lore-order-armor', 'lore-kainek-philosophy', 'lore-carnak-twisted-sobek'];
+    const orderLoreIds = ['lore-order-pact', 'lore-order-affiliates', 'lore-order-armor', 'lore-kainek-philosophy', 'lore-carnak-twisted-sobek'];
     const orderLores = sharedLore.filter(l => orderLoreIds.includes(l.id) || (l.tags && l.tags.includes('The Order')));
 
     const cardsHTML = orderLores.map(lore => this.renderLoreCard(lore, null)).join('');
