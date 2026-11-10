@@ -1239,7 +1239,7 @@ body {
 /* SVG Node & Edge Classes */
 .graph-node {
   cursor: pointer;
-  transition: transform 0.15s ease-out;
+  transition: transform 0.15s ease-out, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
 }
 
 .graph-node:hover {
@@ -1252,7 +1252,7 @@ body {
 
 .graph-edge {
   cursor: pointer;
-  transition: opacity 0.2s, stroke-width 0.2s;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), stroke-width 0.2s, visibility 0.4s;
 }
 
 .graph-edge:hover path.edge-visible {
@@ -1267,6 +1267,15 @@ body {
 .graph-edge.active path.edge-visible {
   stroke-width: 5.5px;
   filter: drop-shadow(0 0 12px currentColor);
+}
+
+/* Associated Characters & Edges Smooth Fade Transitions */
+.graph-node.associated-hidden,
+.graph-edge.associated-hidden {
+  opacity: 0 !important;
+  visibility: hidden;
+  pointer-events: none !important;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
 }
 
 .order-hull {

@@ -253,6 +253,14 @@ class RelationshipCanvas {
       if (!src || !tgt) return;
 
       const edgeEl = this.createEdgeElement(rel, src.canvasPos, tgt.canvasPos);
+      const isAssocEdge = this.isAssociatedCharacter(src) || this.isAssociatedCharacter(tgt);
+      if (isAssocEdge) {
+        edgeEl.setAttribute('data-associated', 'true');
+        edgeEl.classList.add('associated-edge');
+        if (!this.enableAssociatedCharacters) {
+          edgeEl.classList.add('associated-hidden');
+        }
+      }
       group.appendChild(edgeEl);
     });
   }
@@ -423,6 +431,10 @@ class RelationshipCanvas {
     const isAssoc = this.isAssociatedCharacter(char);
     if (isAssoc) {
       g.setAttribute('data-associated', 'true');
+      g.classList.add('associated-node');
+      if (!this.enableAssociatedCharacters) {
+        g.classList.add('associated-hidden');
+      }
     }
     g.setAttribute('transform', `translate(${char.canvasPos.x}, ${char.canvasPos.y})`);
 
@@ -793,11 +805,22 @@ class RelationshipCanvas {
     }
   }
 
-  clearSpeechBubbles() {
+  clearSpeechBubbles(fade = false) {
     const speechLayer = this.svg.querySelector('#speech-bubbles-layer');
-    if (speechLayer) {
-      speechLayer.innerHTML = '';
+    if (!speechLayer) return;
+
+    if (fade) {
+      const bubbles = speechLayer.querySelectorAll('.speech-bubble-group');
+      if (bubbles.length > 0) {
+        bubbles.forEach(b => b.classList.add('fade-out'));
+        setTimeout(() => {
+          speechLayer.innerHTML = '';
+        }, 850);
+        return;
+      }
     }
+
+    speechLayer.innerHTML = '';
   }
 
   renderSpeechBubbles(rel) {
@@ -1325,6 +1348,7 @@ class RelationshipCanvas {
           this.clearRandomThoughtBubble(false);
         }
       }
+      this.clearSpeechBubbles(true);
     }
 
     this.updateVisibility();
@@ -1349,9 +1373,12 @@ class RelationshipCanvas {
       if (!char) return;
 
       const isAssoc = this.isAssociatedCharacter(char);
-      if (!this.enableAssociatedCharacters && isAssoc) {
-        node.style.display = 'none';
-        return;
+      if (isAssoc) {
+        if (!this.enableAssociatedCharacters) {
+          node.classList.add('associated-hidden');
+        } else {
+          node.classList.remove('associated-hidden');
+        }
       }
 
       if (filterType === 'all') {
@@ -1374,9 +1401,13 @@ class RelationshipCanvas {
       const srcChar = charMap.get(srcId);
       const tgtChar = charMap.get(tgtId);
 
-      if (!this.enableAssociatedCharacters && (this.isAssociatedCharacter(srcChar) || this.isAssociatedCharacter(tgtChar))) {
-        edge.style.display = 'none';
-        return;
+      const isAssocEdge = this.isAssociatedCharacter(srcChar) || this.isAssociatedCharacter(tgtChar);
+      if (isAssocEdge) {
+        if (!this.enableAssociatedCharacters) {
+          edge.classList.add('associated-hidden');
+        } else {
+          edge.classList.remove('associated-hidden');
+        }
       }
 
       if (filterType === 'all') {
@@ -1385,7 +1416,6 @@ class RelationshipCanvas {
         const isOrderEdge = srcChar && srcChar.orderMember && tgtChar && tgtChar.orderMember;
         edge.style.display = isOrderEdge ? 'block' : 'none';
       } else if (filterType === 'associated') {
-        const isAssocEdge = this.isAssociatedCharacter(srcChar) || this.isAssociatedCharacter(tgtChar);
         edge.style.display = isAssocEdge ? 'block' : 'none';
       } else {
         edge.style.display = (filterType === type) ? 'block' : 'none';

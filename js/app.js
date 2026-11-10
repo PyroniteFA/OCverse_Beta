@@ -46,6 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterSelect = document.getElementById('filter-select');
   if (filterSelect) {
     filterSelect.addEventListener('change', (e) => {
+      if (e.target.value === 'associated' && !canvas.enableAssociatedCharacters) {
+        const toggleAssociated = document.getElementById('toggle-associated-characters');
+        if (toggleAssociated) toggleAssociated.checked = true;
+        canvas.setAssociatedCharactersEnabled(true);
+      }
       canvas.applyFilter(e.target.value);
     });
   }
