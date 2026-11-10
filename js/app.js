@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Click on "Order Membership Territory" in Legend
+  // Click on "Order Core Members" in Legend
   const legendOrderTerritory = document.getElementById('legend-order-territory');
   if (legendOrderTerritory) {
     legendOrderTerritory.addEventListener('click', () => {

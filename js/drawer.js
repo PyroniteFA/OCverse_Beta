@@ -353,7 +353,7 @@ class DrawerManager {
       <div class="section-box" style="border-left: 3px solid #38bdf8; background: rgba(15, 23, 42, 0.65);">
         <div class="section-label" style="color: #38bdf8; display:flex; justify-content:space-between; align-items:center;">
           <span>The Order: Collective Pact & Combat Gear (${orderLore.length})</span>
-          <span class="order-lore-link" style="font-size:10.5px; font-weight:700; color:#38bdf8; cursor:pointer; text-transform:none; letter-spacing:normal;">View Order Membership ➔</span>
+          <span class="order-lore-link" style="font-size:10.5px; font-weight:700; color:#38bdf8; cursor:pointer; text-transform:none; letter-spacing:normal;">View Order Core Members ➔</span>
         </div>
         <div style="display:flex; flex-direction:column; gap:12px;">
           ${orderLoreHTML}
@@ -466,7 +466,7 @@ class DrawerManager {
       <div class="section-box" style="border-left: 3px solid #38bdf8; background: rgba(15, 23, 42, 0.65);">
         <div class="section-label" style="color: #38bdf8; display:flex; justify-content:space-between; align-items:center;">
           <span>The Order: Collective Pact & Combat Gear (${orderRelLore.length})</span>
-          <span class="order-lore-link" style="font-size:10.5px; font-weight:700; color:#38bdf8; cursor:pointer; text-transform:none; letter-spacing:normal;">View Order Membership ➔</span>
+          <span class="order-lore-link" style="font-size:10.5px; font-weight:700; color:#38bdf8; cursor:pointer; text-transform:none; letter-spacing:normal;">View Order Core Members ➔</span>
         </div>
         <div style="display:flex; flex-direction:column; gap:12px;">
           ${orderRelLoreHTML}
@@ -508,14 +508,14 @@ class DrawerManager {
           <span style="font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #38bdf8;">Tactical Pact & Sovereignty</span>
         </div>
         <h2 style="font-size: 22px; font-weight: 800; color: #f8fafc; margin: 0 0 4px 0;">The Order</h2>
-        <div style="font-size: 13px; font-weight: 600; color: #38bdf8; margin-bottom: 8px;">The Order Membership</div>
+        <div style="font-size: 13px; font-weight: 600; color: #38bdf8; margin-bottom: 8px;">The Order Core Members</div>
         <p style="font-size: 12.5px; line-height: 1.6; color: #cbd5e1; margin: 0;">
           An informal tactical pact centered around Kai'nek. Rejecting mindless sycophants and blind worshipers, the cosmic sovereign coordinates chosen, capable peers across the multiverse—outfitting them in bespoke futuristic combat gear and specialized gadgets to assist planetary campaigns, while harvesting life-force energy from worlds they extinguish.
         </p>
       </div>
 
       <div class="section-box">
-        <div class="section-label">Order Membership Roster (${orderMembers.length} Titans)</div>
+        <div class="section-label">Order Core Members Roster (${orderMembers.length} Titans)</div>
         <div style="display:flex; flex-direction:column; gap:8px;">
           ${orderMembers.map(m => `
             <div class="conn-row" data-char-id="${m.id}" style="cursor:pointer;" title="Click to view ${m.name}'s Dossier">

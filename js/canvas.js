@@ -124,7 +124,7 @@ class RelationshipCanvas {
     const container = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     container.setAttribute('id', 'canvas-content');
 
-    // 1. Order Membership Hull (Triangle Background)
+    // 1. Order Core Members Background Hull (Triangle Background)
     this.renderOrderHull(container);
 
     // 2. Edges Layer
@@ -133,7 +133,10 @@ class RelationshipCanvas {
     this.renderEdges(edgesGroup);
     container.appendChild(edgesGroup);
 
-    // 3. Nodes Layer
+    // 3. Order Core Members Label Layer (Rendered OVER edges so words and badge always appear above relation lines)
+    this.renderOrderLabel(container);
+
+    // 4. Nodes Layer
     const nodesGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     nodesGroup.setAttribute('id', 'nodes-layer');
     this.renderNodes(nodesGroup);
@@ -181,23 +184,40 @@ class RelationshipCanvas {
     const hullGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     hullGroup.setAttribute('class', 'order-hull');
 
-    const centerX = (carnak.canvasPos.x + carpo.canvasPos.x) / 2;
-    const centerY = topY; // Directly aligned with the adjusted top border line
-    const boxW = 430;
-    const boxH = 44;
-
     hullGroup.innerHTML = `
       <polygon points="${p1} ${p2} ${p3} ${p4} ${p5} ${p6} ${p7} ${p8} ${p9}" 
                fill="rgba(56, 189, 248, 0.08)" 
                stroke="rgba(56, 189, 248, 0.35)" 
                stroke-width="3" 
                stroke-dasharray="10 8" />
-      <g class="order-territory-label" title="Click to view The Order lore & roster">
+    `;
+
+    container.appendChild(hullGroup);
+  }
+
+  renderOrderLabel(container) {
+    const characters = this.getCharacters();
+    const carnak = characters.find(c => c.id === 'carnak');
+    const carpo = characters.find(c => c.id === 'carpo');
+
+    if (!carnak || !carpo) return;
+
+    const topY = carnak.canvasPos.y - 145;
+    const centerX = (carnak.canvasPos.x + carpo.canvasPos.x) / 2;
+    const centerY = topY;
+    const boxW = 470;
+    const boxH = 44;
+
+    const labelWrap = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    labelWrap.setAttribute('class', 'order-hull order-label-wrap');
+
+    labelWrap.innerHTML = `
+      <g class="order-territory-label" title="Click to view The Order Core Members lore & roster">
         <rect x="${centerX - boxW / 2}" y="${centerY - boxH / 2}" 
               width="${boxW}" height="${boxH}" rx="22" 
-              fill="rgba(15, 23, 42, 0.95)" 
-              stroke="rgba(56, 189, 248, 0.55)" 
-              stroke-width="2" />
+              fill="#0b172a" 
+              stroke="rgba(56, 189, 248, 0.65)" 
+              stroke-width="2.5" />
         <text x="${centerX}" 
               y="${centerY + 6.5}" 
               fill="#38bdf8" 
@@ -206,12 +226,12 @@ class RelationshipCanvas {
               letter-spacing="0.16em" 
               text-anchor="middle"
               pointer-events="none">
-          THE ORDER MEMBERSHIP
+          THE ORDER CORE MEMBERS
         </text>
       </g>
     `;
 
-    const label = hullGroup.querySelector('.order-territory-label');
+    const label = labelWrap.querySelector('.order-territory-label');
     if (label) {
       label.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -219,7 +239,7 @@ class RelationshipCanvas {
       });
     }
 
-    container.appendChild(hullGroup);
+    container.appendChild(labelWrap);
   }
 
   renderEdges(group) {
@@ -557,14 +577,14 @@ class RelationshipCanvas {
       }
     });
 
-    const hull = this.svg.querySelector('.order-hull');
-    if (hull) {
+    const hulls = this.svg.querySelectorAll('.order-hull');
+    hulls.forEach(hull => {
       if (char && char.orderMember) {
         hull.classList.remove('dimmed');
       } else {
         hull.classList.add('dimmed');
       }
-    }
+    });
   }
 
   clearHighlight() {
@@ -573,10 +593,10 @@ class RelationshipCanvas {
       e.classList.remove('dimmed');
       e.classList.remove('active');
     });
-    const hull = this.svg.querySelector('.order-hull');
-    if (hull) {
+    const hulls = this.svg.querySelectorAll('.order-hull');
+    hulls.forEach(hull => {
       hull.classList.remove('dimmed');
-    }
+    });
   }
 
   highlightOrder() {
@@ -610,10 +630,10 @@ class RelationshipCanvas {
       }
     });
 
-    const hull = this.svg.querySelector('.order-hull');
-    if (hull) {
+    const hulls = this.svg.querySelectorAll('.order-hull');
+    hulls.forEach(hull => {
       hull.classList.remove('dimmed');
-    }
+    });
   }
 
   selectNode(charId) {
@@ -663,10 +683,10 @@ class RelationshipCanvas {
       }
     });
 
-    const hull = this.svg.querySelector('.order-hull');
-    if (hull) {
+    const hulls = this.svg.querySelectorAll('.order-hull');
+    hulls.forEach(hull => {
       hull.classList.add('dimmed');
-    }
+    });
 
     if (this.enableSpeechBubbles) {
       this.renderSpeechBubbles(rel);
@@ -1373,15 +1393,15 @@ class RelationshipCanvas {
     });
 
     // 3. Order Hull
-    const hull = this.svg.querySelector('.order-hull');
-    if (hull) {
+    const hulls = this.svg.querySelectorAll('.order-hull');
+    hulls.forEach(hull => {
       if (filterType === 'all' || filterType === 'order') {
         hull.classList.remove('dimmed');
         hull.style.display = 'block';
       } else {
         hull.classList.add('dimmed');
       }
-    }
+    });
   }
 
   setupEvents() {
