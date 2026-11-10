@@ -91,7 +91,9 @@ In battle, he wields a massive, two-handed breaching sledgehammer inscribed with
       { text: "Sobek's ancient blood flows through my jaws, but this hunger? This hunger is all mine.", category: "personal" },
       { text: "Nothing beats the crunch of a high-rise at dawn. Pure life-force, straight down the gullet.", category: "rampage" },
       { text: "People think I'm angry. I'm not angry at all—I just genuinely despise humanity with every fiber of my being.", category: "personal" },
-      { text: "Good fight, good meal, no drama. That’s how an Order soldier gets things done.", category: "personal" }
+      { text: "Good fight, good meal, no drama. That’s how an Order soldier gets things done.", category: "personal" },
+      { text: "One clean swing of the sledgehammer into their seawall floodgates, and the entire lower district is underwater before they can even sound the sirens. Watching them scramble on rooftops just makes sorting the meal easier.", category: "rampage" },
+      { text: "Clamped my jaws around the midsection of their suspension bridge and went into a full death-roll. Four thousand tons of reinforced steel twisted like a soda can, dropping the entire rush-hour grid straight into my gullet.", category: "rampage" }
     ],
     archetype: "Twisted Sobek / Ascended Vanguard Soldier",
     status: "Vanguard Titan of the Order"
@@ -257,7 +259,9 @@ Endowed with terrifying brute strength, near-impenetrable reptilian scales, rapi
     randomThoughts: [
       { text: "Fifty cycles across foreign stars, millennia buried in bedrock... now this brittle world belongs to my claws.", category: "personal" },
       { text: "Concrete shatters like chalk under my tread. Let them bring their armies—they only make sweeter fuel.", category: "rampage" },
-      { text: "No deities, no masters across this sky. Only the apex predator reclaiming the surface.", category: "personal" }
+      { text: "No deities, no masters across this sky. Only the apex predator reclaiming the surface.", category: "personal" },
+      { text: "Every skyscraper I plow through only fuels the furnace inside. Their tank divisions fire point-blank into my chest; their shells ricochet into dust while my accelerated growth doubles my stride, crushing their armored columns into paste.", category: "rampage" },
+      { text: "Burrowed my claws through four layers of reinforced subterranean bunker steel, ripping the ceiling open like tinfoil. Hiding underground doesn't save a prey species—it just concentrates the feast into a single bowl.", category: "rampage" }
     ],
     archetype: "Awakened Extraterrestrial Colossus",
     status: "Isolated / Under Observation"
@@ -288,7 +292,9 @@ He fiercely values true personal autonomy, maintaining an unspoken mutual truce 
     randomThoughts: [
       { text: "Why conquer endless barren universes when you can be worshipped as a living sun in luxury and theatrical splendor?", category: "personal" },
       { text: "Kai'nek knows better than to infringe upon my realm. An unspoken truce keeps celestial company civilized.", category: "relationship" },
-      { text: "Mortals rise and fall like desert dust. The only thing truly worth pursuing across infinity is pleasure and autonomy.", category: "personal" }
+      { text: "Mortals rise and fall like desert dust. The only thing truly worth pursuing across infinity is pleasure and autonomy.", category: "personal" },
+      { text: "They erected a hundred-meter golden monument to mock the heavens; a single casual breath of condensed solar corona turned it into a puddle of slag, taking six surrounding city plazas with it. The fireworks were simply exquisite.", category: "rampage" },
+      { text: "Uncoiling my golden serpentine lower body through their imperial capital, radiating pure thermonuclear heat. The granite roadways liquefied into glass beneath my scales while their armies could do nothing but drop to their knees and weep in awe.", category: "rampage" }
     ],
     archetype: "Localized Solar Deity & Hedonist",
     status: "Autonomous Sovereign"
@@ -318,7 +324,9 @@ A ferocious powerhouse in his own right, he pulverizes urban centers and flatten
     randomThoughts: [
       { text: "Crushing suspension bridges with Rhidos... honestly, the best romantic dates are the loudest ones.", category: "relationship" },
       { text: "They built that laboratory to contain our growth. Look at us now—stomping whole metropolitan skylines flat.", category: "rampage" },
-      { text: "Heavy steps, heavy appetites, and my favorite horned juggernaut by my side. What more could a pachyderm want?", category: "relationship" }
+      { text: "Heavy steps, heavy appetites, and my favorite horned juggernaut by my side. What more could a pachyderm want?", category: "relationship" },
+      { text: "Planted my front foot right onto their central transit interchange. The seismic shockwave cracked the subway tunnels underneath and toppled three surrounding office towers in a chain reaction of beautiful, deafening rubble.", category: "rampage" },
+      { text: "Wrapped my trunk around the support pylon of their broadcasting spire, hauled back, and used the whole tower as a broom to sweep their armored battalions into the bay. Nothing withstands ten thousand tons of pachyderm mass in motion.", category: "rampage" }
     ],
     archetype: "Superhuman Pachyderm Rampager",
     status: "Isolated / Under Observation"
@@ -348,7 +356,9 @@ A relentless juggernaut in his own right, he thrives on charging through skyscra
     randomThoughts: [
       { text: "Lower the horn, build up the kinetic momentum, and nothing in this city can stop the battering ram.", category: "rampage" },
       { text: "Watching the skyline topple right behind Eidos's stomp... we were truly made for each other.", category: "relationship" },
-      { text: "They thought their reinforced steel bunkers would hold. They never calculated our accelerated growth rate.", category: "rampage" }
+      { text: "They thought their reinforced steel bunkers would hold. They never calculated our accelerated growth rate.", category: "rampage" },
+      { text: "Lined up three consecutive glass skyscrapers down the main commercial avenue and built up full kinetic speed. Punched straight through the first, burst clean out of the second, and brought down the third in a single unbroken charge. That's real momentum.", category: "rampage" },
+      { text: "Drove my horn into the foundation of their elevated highway overpass and tossed the whole concrete span into the air like a toy. Their supply trucks rained down in sparks while I plowed right through the dust cloud without slowing a step.", category: "rampage" }
     ],
     archetype: "Superhuman Horned Rampager",
     status: "Isolated / Under Observation"
