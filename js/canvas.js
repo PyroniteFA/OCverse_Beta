@@ -22,6 +22,7 @@ class RelationshipCanvas {
     this.selectedEdgeId = null;
     this.enableSpeechBubbles = true;
     this.enableRandomThoughts = true;
+    this.enableAssociatedCharacters = true;
     this.randomThoughtTimer = null;
     this.randomThoughtDismissTimer = null;
     this.activeThoughtSpeakerId = null;
@@ -30,6 +31,20 @@ class RelationshipCanvas {
     this.isThoughtHovered = false;
 
     this.init();
+  }
+
+  isAssociatedCharacter(char) {
+    if (!char) return false;
+    if (char.associated !== undefined) return Boolean(char.associated);
+    if (char.isAssociated !== undefined) return Boolean(char.isAssociated);
+    if (char.external !== undefined) return Boolean(char.external);
+    if (char.guest !== undefined) return Boolean(char.guest);
+    if (char.own !== undefined) return !char.own;
+    if (char.isOwn !== undefined) return !char.isOwn;
+    if (Array.isArray(char.tags)) {
+      return char.tags.some(t => typeof t === 'string' && ['associated', 'external', 'guest'].includes(t.toLowerCase()));
+    }
+    return false;
   }
 
   getCharacters() {
@@ -130,6 +145,7 @@ class RelationshipCanvas {
 
     this.svg.appendChild(container);
     this.updateViewBox();
+    this.updateVisibility();
   }
 
   renderOrderHull(container) {
@@ -370,9 +386,13 @@ class RelationshipCanvas {
     const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     g.setAttribute('class', 'graph-node');
     g.setAttribute('data-id', char.id);
+    const isAssoc = this.isAssociatedCharacter(char);
+    if (isAssoc) {
+      g.setAttribute('data-associated', 'true');
+    }
     g.setAttribute('transform', `translate(${char.canvasPos.x}, ${char.canvasPos.y})`);
 
-    const borderColor = char.orderMember ? '#38bdf8' : '#64748b';
+    const borderColor = char.orderMember ? '#38bdf8' : (isAssoc ? '#c084fc' : '#64748b');
     const borderGlow = char.orderMember ? 'filter="url(#glow-cyan)"' : '';
     const livedText = this.formatLivedExperienceSVG(char);
     const rawDisplay = char.livedExperience.display || '';
@@ -974,11 +994,14 @@ class RelationshipCanvas {
 
     if (this.selectedNodeId) {
       const selectedChar = characters.find(c => c.id === this.selectedNodeId);
-      if (selectedChar && selectedChar.randomThoughts && selectedChar.randomThoughts.length > 0) {
+      if (selectedChar && (this.enableAssociatedCharacters || !this.isAssociatedCharacter(selectedChar)) && selectedChar.randomThoughts && selectedChar.randomThoughts.length > 0) {
         candidates = [selectedChar];
       }
     } else {
-      candidates = characters.filter(c => c.randomThoughts && c.randomThoughts.length > 0);
+      candidates = characters.filter(c => {
+        if (!this.enableAssociatedCharacters && this.isAssociatedCharacter(c)) return false;
+        return c.randomThoughts && c.randomThoughts.length > 0;
+      });
     }
 
     if (candidates.length === 0) {
@@ -1240,30 +1263,102 @@ class RelationshipCanvas {
     return outerG;
   }
 
+  setAssociatedCharactersEnabled(enabled) {
+    this.enableAssociatedCharacters = Boolean(enabled);
+
+    if (!this.enableAssociatedCharacters) {
+      const characters = this.getCharacters();
+      if (this.selectedNodeId) {
+        const char = characters.find(c => c.id === this.selectedNodeId);
+        if (this.isAssociatedCharacter(char)) {
+          this.resetSelection();
+        }
+      }
+      if (this.selectedEdgeId) {
+        const relationships = this.getRelationships();
+        const rel = relationships.find(r => r.id === this.selectedEdgeId);
+        if (rel) {
+          const srcChar = characters.find(c => c.id === rel.source);
+          const tgtChar = characters.find(c => c.id === rel.target);
+          if (this.isAssociatedCharacter(srcChar) || this.isAssociatedCharacter(tgtChar)) {
+            this.resetSelection();
+          }
+        }
+      }
+      if (this.activeThoughtSpeakerId) {
+        const speaker = characters.find(c => c.id === this.activeThoughtSpeakerId);
+        if (this.isAssociatedCharacter(speaker)) {
+          this.clearRandomThoughtBubble(false);
+        }
+      }
+    }
+
+    this.updateVisibility();
+  }
+
   applyFilter(filterType) {
-    const characters = this.getCharacters();
     this.activeFilter = filterType;
     this.resetSelection();
+    this.updateVisibility();
+  }
 
-    this.svg.querySelectorAll('.graph-edge').forEach(edge => {
-      const type = edge.getAttribute('data-type');
-      if (filterType === 'all' || filterType === type) {
-        edge.style.display = 'block';
-      } else {
-        edge.style.display = 'none';
-      }
-    });
+  updateVisibility() {
+    const characters = this.getCharacters();
+    const relationships = this.getRelationships();
+    const charMap = new Map(characters.map(c => [c.id, c]));
+    const filterType = this.activeFilter || 'all';
 
+    // 1. Nodes
     this.svg.querySelectorAll('.graph-node').forEach(node => {
       const id = node.getAttribute('data-id');
-      const char = characters.find(c => c.id === id);
-      if (filterType === 'order') {
-        node.style.display = char && char.orderMember ? 'block' : 'none';
-      } else {
+      const char = charMap.get(id);
+      if (!char) return;
+
+      const isAssoc = this.isAssociatedCharacter(char);
+      if (!this.enableAssociatedCharacters && isAssoc) {
+        node.style.display = 'none';
+        return;
+      }
+
+      if (filterType === 'all') {
         node.style.display = 'block';
+      } else if (filterType === 'order') {
+        node.style.display = char.orderMember ? 'block' : 'none';
+      } else if (filterType === 'associated') {
+        node.style.display = isAssoc ? 'block' : 'none';
+      } else {
+        const hasRel = relationships.some(r => r.type === filterType && (r.source === char.id || r.target === char.id));
+        node.style.display = hasRel ? 'block' : 'none';
       }
     });
 
+    // 2. Edges
+    this.svg.querySelectorAll('.graph-edge').forEach(edge => {
+      const type = edge.getAttribute('data-type');
+      const srcId = edge.getAttribute('data-source');
+      const tgtId = edge.getAttribute('data-target');
+      const srcChar = charMap.get(srcId);
+      const tgtChar = charMap.get(tgtId);
+
+      if (!this.enableAssociatedCharacters && (this.isAssociatedCharacter(srcChar) || this.isAssociatedCharacter(tgtChar))) {
+        edge.style.display = 'none';
+        return;
+      }
+
+      if (filterType === 'all') {
+        edge.style.display = 'block';
+      } else if (filterType === 'order') {
+        const isOrderEdge = srcChar && srcChar.orderMember && tgtChar && tgtChar.orderMember;
+        edge.style.display = isOrderEdge ? 'block' : 'none';
+      } else if (filterType === 'associated') {
+        const isAssocEdge = this.isAssociatedCharacter(srcChar) || this.isAssociatedCharacter(tgtChar);
+        edge.style.display = isAssocEdge ? 'block' : 'none';
+      } else {
+        edge.style.display = (filterType === type) ? 'block' : 'none';
+      }
+    });
+
+    // 3. Order Hull
     const hull = this.svg.querySelector('.order-hull');
     if (hull) {
       if (filterType === 'all' || filterType === 'order') {

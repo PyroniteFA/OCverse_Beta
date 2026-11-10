@@ -250,6 +250,7 @@ class DrawerManager {
           <div class="char-hero-name">
             ${char.name} 
             ${char.orderMember ? '<span class="brand-tag">The Order</span>' : ''}
+            ${(char.associated || char.isAssociated || char.external || char.guest) ? '<span class="brand-tag" style="background: rgba(168, 85, 247, 0.18); color: #c084fc; border-color: rgba(168, 85, 247, 0.4);">Associated</span>' : ''}
           </div>
           <div style="display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin: 4px 0;">
             <span style="font-size:11.5px; font-weight:700; background:rgba(56, 189, 248, 0.18); color:#38bdf8; border:1px solid rgba(56, 189, 248, 0.35); padding:2px 8px; border-radius:6px;">${char.species || 'Anthro'}</span>

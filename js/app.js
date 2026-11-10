@@ -29,11 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const match = characters.find(c => 
-        c.name.toLowerCase().includes(q) || 
-        c.title.toLowerCase().includes(q) ||
-        (c.affinityTags && c.affinityTags.some(t => t.toLowerCase().includes(q)))
-      );
+      const match = characters.find(c => {
+        if (!canvas.enableAssociatedCharacters && canvas.isAssociatedCharacter(c)) return false;
+        return c.name.toLowerCase().includes(q) || 
+          c.title.toLowerCase().includes(q) ||
+          (c.affinityTags && c.affinityTags.some(t => t.toLowerCase().includes(q)));
+      });
 
       if (match) {
         canvas.focusCharacter(match.id);
@@ -78,6 +79,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     toggleRandomThoughts.addEventListener('change', (e) => {
       canvas.setRandomThoughtsEnabled(e.target.checked);
+    });
+  }
+
+  // Toggle Associated Characters
+  const toggleAssociated = document.getElementById('toggle-associated-characters');
+  if (toggleAssociated) {
+    if (toggleAssociated.checked !== canvas.enableAssociatedCharacters) {
+      canvas.setAssociatedCharactersEnabled(toggleAssociated.checked);
+    }
+    toggleAssociated.addEventListener('change', (e) => {
+      canvas.setAssociatedCharactersEnabled(e.target.checked);
     });
   }
 

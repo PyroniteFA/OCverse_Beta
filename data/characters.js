@@ -1,6 +1,9 @@
 /**
  * Pyronite OC Verse - Character Database
  * Character records and dossiers across the multiverse.
+ * 
+ * Note: External / non-own guest characters can be flagged with `associated: true` (or `isAssociated: true`).
+ * They will be controlled by the "Associated characters" toggle on the UI (kept ON for now).
  */
 
 const characters = [
