@@ -315,27 +315,45 @@ Because of his boundless appetite and active disgust for humans, Carnak became K
 Despite his terrifying voracity and absolute contempt for humanity, Carnak's interpersonal dynamic with his fellow Order members is remarkably relaxed and grounded. On a peer-to-peer level, Carnak is a cool, likable guy—a steady, drama-free 'bro' among giants. When brought together by Kai'nek for shared planar operations, Carnak rampaged alongside Brutus, and was similarly brought together with Carpo for an operation, executing devastating campaigns while keeping their connections straightforward, reliable, and free of emotional baggage.`
   },
   {
+    id: 'lore-regal-origin',
+    title: "Primal Awakening & The Horned Devastator: Regal's Origin",
+    era: 'Primal Awakening & Solitary Conquest',
+    associated: true,
+    tags: ['Regal'],
+    characterIds: ['regal'],
+    summary: "Waking already massive with zero recollection of his origin, Regal was consumed by a singular instinct: total world domination. Conquering planets within weeks, he honed devastating horn magic, mass levitation, and a crystal-shouldered Kaiju form.",
+    content: `A solitary conqueror across foreign realities, Regal's colossal existence began with an absolute blank slate and an overwhelming predatory drive:
+
+1. Primal Awakening & Immediate Conquest:
+Regal remembers nothing of when or how he came into being. He simply woke up one day already massive and immensely muscular, his consciousness devoid of past memories, family, or history. In place of a past, he possessed a singular, unyielding imperative: total and complete domination of the world beneath his hooves. Wasting no time on introspection, Regal acted upon this instinct immediately—his first planet fell to his wrath within mere weeks of his awakening.
+
+2. Horn Magic & Planar Expansion:
+As he tested and honed his innate abilities, Regal discovered that his horn served as a potent conduit for devastating magical power. Through solitary trial and combat, he mastered mass levitation, scorching extreme heat beams loosed directly from his horn, rapid tactical teleportation, and subtle mind alteration. Possessing corrosive acidic body fluids and form-shifting physiology, Regal periodically assumes the form of a terrifying Kaiju crowned with colossal crystals across his shoulders—capable of discharging cataclysmic torrents of extreme heat and nuclear radiation from his mouth at will.
+
+3. Interplanetary & Multiversal Dominance:
+Having completely subjugated his awakening homeworld, interplanetary travel quickly became second nature as Regal figured out how to propel his colossal mass between celestial spheres. The idea of jumping into foreign universes followed as an afterthought. Reality after reality fell before his horns, hooves, and Kaiju transformations, establishing Regal as an unstoppable, solitary juggernaut of planetary extinction.`
+  },
+  {
     id: 'lore-regal-first-contact',
-    title: "The Changeling Colossus & The Verified Kill: Regal's Pact with the Order",
-    era: 'Multiversal Affiliation & First Contact',
+    title: "First Contact & The Verified Extermination: Regal's Order Contract",
+    era: 'Multiversal Convergence Era',
     associated: true,
     tags: ['The Order', 'Regal', 'Carpo', "Kai'nek", 'Contracted', 'Friendship'],
     characterIds: ['regal', 'carpo', 'kainek'],
     relationshipIds: ['rel-carpo-regal-friend', 'rel-kainek-regal-contract'],
-    summary: "After waking massive with no past and conquering worlds, the shapeshifting equine titan Regal met Carpo—who proved with heartbeat sensors that Regal's sweep was incomplete. Armed with telemetry to achieve 100% eradication, Regal pledged his destructive services under an Order contract.",
-    content: `A solitary conqueror across foreign realities, Regal's path to the Order was forged through a shared appetite for total devastation:
+    summary: "After extinguishing a metropolis, Regal awoke to meet Carpo—the first fellow giant he had ever seen. Using Carpo's heartbeat sensors and population counters to verify a clean 100% kill, Regal eagerly offered his allegiance and entered an Order rampage contract.",
+    content: `<a class="lore-cross-link" data-lore-id="lore-regal-origin" style="margin-bottom:12px;">⬅️ Preceded by: Primal Awakening & The Horned Devastator: Regal's Origin</a>
 
-1. Primal Awakening & Horn Magic:
-Regal remembers nothing of when or how he became what he is. He simply woke up one day already colossal and immensely muscular, his mind wiped clean of past memories save for a single instinct: total and complete domination of the world beneath his hooves. Within weeks, his first planet fell to his wrath. As he learned to wield the immense magical power radiating from his horn—channeling mass levitation, scorching extreme heat beams, quick teleportation, and mind alteration—interplanetary travel became second nature, with multiversal jumps following soon after. Endowed with corrosive acidic body fluids and form-shifting abilities, Regal periodically transforms into a massive Kaiju crowned with shoulder crystals, loosing devastating torrents of mouth-fired heat and nuclear radiation.
+Following a lengthy and methodical extermination of a planetary metropolis, Regal curled up amidst the smoking ruins for a well-earned nap. His path to the Order was sparked when he opened his eyes:
 
-2. The Encounter in the Ash:
-Following a brutal, methodical extermination of a planetary metropolis, Regal curled up amidst the ruins for a nap. Upon waking, he found himself face-to-face with Carpo—the first giant he had ever encountered, outfitted in sleek, high-tech flight gear and telemetry optics. Initially amused, Regal laughed off the Gryphon's presence, assuming his own senses were playing tricks.
+1. The Encounter in the Ash:
+Upon waking, Regal found himself staring at a fellow giant—the Gryphon named Carpo. Regal was genuinely stunned: in all his centuries of solitary conquest, he had never once met another titan of comparable scale, let alone one outfitted in futuristic, high-tech flight gear and telemetry optics. Initially amused, Regal laughed at the sight, momentarily thinking his sleep-addled senses were playing tricks on him or that the armored bird was delusional.
 
-3. The Heartbeat Sensor & Verified Extermination:
-Carpo quickly shattered the illusion. Pointing his wrist telemetry and optical scanner toward the rubble, the Gryphon activated a live population counter and acoustic heartbeat sensor—proving to Regal that despite his apocalyptic rampage, pockets of mortal survivors remained alive in subterranean shelters beneath the slag. Refusing to leave any job half-done, Regal used Carpo's sensor data to root out every remaining pocket, achieving his true goal of complete, hundred-percent eradication.
+2. The Heartbeat Sensor & The Verified Kill:
+Carpo quickly corrected Regal's assumption. Raising his wrist diagnostics and optical sensors toward the pulverized cityscape, the Gryphon brought up a live population counter and an acoustic heartbeat sensor—proving to Regal that his devastating rampage wasn't as thorough as he believed. Pockets of mortal survivors were still clinging to life in deep subterranean bunkers beneath the slag. Refusing to leave any job half-done, Regal utilized Carpo's high-tech diagnostic tools to track down and obliterate every last survivor, finally achieving his true goal of total, one-hundred-percent population eradication.
 
-4. Appreciation & The Order Contract:
-Stunned and deeply appreciative of the high-tech precision Carpo brought to macro destruction, Regal offered his allegiance to the Gryphon on the spot. When Carpo explained the Order's broader mission and Kai'nek's multiversal campaigns, Regal eagerly accepted: if aligning with the Order meant more worlds to conquer with advanced telemetry ensuring total population reduction, he was more than ready to sign the contract.`
+3. Appreciation & Entering the Order Rampage Pact:
+Deeply impressed and appreciative of the high-tech precision Carpo brought to macro destruction, Regal immediately offered his services to the Gryphon whenever needed. Inquiring as to why Carpo had sought him out in the first place, Carpo introduced Regal to the Order and the sovereign Kai'nek. To Regal, the proposition was unbeatable: if joining this Order meant an endless queue of unclaimed mortal worlds to extinguish, backed by advanced telemetry tools to verify zero percent survivor rates, he was more than ready to sign the contract.`
   }
 ];
 
