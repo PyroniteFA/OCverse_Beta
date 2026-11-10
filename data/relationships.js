@@ -479,18 +479,18 @@ In exchange for targeting telemetry, favors, and cosmic coordinates, Regal pledg
     bidirectional: true,
     color: '#22c55e',
     offset: 0,
-    summary: "Veteran comrades (Tier-1): Carpo introduced Regal to population counters and heartbeat sensors, turning a chance post-nap meeting into a steadfast destructive partnership.",
-    details: `An authentic bond of mutual respect forged amidst planetary ruin. After Regal annihilated a metropolis and woke from a nap, he met Carpo—the first fellow giant he had ever encountered. Although Regal initially laughed off the armored Gryphon as a hallucination, Carpo proved his seriousness by deploying a population counter and heartbeat sensor, demonstrating that pockets of mortal survivors still huddled beneath the rubble.
+    summary: "Veteran comrades (Tier-1): Approached bare by Carpo during primal first contact, Regal bonded through joint rampages before Kai'nek approved revealing the Order's gear. Though Regal initially scoffed, Carpo's heartbeat sensors proved their lethal value, cementing a steadfast partnership.",
+    details: `An authentic bond of mutual respect forged amidst planetary ruin. Adhering to his recruiter modus operandi—approaching unarmored titans with zero gear—Carpo initially met Regal completely bare after the changeling woke from a post-metropolis nap. Regal was astonished to meet a fellow colossal giant, and the two embarked on joint rampages in their raw, primal physical forms.
 
-Using Carpo's tools to achieve a verified one-hundred percent extermination, Regal deeply appreciated the precision and offered his services whenever Carpo needed. The two now share an easy, high-respect Tier-1 camaraderie, frequently embarking on joint rampages where Carpo's high-altitude telemetry and aerial recon perfectly complement Regal's horn magic, mass levitation, and crystal Kaiju transformations.`,
+Once Regal proved his devastating reliability and earned the Order's trust, Carpo received Kai'nek's approval to rendezvous in full futuristic flight gear. While Regal initially scoffed and laughed at the sight of an all-powerful titan wearing high-tech clothing, Carpo demonstrated the gear's benefits by deploying population counters and heartbeat sensors to reveal survivors hiding in deep subterranean bunkers. Refusing to leave any job half-done, Regal used the telemetry to achieve a verified 100% eradication, warming up completely to the technology. The two now share an easy, high-respect Tier-1 camaraderie, coordinating combined-arms rampages where Carpo's aerial recon and telemetry perfectly complement Regal's horn magic and Kaiju transformations.`,
     speechBubbles: [
       {
         speakerId: 'carpo',
-        text: "Your sweep was impressive, but my sensors still read life below. Here—let's make it a clean hundred percent."
+        text: "I approached you bare at first, but now that you're trusted, take a look at what these sensors can do."
       },
       {
         speakerId: 'regal',
-        text: "A giant in flight armor with tools to verify the kill? Call on me anytime, Gryphon—we make a terrifying team."
+        text: "I scoffed at the flight suit at first, but zero survivors means zero. You've made a believer out of me, Gryphon."
       }
     ],
     tags: ['Friendship', 'The Order', 'Carpo', 'Regal']
