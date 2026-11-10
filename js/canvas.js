@@ -21,6 +21,7 @@ class RelationshipCanvas {
     this.activeThoughtSpeakerId = null;
     this.lastThoughtSpeakerId = null;
     this.lastThoughtText = {};
+    this.isThoughtHovered = false;
 
     this.init();
   }
@@ -951,6 +952,7 @@ class RelationshipCanvas {
       clearTimeout(this.randomThoughtDismissTimer);
       this.randomThoughtDismissTimer = null;
     }
+    this.isThoughtHovered = false;
   }
 
   triggerRandomThought() {
@@ -1023,15 +1025,17 @@ class RelationshipCanvas {
 
     // Reading duration calculation: comfortable natural reading speed + baseline
     const wordCount = thought.trim().split(/\s+/).length;
-    const readDuration = Math.max(5000, Math.min(8000, Math.round(1800 + (wordCount / 2.8) * 1000)));
+    // Generous reading allocation: 4.5s baseline for orientation + 360ms per word (~166 WPM), min 7.5s, up to 28s
+    const readDuration = Math.max(7500, Math.min(28000, Math.round(4500 + wordCount * 360)));
 
     if (this.randomThoughtDismissTimer) {
       clearTimeout(this.randomThoughtDismissTimer);
     }
 
     this.randomThoughtDismissTimer = setTimeout(() => {
-      // Clear bubble and schedule next after at least 5s break
-      this.clearRandomThoughtBubble(true);
+      if (!this.isThoughtHovered) {
+        this.clearRandomThoughtBubble(true);
+      }
     }, readDuration);
   }
 
@@ -1040,6 +1044,7 @@ class RelationshipCanvas {
       clearTimeout(this.randomThoughtDismissTimer);
       this.randomThoughtDismissTimer = null;
     }
+    this.isThoughtHovered = false;
 
     const thoughtLayer = this.svg.querySelector('#random-thoughts-layer');
     if (thoughtLayer) {
@@ -1173,6 +1178,24 @@ class RelationshipCanvas {
     outerG.addEventListener('click', (e) => {
       e.stopPropagation();
       this.clearRandomThoughtBubble(true);
+    });
+
+    outerG.addEventListener('mouseenter', () => {
+      this.isThoughtHovered = true;
+      if (this.randomThoughtDismissTimer) {
+        clearTimeout(this.randomThoughtDismissTimer);
+        this.randomThoughtDismissTimer = null;
+      }
+    });
+
+    outerG.addEventListener('mouseleave', () => {
+      this.isThoughtHovered = false;
+      if (this.enableRandomThoughts && this.activeThoughtSpeakerId) {
+        if (this.randomThoughtDismissTimer) clearTimeout(this.randomThoughtDismissTimer);
+        this.randomThoughtDismissTimer = setTimeout(() => {
+          this.clearRandomThoughtBubble(true);
+        }, 4500);
+      }
     });
 
     return outerG;
