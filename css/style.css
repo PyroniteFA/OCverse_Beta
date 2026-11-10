@@ -14,6 +14,7 @@
   --color-friend: #22c55e;
   --color-lovers: #f43f5e;
   --color-obs: #94a3b8;
+  --color-contracted: #c084fc;
   --color-order: #38bdf8;
 
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -332,6 +333,9 @@ body {
 .legend-line.friend { background: var(--color-friend); }
 .legend-line.lovers { background: var(--color-lovers); }
 .legend-line.obs { background: var(--color-obs); }
+.legend-line.contracted {
+  background: repeating-linear-gradient(90deg, #c084fc, #c084fc 4px, transparent 4px, transparent 8px);
+}
 
 .legend-triangle-badge {
   width: 18px;

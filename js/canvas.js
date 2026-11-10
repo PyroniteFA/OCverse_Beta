@@ -90,6 +90,12 @@ class RelationshipCanvas {
       <marker id="marker-obs-start" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="9.5" markerHeight="9.5" orient="auto">
         <path d="M 10 1.5 L 0 5 L 10 8.5 z" fill="#94a3b8" />
       </marker>
+      <marker id="marker-contracted-end" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9.5" markerHeight="9.5" orient="auto">
+        <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#c084fc" />
+      </marker>
+      <marker id="marker-contracted-start" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="9.5" markerHeight="9.5" orient="auto">
+        <path d="M 10 1.5 L 0 5 L 10 8.5 z" fill="#c084fc" />
+      </marker>
 
       <!-- Glow & Shadow Filters -->
       <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
@@ -275,7 +281,7 @@ class RelationshipCanvas {
     visPath.setAttribute('fill', 'none');
     visPath.setAttribute('stroke-linecap', 'round');
 
-    if (rel.style === 'dashed') {
+    if (rel.style === 'dashed' || rel.type === 'contracted' || rel.type === 'contract') {
       visPath.setAttribute('stroke-dasharray', '8 6');
     }
 
@@ -295,6 +301,11 @@ class RelationshipCanvas {
       visPath.setAttribute('marker-end', 'url(#marker-obs)');
       if (rel.bidirectional) {
         visPath.setAttribute('marker-start', 'url(#marker-obs-start)');
+      }
+    } else if (rel.type === 'contracted' || rel.type === 'contract') {
+      visPath.setAttribute('marker-end', 'url(#marker-contracted-end)');
+      if (rel.bidirectional) {
+        visPath.setAttribute('marker-start', 'url(#marker-contracted-start)');
       }
     }
 
@@ -334,6 +345,9 @@ class RelationshipCanvas {
     } else if (rel.type === 'friendship') {
       labelText = rel.score || '';
       textColor = '#22c55e';
+    } else if (rel.type === 'contracted' || rel.type === 'contract') {
+      labelText = rel.modifier || 'Contracted';
+      textColor = '#c084fc';
     } else if (rel.symbol) {
       labelText = rel.symbol;
       textColor = '#cbd5e1';

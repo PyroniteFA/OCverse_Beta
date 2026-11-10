@@ -313,6 +313,29 @@ Because of his boundless appetite and active disgust for humans, Carnak became K
 
 4. The 'Bro' Among Peers:
 Despite his terrifying voracity and absolute contempt for humanity, Carnak's interpersonal dynamic with his fellow Order members is remarkably relaxed and grounded. On a peer-to-peer level, Carnak is a cool, likable guy—a steady, drama-free 'bro' among giants. When brought together by Kai'nek for shared planar operations, Carnak rampaged alongside Brutus, and was similarly brought together with Carpo for an operation, executing devastating campaigns while keeping their connections straightforward, reliable, and free of emotional baggage.`
+  },
+  {
+    id: 'lore-regal-first-contact',
+    title: "The Changeling Colossus & The Verified Kill: Regal's Pact with the Order",
+    era: 'Multiversal Affiliation & First Contact',
+    associated: true,
+    tags: ['The Order', 'Regal', 'Carpo', "Kai'nek", 'Contracted', 'Friendship'],
+    characterIds: ['regal', 'carpo', 'kainek'],
+    relationshipIds: ['rel-carpo-regal-friend', 'rel-kainek-regal-contract'],
+    summary: "After waking massive with no past and conquering worlds, the shapeshifting equine titan Regal met Carpo—who proved with heartbeat sensors that Regal's sweep was incomplete. Armed with telemetry to achieve 100% eradication, Regal pledged his destructive services under an Order contract.",
+    content: `A solitary conqueror across foreign realities, Regal's path to the Order was forged through a shared appetite for total devastation:
+
+1. Primal Awakening & Horn Magic:
+Regal remembers nothing of when or how he became what he is. He simply woke up one day already colossal and immensely muscular, his mind wiped clean of past memories save for a single instinct: total and complete domination of the world beneath his hooves. Within weeks, his first planet fell to his wrath. As he learned to wield the immense magical power radiating from his horn—channeling mass levitation, scorching extreme heat beams, quick teleportation, and mind alteration—interplanetary travel became second nature, with multiversal jumps following soon after. Endowed with corrosive acidic body fluids and form-shifting abilities, Regal periodically transforms into a massive Kaiju crowned with shoulder crystals, loosing devastating torrents of mouth-fired heat and nuclear radiation.
+
+2. The Encounter in the Ash:
+Following a brutal, methodical extermination of a planetary metropolis, Regal curled up amidst the ruins for a nap. Upon waking, he found himself face-to-face with Carpo—the first giant he had ever encountered, outfitted in sleek, high-tech flight gear and telemetry optics. Initially amused, Regal laughed off the Gryphon's presence, assuming his own senses were playing tricks.
+
+3. The Heartbeat Sensor & Verified Extermination:
+Carpo quickly shattered the illusion. Pointing his wrist telemetry and optical scanner toward the rubble, the Gryphon activated a live population counter and acoustic heartbeat sensor—proving to Regal that despite his apocalyptic rampage, pockets of mortal survivors remained alive in subterranean shelters beneath the slag. Refusing to leave any job half-done, Regal used Carpo's sensor data to root out every remaining pocket, achieving his true goal of complete, hundred-percent eradication.
+
+4. Appreciation & The Order Contract:
+Stunned and deeply appreciative of the high-tech precision Carpo brought to macro destruction, Regal offered his allegiance to the Gryphon on the spot. When Carpo explained the Order's broader mission and Kai'nek's multiversal campaigns, Regal eagerly accepted: if aligning with the Order meant more worlds to conquer with advanced telemetry ensuring total population reduction, he was more than ready to sign the contract.`
   }
 ];
 

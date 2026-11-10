@@ -1,6 +1,6 @@
 const CANONICAL_LORE_TAGS = new Set([
-  "Kai'nek", "Carnak", "Carpo", "Brutus", "Zahra", "Abrax", "Ph'ya", "Eidos", "Rhidos",
-  "The Order", "The Sanctuary Trio", "Committed Lovers", "Friendship", "Facilitation", "Observation"
+  "Kai'nek", "Carnak", "Carpo", "Brutus", "Zahra", "Abrax", "Ph'ya", "Eidos", "Rhidos", "Regal",
+  "The Order", "The Sanctuary Trio", "Committed Lovers", "Friendship", "Facilitation", "Observation", "Contracted"
 ]);
 
 class DrawerManager {
@@ -16,15 +16,44 @@ class DrawerManager {
   }
 
   getCharacters() {
-    return window.characters || [];
+    const chars = window.characters || [];
+    if (this.canvas && !this.canvas.enableAssociatedCharacters) {
+      return chars.filter(c => !this.canvas.isAssociatedCharacter(c));
+    }
+    return chars;
   }
 
   getRelationships() {
-    return window.relationships || [];
+    const rels = window.relationships || [];
+    if (this.canvas && !this.canvas.enableAssociatedCharacters) {
+      const allChars = window.characters || [];
+      const charMap = new Map(allChars.map(c => [c.id, c]));
+      return rels.filter(r => {
+        const src = charMap.get(r.source);
+        const tgt = charMap.get(r.target);
+        return !(this.canvas.isAssociatedCharacter(src) || this.canvas.isAssociatedCharacter(tgt));
+      });
+    }
+    return rels;
   }
 
   getSharedLore() {
-    return window.sharedLore || [];
+    const lores = window.sharedLore || [];
+    if (this.canvas && !this.canvas.enableAssociatedCharacters) {
+      const allChars = window.characters || [];
+      const charMap = new Map(allChars.map(c => [c.id, c]));
+      return lores.filter(lore => {
+        if (lore.associated) return false;
+        if (lore.characterIds && lore.characterIds.some(id => {
+          const c = charMap.get(id);
+          return c && this.canvas.isAssociatedCharacter(c);
+        })) {
+          return false;
+        }
+        return true;
+      });
+    }
+    return lores;
   }
 
   init() {
@@ -357,6 +386,7 @@ class DrawerManager {
     let typeName = rel.typeLabel;
     if (rel.bidirectional) arrowSymbol = '⇄';
     if (rel.type === 'lovers') arrowSymbol = '❤️';
+    if (rel.type === 'contracted') arrowSymbol = '⚡';
 
     const tagsHTML = (rel.tags || []).filter(t => CANONICAL_LORE_TAGS.has(t)).map(t => `<span class="tag-pill" data-tag="${t}">#${t}</span>`).join('');
 

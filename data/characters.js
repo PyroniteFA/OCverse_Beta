@@ -365,6 +365,43 @@ A relentless juggernaut in his own right, he thrives on charging through skyscra
     ],
     archetype: "Superhuman Horned Rampager",
     status: "Isolated / Under Observation"
+  },
+  {
+    id: 'regal',
+    name: 'Regal',
+    species: "Equine / Changeling",
+    title: "The Changeling Colossus & Horned Devastator",
+    avatar: 'assets/avatars/regal.png',
+    fullArt: 'assets/full_art/regal.png',
+    orderMember: false,
+    associated: true,
+    universeTraversal: 'some_exertion',
+    livedExperience: {
+      display: '?',
+      raw: '?',
+      breakdown: [
+        { label: 'Colossal Awakening & Planetary Domination', value: 'Unknown', isMacro: true }
+      ],
+      description: "Woke up already massive with zero memory of his past origin, conquering his first world within weeks before honing horn magic, mass levitation, and multiversal teleportation."
+    },
+    canvasPos: { x: 1450, y: 960 },
+    bio: `A colossal equine changeling titan and muscular powerhouse, possessing unknown lived experience (?) with zero memory of his origin or past. Regal woke up one day already massive, his mind devoid of recollections but consumed by a singular, overwhelming drive: total and complete domination of the world beneath him. Acting upon this instinct immediately, his first world fell to his wrath within mere weeks.
+
+As he experimented with his innate magical powers, he learned to channel devastating abilities sourced directly from his horn—mastering mass levitation, scorching extreme heat beams, quick teleportation, and mind alteration. Endowed with corrosive acidic body fluids and form-shifting capabilities, Regal periodically assumes the form of a terrifying Kaiju crowned with colossal shoulder crystals, unleashing cataclysmic beams of extreme heat and nuclear radiation from his mouth at will.
+
+Interplanetary conquests soon became routine, with multiversal travel following as an afterthought. During a post-rampage rest after thoroughly exterminating a planetary metropolis, Regal met Carpo. When the armored Gryphon utilized futuristic population counters and heartbeat sensors to prove survivors still lurked beneath the rubble, Regal was deeply impressed by the telemetry tools. Appreciating the means to ensure true one-hundred percent eradication, Regal readily entered an association with the Order, contracting his destructive might under Kai'nek's multiversal banner.`,
+    gearsAndTactics: `Operates primarily through his immense muscular physical build and devastating horn magic—wielding extreme heat beams, mass levitation, rapid teleportation, mind manipulation, and corrosive acidic body fluids. Can shapeshift into a crystalline Kaiju form equipped with massive shoulder crystals to discharge wide-area beams of extreme heat and nuclear radiation from his jaws.
+
+Under his Order contract, Regal partners with Carpo's high-tech diagnostic sensor suite—specifically population counters and acoustic heartbeat telemetry—to guarantee zero survivors escape his planetary exterminations. Can freely alternate between his equine juggernaut form and radiant crystal Kaiju beast at will.`,
+    randomThoughts: [
+      { text: "Waking up already massive with an empty mind and a world beneath my hooves... I didn't need a past when I had an entire civilization to grind into dust.", category: "personal" },
+      { text: "The extreme heat beam from my horn cuts through their planetary defense grid like hot iron through grease. Once the sky burns, their will crumbles.", category: "rampage" },
+      { text: "Shifted into my crystal-shouldered Kaiju form and let loose the radiation beam straight through their capital continent. Watching miles of granite vitrify in seconds never gets old.", category: "rampage" },
+      { text: "Carpo's heartbeat sensors and population counters changed everything. No more survivors crawling out of the rubble after I leave—zero means zero.", category: "relationship" },
+      { text: "The serpent sovereign Kai'nek wanted a contract; I wanted an endless line of worlds to extinguish. Pledging the harvest energy is a bargain when every hunt leaves nothing alive.", category: "relationship" }
+    ],
+    archetype: "Changeling Colossus / Contracted Devastator",
+    status: "Contracted Order Associate"
   }
 ];
 

@@ -437,6 +437,63 @@ The two deities mutually agreed—without a single word spoken—to leave each o
     summary: "Kai'nek observes Rhidos's raw kinetic breaking power from afar, occasionally nudging conditions in his favor.",
     details: `Rhidos rampages across his world completely unaware of Kai'nek's gaze. Kai'nek observes his momentum and vitality, letting the young titan learn the ropes before extending a recruitment offer.`,
     tags: ['Observation', "Kai'nek", 'Rhidos']
+  },
+
+  // --- Contracted Allies (Dashed Purple) ---
+  {
+    id: 'rel-kainek-regal-contract',
+    source: 'kainek',
+    target: 'regal',
+    type: 'contracted',
+    typeLabel: 'Contracted',
+    modifier: 'Contracted',
+    style: 'dashed',
+    bidirectional: false,
+    color: '#c084fc',
+    offset: 0,
+    summary: "A formal multiversal rampage contract: Kai'nek provides target coordinates and telemetry while harvesting released life-force, redistributing energy to fuel Regal's magical onslaught.",
+    details: `A strategic multiversal contract between the sovereign architect of the Order and the shapeshifting colossus. Introduced through Carpo's pathfinding and recruiter charm, Regal willingly entered a formal association with Kai'nek. Under their pact, Kai'nek directs Regal toward unclaimed, unprotected mortal worlds that lack any ability to mount defensive resistance.
+
+In exchange for targeting telemetry, favors, and cosmic coordinates, Regal pledges the massive stores of mortal life-force released during his exterminations to Kai'nek. Because Regal possesses no native ability to harvest or store ambient life energy on his own—leaving vast vitality to dissipate and go wasted—Kai'nek collects the energy into his lengthening tails and redistributes it back in empowered forms to fuel Regal's horn magic, mass levitation, and crystal-shouldered Kaiju forms, forming an immensely productive cycle of verified planetary ruin.`,
+    speechBubbles: [
+      {
+        speakerId: 'kainek',
+        text: "Obliterate their cities as thoroughly as you wish; I will harvest the current and return your share in kind."
+      },
+      {
+        speakerId: 'regal',
+        text: "Provide the coordinates and the sensors, Sovereign. By the time I finish, not a single pulse will remain."
+      }
+    ],
+    tags: ['Contracted', 'The Order', "Kai'nek", 'Regal']
+  },
+
+  // --- External Friendships (Tier 1) ---
+  {
+    id: 'rel-carpo-regal-friend',
+    source: 'carpo',
+    target: 'regal',
+    type: 'friendship',
+    typeLabel: 'Friendship (Veteran Comrades)',
+    score: '1',
+    bidirectional: true,
+    color: '#22c55e',
+    offset: 0,
+    summary: "Veteran comrades (Tier-1): Carpo introduced Regal to population counters and heartbeat sensors, turning a chance post-nap meeting into a steadfast destructive partnership.",
+    details: `An authentic bond of mutual respect forged amidst planetary ruin. After Regal annihilated a metropolis and woke from a nap, he met Carpo—the first fellow giant he had ever encountered. Although Regal initially laughed off the armored Gryphon as a hallucination, Carpo proved his seriousness by deploying a population counter and heartbeat sensor, demonstrating that pockets of mortal survivors still huddled beneath the rubble.
+
+Using Carpo's tools to achieve a verified one-hundred percent extermination, Regal deeply appreciated the precision and offered his services whenever Carpo needed. The two now share an easy, high-respect Tier-1 camaraderie, frequently embarking on joint rampages where Carpo's high-altitude telemetry and aerial recon perfectly complement Regal's horn magic, mass levitation, and crystal Kaiju transformations.`,
+    speechBubbles: [
+      {
+        speakerId: 'carpo',
+        text: "Your sweep was impressive, but my sensors still read life below. Here—let's make it a clean hundred percent."
+      },
+      {
+        speakerId: 'regal',
+        text: "A giant in flight armor with tools to verify the kill? Call on me anytime, Gryphon—we make a terrifying team."
+      }
+    ],
+    tags: ['Friendship', 'The Order', 'Carpo', 'Regal']
   }
 ];
 
