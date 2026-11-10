@@ -384,7 +384,7 @@ A relentless juggernaut in his own right, he thrives on charging through skyscra
       ],
       description: "Woke up already massive with zero memory of his past origin, conquering his first world within weeks before honing horn magic, mass levitation, and multiversal teleportation."
     },
-    canvasPos: { x: 1450, y: 960 },
+    canvasPos: { x: 1180, y: -60 },
     bio: `A colossal equine changeling titan and muscular powerhouse, possessing unknown lived experience (?) with zero memory of his origin or past. Regal woke up one day already massive, his mind devoid of recollections but consumed by a singular, overwhelming drive: total and complete domination of the world beneath him. Acting upon this instinct immediately, his first world fell to his wrath within mere weeks.
 
 As he experimented with his innate magical powers, he learned to channel devastating abilities sourced directly from his horn—mastering mass levitation, scorching extreme heat beams, quick teleportation, and mind alteration. Endowed with corrosive acidic body fluids and form-shifting capabilities, Regal periodically assumes the form of a terrifying Kaiju crowned with colossal shoulder crystals, unleashing cataclysmic beams of extreme heat and nuclear radiation from his mouth at will.

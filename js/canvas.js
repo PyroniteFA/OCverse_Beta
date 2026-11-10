@@ -13,7 +13,7 @@ class RelationshipCanvas {
     this.onOrderClick = onOrderClick;
 
     // Viewport transform state scaled for 150px+ nodes with tighter default framing
-    this.viewBox = { x: 70, y: -45, width: 1580, height: 1530 };
+    this.viewBox = { x: 70, y: -220, width: 1580, height: 1840 };
     this.initialViewBox = { ...this.viewBox };
     this.isPanning = false;
     this.startPan = { x: 0, y: 0 };
