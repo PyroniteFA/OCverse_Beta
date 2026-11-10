@@ -1,3 +1,9 @@
+const THOUGHT_WEIGHTS = {
+  rampage: 1.0,
+  personal: 0.7,
+  relationship: 0.5
+};
+
 class RelationshipCanvas {
   constructor(svgElement, onNodeClick, onEdgeClick, onDeselect, onOrderClick) {
     this.svg = svgElement;
@@ -990,21 +996,54 @@ class RelationshipCanvas {
       chosenChar = candidates[0];
     }
 
-    // Pick thought (prevent consecutive duplicate line for the same character if multiple available)
+    // Pick thought using weighted random selection (rampage: 1.0, personal: 0.7, relationship: 0.5)
     const thoughts = chosenChar.randomThoughts;
-    let chosenThought;
+    let chosenThoughtObj;
     if (thoughts.length > 1) {
-      const variedThoughts = thoughts.filter(t => t !== this.lastThoughtText[chosenChar.id]);
+      const variedThoughts = thoughts.filter(t => {
+        const text = typeof t === 'object' ? t.text : t;
+        return text !== this.lastThoughtText[chosenChar.id];
+      });
       const tPool = variedThoughts.length > 0 ? variedThoughts : thoughts;
-      chosenThought = tPool[Math.floor(Math.random() * tPool.length)];
+      chosenThoughtObj = this.pickWeightedThought(tPool);
     } else {
-      chosenThought = thoughts[0];
+      chosenThoughtObj = thoughts[0];
     }
+
+    const chosenThought = typeof chosenThoughtObj === 'object' ? chosenThoughtObj.text : chosenThoughtObj;
 
     this.lastThoughtSpeakerId = chosenChar.id;
     this.lastThoughtText[chosenChar.id] = chosenThought;
 
     this.showRandomThoughtBubble(chosenChar, chosenThought);
+  }
+
+  getThoughtWeight(thought) {
+    if (typeof thought === 'object' && thought.category) {
+      const cat = thought.category.toLowerCase();
+      if (THOUGHT_WEIGHTS[cat] !== undefined) {
+        return THOUGHT_WEIGHTS[cat];
+      }
+    }
+    return 1.0;
+  }
+
+  pickWeightedThought(thoughtPool) {
+    if (!thoughtPool || thoughtPool.length === 0) return null;
+    if (thoughtPool.length === 1) return thoughtPool[0];
+
+    const totalWeight = thoughtPool.reduce((sum, t) => sum + this.getThoughtWeight(t), 0);
+    if (totalWeight <= 0) return thoughtPool[Math.floor(Math.random() * thoughtPool.length)];
+
+    let rand = Math.random() * totalWeight;
+    for (const t of thoughtPool) {
+      const weight = this.getThoughtWeight(t);
+      if (rand <= weight) {
+        return t;
+      }
+      rand -= weight;
+    }
+    return thoughtPool[thoughtPool.length - 1];
   }
 
   showRandomThoughtBubble(char, thought) {

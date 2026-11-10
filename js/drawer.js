@@ -227,14 +227,17 @@ class DrawerManager {
             Internal reflections, private convictions, and lived philosophies spoken across planar campaigns.
           </div>
           <div style="display: flex; flex-direction: column; gap: 9px;">
-            ${char.randomThoughts.map((thought, idx) => `
+            ${char.randomThoughts.map((thought, idx) => {
+              const text = typeof thought === 'object' ? thought.text : thought;
+              return `
               <div class="thought-item" style="display: flex; gap: 10px; align-items: flex-start; background: rgba(0, 0, 0, 0.28); padding: 10px 12px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05);">
                 <span class="thought-idx" style="font-size: 11.5px; font-weight: 800; color: ${accentColor}; flex-shrink: 0; min-width: 20px; margin-top: 1px;">#${idx + 1}</span>
                 <div class="thought-quote" style="font-size: 13px; font-style: italic; color: #f8fafc; line-height: 1.55;">
-                  “${thought}”
+                  “${text}”
                 </div>
               </div>
-            `).join('')}
+            `;
+            }).join('')}
           </div>
         </div>
       `;
