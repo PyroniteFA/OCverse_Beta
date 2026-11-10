@@ -42,6 +42,11 @@ class DrawerManager {
     if (this.canvas && !this.canvas.enableAssociatedCharacters) {
       const allChars = window.characters || [];
       const charMap = new Map(allChars.map(c => [c.id, c]));
+      const assocNamesOrIds = new Set(
+        allChars.filter(c => this.canvas.isAssociatedCharacter(c))
+          .flatMap(c => [c.id.toLowerCase(), c.name.toLowerCase()])
+      );
+
       return lores.filter(lore => {
         if (lore.associated) return false;
         if (lore.characterIds && lore.characterIds.some(id => {
@@ -49,6 +54,11 @@ class DrawerManager {
           return c && this.canvas.isAssociatedCharacter(c);
         })) {
           return false;
+        }
+        if (lore.tags && Array.isArray(lore.tags)) {
+          if (lore.tags.some(t => typeof t === 'string' && assocNamesOrIds.has(t.toLowerCase()))) {
+            return false;
+          }
         }
         return true;
       });
@@ -155,13 +165,14 @@ class DrawerManager {
 
   showCharacter(char) {
     this.open();
-    const characters = this.getCharacters();
-    const relationships = this.getRelationships();
-    const sharedLore = this.getSharedLore();
-    const charMap = new Map(characters.map(c => [c.id, c]));
+    this.currentView = 'character';
+    const allCharacters = window.characters || [];
+    const allRelationships = window.relationships || [];
+    const allSharedLore = window.sharedLore || [];
+    const charMap = new Map(allCharacters.map(c => [c.id, c]));
 
-    const taggedLore = sharedLore.filter(l => l.characterIds && l.characterIds.includes(char.id));
-    const charRels = relationships.filter(r => r.source === char.id || r.target === char.id);
+    const taggedLore = allSharedLore.filter(l => l.characterIds && l.characterIds.includes(char.id));
+    const charRels = allRelationships.filter(r => r.source === char.id || r.target === char.id);
 
     // Distinguish between the character's personal arc lore vs collective Order institutional lore
     const orderInstitutionalIds = new Set(['lore-order-pact', 'lore-order-affiliates', 'lore-order-armor']);
@@ -367,13 +378,14 @@ class DrawerManager {
 
   showRelationship(rel) {
     this.open();
-    const characters = this.getCharacters();
-    const sharedLore = this.getSharedLore();
-    const charMap = new Map(characters.map(c => [c.id, c]));
+    this.currentView = 'relationship';
+    const allCharacters = window.characters || [];
+    const allSharedLore = window.sharedLore || [];
+    const charMap = new Map(allCharacters.map(c => [c.id, c]));
     const src = charMap.get(rel.source);
     const tgt = charMap.get(rel.target);
 
-    const taggedLore = sharedLore.filter(l => 
+    const taggedLore = allSharedLore.filter(l => 
       (l.relationshipIds && l.relationshipIds.includes(rel.id)) ||
       (l.characterIds && l.characterIds.includes(rel.source) && l.characterIds.includes(rel.target))
     );
@@ -487,17 +499,32 @@ class DrawerManager {
 
   showOrderLore() {
     this.open();
+    this.currentView = 'order';
     if (this.canvas) {
       this.canvas.highlightOrder();
     }
 
-    const characters = this.getCharacters();
-    const sharedLore = this.getSharedLore();
-    const orderMembers = characters.filter(c => c.orderMember);
+    const allCharacters = window.characters || [];
+    const allRelationships = window.relationships || [];
+    const orderMembers = allCharacters.filter(c => c.orderMember);
 
-    // Primary Order lore chapters
-    const orderLoreIds = ['lore-order-pact', 'lore-order-affiliates', 'lore-order-armor', 'lore-kainek-philosophy', 'lore-carnak-twisted-sobek'];
-    const orderLores = sharedLore.filter(l => orderLoreIds.includes(l.id) || (l.tags && l.tags.includes('The Order')));
+    // Contracted members: non-core members with contracted status/relationship to the Order
+    // Always visible in this roster regardless of whether the canvas toggle is on or off
+    const contractedMembers = allCharacters.filter(c => {
+      if (c.orderMember) return false;
+      if (c.contracted) return true;
+      if (c.status && c.status.toLowerCase().includes('contract')) return true;
+      if (c.archetype && c.archetype.toLowerCase().includes('contract')) return true;
+      return allRelationships.some(r => 
+        (r.type === 'contracted' || r.type === 'contract') && 
+        (r.source === c.id || r.target === c.id)
+      );
+    });
+
+    // Primary Order lore chapters (only show entries tied to associated characters when toggle is enabled)
+    const baseOrderLoreIds = ['lore-order-pact', 'lore-order-affiliates', 'lore-order-armor', 'lore-kainek-philosophy', 'lore-carnak-twisted-sobek'];
+    const sharedLore = this.getSharedLore();
+    const orderLores = sharedLore.filter(l => baseOrderLoreIds.includes(l.id) || (l.tags && l.tags.includes('The Order')));
 
     const cardsHTML = orderLores.map(lore => this.renderLoreCard(lore, null)).join('');
 
@@ -533,6 +560,34 @@ class DrawerManager {
           `).join('')}
         </div>
       </div>
+
+      ${contractedMembers.length > 0 ? `
+      <div class="section-box" style="border-left: 3px solid #c084fc; background: rgba(24, 16, 44, 0.45);">
+        <div class="section-label" style="color: #c084fc; display:flex; justify-content:space-between; align-items:center;">
+          <span>Order Contracted Associates Roster (${contractedMembers.length} ${contractedMembers.length === 1 ? 'Titan' : 'Titans'})</span>
+          <span style="font-size: 10px; font-weight: 700; color: #c084fc; letter-spacing: 0.08em; text-transform: uppercase;">Rampage Pact</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          ${contractedMembers.map(m => `
+            <div class="conn-row" data-char-id="${m.id}" style="cursor:pointer; border-color: rgba(192, 132, 252, 0.25);" title="Click to view ${m.name}'s Dossier">
+              <div class="conn-partner">
+                <img src="${m.avatar}" alt="${m.name}" style="border: 1.5px solid rgba(192, 132, 252, 0.5);">
+                <div>
+                  <div style="font-weight:700; color:#f8fafc; display:flex; align-items:center; gap:6px;">
+                    <span>${m.name}</span>
+                    <span style="font-size: 9.5px; padding: 1px 6px; border-radius: 4px; background: rgba(192, 132, 252, 0.18); color: #c084fc; font-weight: 700; border: 1px solid rgba(192, 132, 252, 0.35);">Contracted</span>
+                  </div>
+                  <div style="font-size:11px; color:#c084fc;">${m.archetype}</div>
+                </div>
+              </div>
+              <span class="conn-badge" style="background:rgba(192,132,252,0.15); color:#c084fc; border:1px solid rgba(192,132,252,0.35);">
+                ${m.livedExperience.display}
+              </span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+      ` : ''}
 
       <div class="section-box" style="border-left: 3px solid #38bdf8;">
         <div class="section-label">Order Foundation Lore & Doctrines (${orderLores.length})</div>
@@ -650,16 +705,23 @@ class DrawerManager {
   }
 
   bindDynamicLinks() {
-    const characters = this.getCharacters();
-    const relationships = this.getRelationships();
+    const allCharacters = window.characters || [];
+    const allRelationships = window.relationships || [];
 
     this.contentEl.querySelectorAll('[data-char-id]').forEach(el => {
       el.addEventListener('click', (e) => {
         e.stopPropagation();
         const id = el.getAttribute('data-char-id');
-        const char = characters.find(c => c.id === id);
+        const char = allCharacters.find(c => c.id === id);
         if (char) {
-          if (this.canvas) this.canvas.focusCharacter(id);
+          if (this.canvas) {
+            if (this.canvas.isAssociatedCharacter(char) && !this.canvas.enableAssociatedCharacters) {
+              const toggleAssociated = document.getElementById('toggle-associated-characters');
+              if (toggleAssociated) toggleAssociated.checked = true;
+              this.canvas.setAssociatedCharactersEnabled(true);
+            }
+            this.canvas.focusCharacter(id);
+          }
           this.showCharacter(char);
         }
       });
@@ -669,7 +731,7 @@ class DrawerManager {
       el.addEventListener('click', (e) => {
         if (e.target.closest('[data-char-id]')) return;
         const relId = el.getAttribute('data-rel-id');
-        const rel = relationships.find(r => r.id === relId);
+        const rel = allRelationships.find(r => r.id === relId);
         if (rel) {
           if (this.canvas) this.canvas.selectEdge(relId);
           this.showRelationship(rel);

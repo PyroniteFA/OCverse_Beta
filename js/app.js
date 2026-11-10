@@ -95,6 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     toggleAssociated.addEventListener('change', (e) => {
       canvas.setAssociatedCharactersEnabled(e.target.checked);
+      if (drawer && drawer.drawer.classList.contains('open') && drawer.currentView === 'order') {
+        drawer.showOrderLore();
+      }
     });
   }
 

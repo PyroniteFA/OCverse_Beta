@@ -401,7 +401,8 @@ Under his Order contract, Regal partners with Carpo's high-tech diagnostic senso
       { text: "The serpent sovereign Kai'nek wanted a contract; I wanted an endless line of worlds to extinguish. Pledging the harvest energy is a bargain when every hunt leaves nothing alive.", category: "relationship" }
     ],
     archetype: "Changeling Colossus / Contracted Devastator",
-    status: "Contracted Order Associate"
+    status: "Contracted Order Associate",
+    contracted: true
   }
 ];
 
