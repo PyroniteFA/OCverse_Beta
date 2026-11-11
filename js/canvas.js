@@ -242,6 +242,35 @@ class RelationshipCanvas {
     container.appendChild(labelWrap);
   }
 
+  /**
+   * Compute display and anchor geometry for a character node on the canvas.
+   * Kai'nek renders 20% larger than standard nodes to reflect his sovereign stature.
+   */
+  getNodeMetrics(char) {
+    const scale = char && char.id === 'kainek' ? 1.2 : 1;
+    const boxSize = Math.round(150 * scale);
+    const half = boxSize / 2;
+    const imgSize = boxSize - 2;
+    const imgHalf = imgSize / 2;
+    const rxOuter = Math.round(24 * scale);
+    const rxClip = rxOuter - 2;
+    const extraHalf = half - 75;
+    return {
+      scale,
+      boxSize,
+      half,
+      imgSize,
+      imgHalf,
+      rxOuter,
+      rxClip,
+      edgeRadius: 96 + extraHalf,
+      traversalOffset: 68 + extraHalf,
+      nameLabelY: -(98 + extraHalf),
+      livedBadgeY: 104 + extraHalf,
+      bubbleTailTipY: -(124 + extraHalf)
+    };
+  }
+
   renderEdges(group) {
     const characters = this.getCharacters();
     const relationships = this.getRelationships();
@@ -252,7 +281,7 @@ class RelationshipCanvas {
       const tgt = charMap.get(rel.target);
       if (!src || !tgt) return;
 
-      const edgeEl = this.createEdgeElement(rel, src.canvasPos, tgt.canvasPos);
+      const edgeEl = this.createEdgeElement(rel, src.canvasPos, tgt.canvasPos, src, tgt);
       const isAssocEdge = this.isAssociatedCharacter(src) || this.isAssociatedCharacter(tgt);
       if (isAssocEdge) {
         edgeEl.setAttribute('data-associated', 'true');
@@ -265,7 +294,7 @@ class RelationshipCanvas {
     });
   }
 
-  createEdgeElement(rel, p1, p2) {
+  createEdgeElement(rel, p1, p2, srcChar = null, tgtChar = null) {
     const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     g.setAttribute('class', `graph-edge edge-${rel.type}`);
     g.setAttribute('data-id', rel.id);
@@ -283,14 +312,15 @@ class RelationshipCanvas {
     const nx = -uy;
     const ny = ux;
 
-    // Scale parallel line offset proportionally for 150px nodes
+    // Scale parallel line offset proportionally for 150px+ nodes
     const offset = (rel.offset || 0) * 1.5;
-    const nodeRadius = 96; // Half of 150px node + badge clearance
+    const srcRadius = this.getNodeMetrics(srcChar).edgeRadius;
+    const tgtRadius = this.getNodeMetrics(tgtChar).edgeRadius;
 
-    const sx = p1.x + ux * nodeRadius + nx * offset;
-    const sy = p1.y + uy * nodeRadius + ny * offset;
-    const tx = p2.x - ux * nodeRadius + nx * offset;
-    const ty = p2.y - uy * nodeRadius + ny * offset;
+    const sx = p1.x + ux * srcRadius + nx * offset;
+    const sy = p1.y + uy * srcRadius + ny * offset;
+    const tx = p2.x - ux * tgtRadius + nx * offset;
+    const ty = p2.y - uy * tgtRadius + ny * offset;
 
     const pathData = `M ${sx} ${sy} L ${tx} ${ty}`;
 
@@ -444,49 +474,61 @@ class RelationshipCanvas {
     const rawDisplay = char.livedExperience.display || '';
     const badgeW = rawDisplay === '∞' ? 100 : Math.max(160, rawDisplay.length * 11 + 40);
 
+    const {
+      boxSize,
+      half,
+      imgSize,
+      imgHalf,
+      rxOuter,
+      rxClip,
+      traversalOffset,
+      nameLabelY,
+      livedBadgeY
+    } = this.getNodeMetrics(char);
+
     // Universe Traversal Glyph (3 Tiers)
     let traversalGlyph = '';
     if (char.universeTraversal === 'effortless') {
       traversalGlyph = `
-        <g transform="translate(68, -68)" class="traversal-badge" title="Effortless Traversal">
+        <g transform="translate(${traversalOffset}, -${traversalOffset})" class="traversal-badge" title="Effortless Traversal">
           <circle cx="0" cy="0" r="20" fill="#0f172a" stroke="#38bdf8" stroke-width="3"/>
           <text x="0" y="7" font-size="20" text-anchor="middle" fill="#fff">🌐</text>
         </g>
       `;
     } else if (char.universeTraversal === 'some_exertion') {
       traversalGlyph = `
-        <g transform="translate(68, -68)" class="traversal-badge" title="Some Exertion (needs a nap)">
+        <g transform="translate(${traversalOffset}, -${traversalOffset})" class="traversal-badge" title="Some Exertion (needs a nap)">
           <circle cx="0" cy="0" r="20" fill="#0f172a" stroke="#22c55e" stroke-width="2.5" stroke-dasharray="6 4"/>
           <text x="0" y="7" font-size="19" text-anchor="middle" fill="#22c55e">🌐</text>
         </g>
       `;
     } else if (char.universeTraversal === 'great_exertion' || char.universeTraversal === 'exertion') {
       traversalGlyph = `
-        <g transform="translate(68, -68)" class="traversal-badge" title="Great Exertion (knocked out for a day)">
+        <g transform="translate(${traversalOffset}, -${traversalOffset})" class="traversal-badge" title="Great Exertion (knocked out for a day)">
           <circle cx="0" cy="0" r="20" fill="#0f172a" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="4 4"/>
           <text x="0" y="7" font-size="19" text-anchor="middle" fill="#94a3b8">🌐</text>
         </g>
       `;
     }
 
-    // 150px Square Node with Rounded Corners
+    // Square Node with Rounded Corners (150px standard, 180px for Kai'nek)
     g.innerHTML = `
       <defs>
         <clipPath id="clip-${char.id}">
-          <rect x="-74" y="-74" width="148" height="148" rx="22" ry="22" />
+          <rect x="-${imgHalf}" y="-${imgHalf}" width="${imgSize}" height="${imgSize}" rx="${rxClip}" ry="${rxClip}" />
         </clipPath>
       </defs>
 
-      <!-- Glow & Outer Avatar Frame (150px) -->
-      <rect x="-75" y="-75" width="150" height="150" rx="24" ry="24" 
+      <!-- Glow & Outer Avatar Frame -->
+      <rect x="-${half}" y="-${half}" width="${boxSize}" height="${boxSize}" rx="${rxOuter}" ry="${rxOuter}" 
             fill="#0f172a" stroke="${borderColor}" stroke-width="3.5" ${borderGlow} />
 
-      <!-- High-Res Portrait Image (148x148) -->
-      <image href="${char.avatar}" xlink:href="${char.avatar}" x="-74" y="-74" width="148" height="148" 
+      <!-- High-Res Portrait Image -->
+      <image href="${char.avatar}" xlink:href="${char.avatar}" x="-${imgHalf}" y="-${imgHalf}" width="${imgSize}" height="${imgSize}" 
              clip-path="url(#clip-${char.id})" preserveAspectRatio="xMidYMid slice" />
 
-      <!-- Top Name Label (Shifted above 150px box) -->
-      <g transform="translate(0, -98)">
+      <!-- Top Name Label -->
+      <g transform="translate(0, ${nameLabelY})">
         <rect x="-95" y="-19" width="190" height="38" rx="19" 
               fill="rgba(15, 23, 42, 0.96)" stroke="${borderColor}" stroke-width="2"/>
         <text x="0" y="7" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="800">
@@ -497,8 +539,8 @@ class RelationshipCanvas {
       <!-- Traversal Badge -->
       ${traversalGlyph}
 
-      <!-- Bottom Lived Experience Badge (Shifted below 150px box) -->
-      <g transform="translate(0, 104)">
+      <!-- Bottom Lived Experience Badge -->
+      <g transform="translate(0, ${livedBadgeY})">
         <rect x="${-badgeW / 2}" y="-19" width="${badgeW}" height="38" rx="19" 
               fill="rgba(15, 23, 42, 0.96)" stroke="rgba(255, 255, 255, 0.3)" stroke-width="2"/>
         <text x="0" y="7" text-anchor="middle" fill="#cbd5e1" font-size="20" font-weight="700">
@@ -884,7 +926,7 @@ class RelationshipCanvas {
     const boxW = Math.max(160, Math.min(360, maxLineLen * 10.5 + paddingX * 2));
 
     const tailTipX = 0;
-    const tailTipY = -124; // Points down toward the top of character's name badge
+    const tailTipY = this.getNodeMetrics(char).bubbleTailTipY; // Points down toward the top of character's name badge
     const bubbleGap = 12;
     const boxBottom = tailTipY - bubbleGap; // e.g. -136
     const boxTop = boxBottom - boxH;
@@ -1207,7 +1249,7 @@ class RelationshipCanvas {
     const boxW = Math.max(180, Math.min(380, maxLineLen * 10 + paddingX * 2));
 
     const bubbleGap = 16;
-    const tailTipY = -124; // Just above top of character badge
+    const tailTipY = this.getNodeMetrics(char).bubbleTailTipY; // Just above top of character badge
     const boxBottom = tailTipY - bubbleGap; // e.g. -140
     const boxTop = boxBottom - boxH;
 
