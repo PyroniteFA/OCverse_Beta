@@ -244,10 +244,10 @@ class RelationshipCanvas {
 
   /**
    * Compute display and anchor geometry for a character node on the canvas.
-   * Kai'nek renders 20% larger than standard nodes to reflect his sovereign stature.
+   * Kai'nek renders 1.5x larger than standard nodes to reflect his sovereign stature.
    */
   getNodeMetrics(char) {
-    const scale = char && char.id === 'kainek' ? 1.2 : 1;
+    const scale = char && char.id === 'kainek' ? 1.5 : 1;
     const boxSize = Math.round(150 * scale);
     const half = boxSize / 2;
     const imgSize = boxSize - 2;
@@ -263,8 +263,8 @@ class RelationshipCanvas {
       imgHalf,
       rxOuter,
       rxClip,
-      edgeRadius: 96 + extraHalf,
-      traversalOffset: 68 + extraHalf,
+      edgeRadius: Math.round(96 * scale),
+      traversalOffset: Math.round(68 * scale),
       nameLabelY: -(98 + extraHalf),
       livedBadgeY: 104 + extraHalf,
       bubbleTailTipY: -(124 + extraHalf)
@@ -511,7 +511,7 @@ class RelationshipCanvas {
       `;
     }
 
-    // Square Node with Rounded Corners (150px standard, 180px for Kai'nek)
+    // Square Node with Rounded Corners (150px standard, 225px for Kai'nek)
     g.innerHTML = `
       <defs>
         <clipPath id="clip-${char.id}">

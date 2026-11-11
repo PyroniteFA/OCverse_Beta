@@ -24,7 +24,7 @@ const characters = [
       ],
       description: "Infinite lived experience. Exists without remembering his own origin, knowing only what he wants and exploiting it across universes."
     },
-    canvasPos: { x: 900, y: 750 },
+    canvasPos: { x: 900, y: 820 },
     bio: `A towering, enigmatic deity-level entity with a red-queen complex who presides as the sovereign architect of the Order. Emanating a terrifying light blue aura, Kai'nek possesses a controllable cool-toned bioluminescent glow visible across his intricate markings, tongue, and intimate anatomy. He came to exist without memory of his own origin; while feeling as old as time itself, he senses that reality unfolded outside and despite of him. Incapable of generating life from scratch, ascending candidates across the multiverse is the closest act of creation available to him.
 
 He operates under a chilling philosophy where efficiency is strictly secondary to personal enjoyment: while technically capable of effortlessly siphoning raw energy from sterile planetary cores or nuclear stars, he finds zero fun in barren power. Instead, he craves the life-force of panicking, dominated lesser beings, finding the terror and collapse of struggling civilizations uniquely 'delicious.' When destroying worlds, he leaves before wiping out every last soul—deriving no artistic thrill from eradicating people huddled in underground bunkers compared to watching everyday routines crumble mid-stride. Strategically, Kai'nek and his Order only target worlds that are unclaimed and unprotected by other macro or deity entities, preferring to focus their campaigns on exploiting planets and civilizations that lack any real ability to mount resistance against him.
