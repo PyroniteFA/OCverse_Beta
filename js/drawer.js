@@ -1,5 +1,5 @@
 const CANONICAL_LORE_TAGS = new Set([
-  "Kai'nek", "Carnak", "Carpo", "Brutus", "Zahra", "Abrax", "Ph'ya", "Eidos", "Rhidos", "Regal",
+  "Kai'nek", "Carnak", "Carpo", "Brutus", "Zahra", "Abrax", "Ph'ya", "Eidos", "Rhidos", "Regal", "Rathen",
   "The Order", "The Sanctuary Trio", "Committed Lovers", "Friendship", "Facilitation", "Observation", "Contracted"
 ]);
 
@@ -293,17 +293,19 @@ class DrawerManager {
             ${(char.associated || char.isAssociated || char.external || char.guest) ? '<span class="brand-tag" style="background: rgba(168, 85, 247, 0.18); color: #c084fc; border-color: rgba(168, 85, 247, 0.4);">Associated</span>' : ''}
           </div>
           <div style="display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin: 4px 0;">
-            <span style="font-size:11.5px; font-weight:700; background:rgba(56, 189, 248, 0.18); color:#38bdf8; border:1px solid rgba(56, 189, 248, 0.35); padding:2px 8px; border-radius:6px;">${char.species || 'Anthro'}</span>
-            <span class="char-hero-title" style="margin:0;">${char.title}</span>
+            ${char.species ? `<span style="font-size:11.5px; font-weight:700; background:rgba(56, 189, 248, 0.18); color:#38bdf8; border:1px solid rgba(56, 189, 248, 0.35); padding:2px 8px; border-radius:6px;">${char.species}</span>` : ''}
+            ${char.title ? `<span class="char-hero-title" style="margin:0;">${char.title}</span>` : ''}
           </div>
-          <div class="char-hero-status">${char.archetype}</div>
+          ${char.archetype ? `<div class="char-hero-status">${char.archetype}</div>` : ''}
         </div>
       </div>
 
       <div class="section-box">
         <div class="section-label">Overview & Bio</div>
         <div class="char-bio-body">
-          ${char.bio.split(/\n\s*\n/).filter(Boolean).map(p => `<p class="char-bio-p">${p.trim()}</p>`).join('')}
+          ${(char.bio || '').trim()
+            ? char.bio.split(/\n\s*\n/).filter(Boolean).map(p => `<p class="char-bio-p">${p.trim()}</p>`).join('')
+            : `<p class="char-bio-p" style="color:var(--text-dim); font-style:italic;">(No bio logged yet)</p>`}
         </div>
       </div>
 
@@ -430,7 +432,9 @@ class DrawerManager {
         <div style="font-size:15px; font-weight:700; color:${rel.color};">
           ${rel.typeLabel} ${rel.modifier ? `— ${rel.modifier}` : ''}
         </div>
-        <p style="font-size:13px; line-height:1.6; color:#cbd5e1;">${rel.summary}</p>
+        <p style="font-size:13px; line-height:1.6; color:#cbd5e1;">
+          ${(rel.summary || '').trim() || '<span style="color:var(--text-dim); font-style:italic;">(No summary logged yet)</span>'}
+        </p>
         <div class="tag-pills">${tagsHTML}</div>
       </div>
 
@@ -459,7 +463,9 @@ class DrawerManager {
       <div class="section-box">
         <div class="section-label">In-Depth Dynamic Details</div>
         <div class="char-bio-body">
-          ${rel.details.split(/\n\s*\n/).filter(Boolean).map(p => `<p class="char-bio-p">${p.trim()}</p>`).join('')}
+          ${(rel.details || '').trim()
+            ? rel.details.split(/\n\s*\n/).filter(Boolean).map(p => `<p class="char-bio-p">${p.trim()}</p>`).join('')
+            : `<p class="char-bio-p" style="color:var(--text-dim); font-style:italic;">(No observation details logged yet)</p>`}
         </div>
       </div>
 

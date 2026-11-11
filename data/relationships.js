@@ -438,6 +438,19 @@ The two deities mutually agreed—without a single word spoken—to leave each o
     details: `Rhidos rampages across his world completely unaware of Kai'nek's gaze. Kai'nek observes his momentum and vitality, letting the young titan learn the ropes before extending a recruitment offer.`,
     tags: ['Observation', "Kai'nek", 'Rhidos']
   },
+  {
+    id: 'rel-kainek-rathen-obs',
+    source: 'kainek',
+    target: 'rathen',
+    type: 'observation',
+    typeLabel: 'Observation',
+    bidirectional: false,
+    color: '#94a3b8',
+    offset: 0,
+    summary: '',
+    details: '',
+    tags: ['Observation', "Kai'nek", 'Rathen']
+  },
 
   // --- Contracted Allies (Dashed Purple) ---
   {

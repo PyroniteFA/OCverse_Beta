@@ -403,6 +403,28 @@ Under his Order contract, Regal partners with Carpo's high-tech diagnostic senso
     archetype: "Changeling Colossus / Contracted Devastator",
     status: "Contracted Order Associate",
     contracted: true
+  },
+  {
+    id: 'rathen',
+    name: 'Rathen',
+    species: '',
+    title: '',
+    avatar: 'assets/avatars/rathen.png',
+    fullArt: 'assets/full_art/rathen.png',
+    orderMember: false,
+    associated: true,
+    universeTraversal: 'none',
+    livedExperience: {
+      display: '?',
+      raw: '?',
+      breakdown: [],
+      description: ''
+    },
+    canvasPos: { x: 900, y: -60 },
+    bio: '',
+    randomThoughts: [],
+    archetype: '',
+    status: ''
   }
 ];
 
