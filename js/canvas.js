@@ -581,26 +581,43 @@ class RelationshipCanvas {
       return `<tspan font-size="28" font-weight="900" fill="#fbbf24" dy="2">∞</tspan>`;
     }
 
+    const renderPart = (val, isMacro) => isMacro
+      ? `<tspan font-weight="900" fill="#fbbf24">${val}</tspan>`
+      : `<tspan fill="#cbd5e1">${val}</tspan>`;
+
+    const parts = display.split('+').map(p => p.trim());
     const breakdown = char.livedExperience.breakdown;
     if (breakdown && breakdown.length > 0) {
-      const parts = display.split('+').map(p => p.trim());
-      if (parts.length === breakdown.length) {
-        return parts.map((val, idx) => {
-          const isMacro = breakdown[idx].isMacro;
-          return isMacro 
-            ? `<tspan font-weight="900" fill="#fbbf24">${val}</tspan>`
-            : `<tspan fill="#cbd5e1">${val}</tspan>`;
-        }).join(' + ');
+      let matchedStages = parts.length === breakdown.length ? breakdown : null;
+
+      if (!matchedStages && parts.length < breakdown.length) {
+        // Align display numbers with breakdown stages when uncounted dormant eras sit in between
+        let cursor = 0;
+        const found = [];
+        for (const val of parts) {
+          const escaped = val.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          const tokenRe = new RegExp(`^~?${escaped}(?:$|\\D)`);
+          const matchIdx = breakdown.findIndex((stage, i) =>
+            i >= cursor && tokenRe.test(String(stage.value || '').trim())
+          );
+          if (matchIdx === -1) break;
+          found.push(breakdown[matchIdx]);
+          cursor = matchIdx + 1;
+        }
+        if (found.length === parts.length) {
+          matchedStages = found;
+        }
+      }
+
+      if (matchedStages) {
+        return parts.map((val, idx) => renderPart(val, matchedStages[idx].isMacro)).join(' + ');
       }
     }
 
-    const parts = display.split('+').map(p => p.trim());
     if (parts.length > 1) {
-      const normalParts = parts.slice(0, -1).map(p => `<tspan fill="#cbd5e1">${p}</tspan>`).join(' + ');
-      const macroPart = parts[parts.length - 1];
-      return `${normalParts} + <tspan font-weight="900" fill="#fbbf24">${macroPart}</tspan>`;
+      return parts.map((val, idx) => renderPart(val, idx === parts.length - 1)).join(' + ');
     }
-    return `<tspan fill="#cbd5e1">${display}</tspan>`;
+    return renderPart(display, false);
   }
 
   highlightConnected(charId) {

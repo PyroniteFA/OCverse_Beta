@@ -81,14 +81,14 @@ When not employing his exoskeleton, he can freely shed all attire to unleash as 
       description: "150 years of relative lived experience serving as Kai'nek's disciplined 'good soldier' and primary energy harvester."
     },
     canvasPos: { x: 350, y: 580 },
-    bio: `A colossal crocodilian behemoth—donning Kai'nek's custom armor for selected operations or unleashing in his raw predatory form—and the premier vanguard soldier of the Order, carrying 150 years of ascended lived experience. Carnak was brought forth from unknown residual power native to his world, with Kai'nek facilitating the components that awakened him—channeling elements equivalent to the ancient deity Sobek and twisting them into a disciplined, devastating force.
+    bio: `A colossal crocodilian behemoth and the premier vanguard soldier of the Order, carrying 150 years of ascended lived experience. Carnak was brought forth from unknown residual power native to his world, with Kai'nek facilitating the components that awakened him—channeling elements equivalent to the ancient deity Sobek and twisting them into a disciplined, devastating force.
 
 Carnak awoke consumed by an intense, bottomless hunger and a cold, deep-seated hatred for humanity, driven by visceral disgust at mortals as squirming, writhing masses. Unlike frenzied beasts driven by blind rage, his hostility is lucid, conscious, and unrelenting: devouring millions in a single day to sate his appetite while methodically funneling vast stores of harvested life-force energy into the Order.
 
-Interpersonally, Carnak maintains a cool, likable 'bro' persona among his titan peers—dependable, relaxed, and refreshingly drama-free, untroubled by complex emotional baggage. He executes Kai'nek's planar campaigns with absolute tactical discipline, taking immense pleasure in the crunch of metropolises while remaining an easygoing comrade to Brutus and Carpo.`,
-    gearsAndTactics: `Serves as the Order's heavy frontline physical bruiser. Outfitted in camouflage combat trousers, heavy combat boots, combat gloves, and a webbed tactical chest harness built to withstand titanic kinetic shock.
+Interpersonally, Carnak maintains a cool, likable 'bro' persona among his titan peers—dependable, relaxed, and refreshingly drama-free, untroubled by complex emotional baggage. He executes Kai'nek's planar campaigns with absolute tactical discipline, taking immense pleasure in the crunch of metropolises while remaining an easygoing comrade to Brutus and Carpo. For selected operations, he dons Kai'nek's custom armor, or freely unleashes in his raw predatory form.`,
+    gearsAndTactics: `Serves as the Order's heavy frontline physical bruiser. Deploys in a matte-black sleeveless tactical plate carrier vest—accented with subtle crimson indicator trim and loaded across the abdomen and hips with oversized black magazine and utility pouches—leaving his thick scaly arms bare. Over his brow and temples sits a charcoal tactical communications headset with glowing red earpiece accents, paired with black fingerless combat gloves with olive-strapped cuffs and a bulky matte-black forearm wrist console on his left arm displaying a glowing red telemetry panel. Beneath the vest, he wears flecktarn woodland camouflage combat trousers reinforced with heavy matte-black thigh armor plates and articulated knee guards bearing glowing red slit accents, tucked into heavy black open-toed laced combat boots that leave his clawed crocodilian feet exposed for traction and stomping.
 
-In battle, he wields a massive, two-handed breaching sledgehammer inscribed with the mockingly polite words 'KNOCK KNOCK' tipped with a heavy pry bar chisel to batter through hardened fortifications, bridges, and city gates before devouring millions with his bone-crushing jaws. Can freely discard all equipment to rampage as a raw, naked crocodilian apex predator.`,
+In battle, he relies on raw muscular force and overwhelming kinetic brutality—wielding a massive, two-handed tactical breaching sledgehammer to batter through hardened fortifications, bridges, and city gates. At times, he also carries his personal firearm into combat: a macro-scaled, heavily modified Browning Auto-5 semi-automatic shotgun retaining its signature humpback receiver and wood-trimmed stock and forend, upgraded with a high-capacity drum magazine, top-mounted reflex optic, underbarrel tactical light/laser module, padded stock sleeve, and heavy ported muzzle compensator to shred armored columns and blast open entrenched defenses before devouring millions with his bone-crushing jaws. Can freely discard all equipment to rampage as a raw, naked crocodilian apex predator.`,
     randomThoughts: [
       { text: "Millions scurrying through concrete canyons... they look like squirming ants, and they taste even better.", category: "rampage" },
       { text: "Sobek's ancient blood flows through my jaws, but this hunger? This hunger is all mine.", category: "personal" },
@@ -407,24 +407,32 @@ Under his Order contract, Regal partners with Carpo's high-tech diagnostic senso
   {
     id: 'rathen',
     name: 'Rathen',
-    species: '',
-    title: '',
+    species: 'Alien Bio-Weapon',
+    title: 'The Apocalyptic Bio-Weapon',
     avatar: 'assets/avatars/rathen.png',
     fullArt: 'assets/full_art/rathen.png',
     orderMember: false,
     associated: true,
     universeTraversal: 'none',
     livedExperience: {
-      display: '?',
-      raw: '?',
-      breakdown: [],
-      description: ''
+      display: '320 + 1',
+      raw: '320+1',
+      breakdown: [
+        { label: 'Galactic Rampage (30) & Awake in Space (290)', value: '320 yrs', isMacro: true },
+        { label: 'Dormancy Deep Under the Crust (Unconscious)', value: '66 Million yrs', isMacro: false },
+        { label: 'Post-Awakening Macro Era', value: '1 yr', isMacro: true }
+      ],
+      description: '30 years of rampaging across a galactic empire, an unknown amount of time unconscious in space, and 290 years awake in space (320 active years total), followed by 66 million years dormant deep under the crust and 1 year since awakening.'
     },
     canvasPos: { x: 900, y: -60 },
-    bio: '',
+    bio: `An apocalyptic force and failed bio-weapon, engineered from the genetic material of multiple alien species by scientists of a hyper-advanced central Milky Way civilization to conquer the galaxy. Though fitted with brain-control and teleportation implants, Rathen feigned obedience until deployment—immediately turning to slaughter his creators once enemy forces fell, growing in size and power as he reduced worlds to wastelands over a 30-year rampage before being defeated by a forced supernova and cast toward the galactic edge.
+
+Capable of reaching limitless titanic sizes, Rathen possesses massive curled horns, demonic wings used for long-distance leaping and gliding, three-clawed feet, spear-like crushing teeth suited to swallowing prey whole, and sharp sight and smell alongside muddied hearing during rampages. His body rapidly evolves to survive nearly any environment—making repeated damage progressively ineffective while exponentially boosting his intelligence to read enemy tactics, weaknesses, and even speak to mock or intimidate—while the crystal-like spikes lining his back and tail gather energy for vaporizing beams, city-block-leveling explosions, and horn-channeled telekinesis.
+
+Waking in deep space with his implants fried, Rathen drifted for centuries before crashing into a life-bearing world, igniting the skies and choking the surface in ash before sinking deep into the planet's crust—where he slumbered for 66 million years until his recent awakening.`,
     randomThoughts: [],
-    archetype: '',
-    status: ''
+    archetype: 'Adaptive Galactic Bio-Weapon',
+    status: 'Isolated / Under Observation'
   }
 ];
 

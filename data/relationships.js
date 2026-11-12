@@ -444,12 +444,17 @@ The two deities mutually agreed—without a single word spoken—to leave each o
     target: 'rathen',
     type: 'observation',
     typeLabel: 'Observation',
+    modifier: 'Keen Interest',
     bidirectional: false,
     color: '#94a3b8',
     offset: 0,
-    summary: '',
-    details: '',
-    tags: ['Observation', "Kai'nek", 'Rathen']
+    summary: "Kai'nek monitors the reawakened bio-weapon Rathen across the veil with keen interest, studying his limitless adaptation, calculating intellect, and untapped potential for the Order.",
+    details: `Following Rathen's unprompted awakening after 66 million years buried beneath a planet's crust, Kai'nek has placed the galactic bio-weapon under close, passive surveillance from across the dimensional veil. Completely unaware of the sovereign's light-blue gaze, Rathen continues his first year of post-awakening rampages while Kai'nek studies every facet of his evolutionary biology and destructive output.
+
+What elevates Rathen above routine cosmic targets is the razor-sharp mind behind the demonic bulk. Kai'nek's strict code forbids turning candidates into brainwashed drones, and Rathen's history—secretly plotting beneath a neural control implant, slaughtering his hyper-advanced creators across a 30-year galactic rampage, and rapidly decoding enemy tactics and languages—marks him as a cunning, fiercely independent apex entity.
+
+Because the forced supernova that defeated him fried his teleportation implant and left him stranded without dimensional mobility, Rathen represents immense untapped synergy for the Order. Kai'nek watches closely to gauge his adaptive limits and temperament before deciding when to make an outreach offer—one that would trade multiversal traversal and redistributed harvest empowerment for pledged mortal life-force.`,
+    tags: ['Observation', 'The Order', "Kai'nek", 'Rathen']
   },
 
   // --- Contracted Allies (Dashed Purple) ---
