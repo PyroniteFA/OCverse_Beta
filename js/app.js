@@ -143,5 +143,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Acknowledgements, AI & Art Disclosure Modal
+  const ackBtn = document.getElementById('btn-acknowledgements');
+  const ackBackdrop = document.getElementById('ack-modal-backdrop');
+  const ackCloseBtn = document.getElementById('ack-modal-close');
+  const ackBody = ackBackdrop ? ackBackdrop.querySelector('.ack-modal-body') : null;
+
+  const openAckModal = () => {
+    if (!ackBackdrop) return;
+    ackBackdrop.classList.add('open');
+    ackBackdrop.setAttribute('aria-hidden', 'false');
+    if (ackBody) ackBody.scrollTop = 0;
+    if (ackCloseBtn) ackCloseBtn.focus();
+  };
+
+  const closeAckModal = () => {
+    if (!ackBackdrop || !ackBackdrop.classList.contains('open')) return;
+    ackBackdrop.classList.remove('open');
+    ackBackdrop.setAttribute('aria-hidden', 'true');
+    if (ackBtn) ackBtn.focus();
+  };
+
+  if (ackBtn && ackBackdrop) {
+    ackBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openAckModal();
+    });
+
+    if (ackCloseBtn) {
+      ackCloseBtn.addEventListener('click', closeAckModal);
+    }
+
+    ackBackdrop.addEventListener('click', (e) => {
+      if (e.target === ackBackdrop) {
+        closeAckModal();
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && ackBackdrop.classList.contains('open')) {
+        e.preventDefault();
+        closeAckModal();
+      }
+    });
+  }
+
   // Ready! Start with the full canvas visible and all characters un-dimmed.
 });

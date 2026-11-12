@@ -160,8 +160,13 @@
         <!-- Versioning: v1.x.y-beta (x increments only on major updates; y increments on every adjustment) -->
         <div class="legend-footer">
           <div class="legend-footer-meta">
-            <span class="legend-app-version">v1.7.5-beta</span>
-            <span class="legend-last-updated">Updated: Nov 12, 2026, 12:29 PM</span>
+            <span class="legend-app-version">v1.8.0-beta</span>
+            <span class="legend-last-updated">Updated: Nov 12, 2026, 12:55 PM</span>
+          </div>
+          <div class="legend-footer-links">
+            <button type="button" id="btn-acknowledgements" class="legend-ack-link">
+              Acknowledgements, AI &amp; Art Disclosure ↗
+            </button>
           </div>
         </div>
       </aside>
@@ -193,6 +198,91 @@
       </div>
       <div class="drawer-content">
         <!-- Dynamically populated via js/drawer.js -->
+      </div>
+    </div>
+
+    <!-- Acknowledgements, AI & Art Ethics Disclosure Modal -->
+    <div id="ack-modal-backdrop" class="ack-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="ack-modal-title" aria-hidden="true">
+      <div class="ack-modal">
+        <div class="ack-modal-header">
+          <div class="ack-modal-title-group">
+            <div><span class="brand-tag">Transparency &amp; Ethics • Beta</span></div>
+            <h2 id="ack-modal-title" class="ack-modal-title">Acknowledgements &amp; AI / Art Discussion</h2>
+            <div class="ack-modal-subtitle">Pyronite OC Verse — Created &amp; Curated by <strong style="color: #f8fafc;">CarpoPyronite</strong></div>
+          </div>
+          <button type="button" id="ack-modal-close" class="drawer-close" title="Close Window (Esc)" aria-label="Close Acknowledgements">✕</button>
+        </div>
+
+        <div class="ack-modal-body">
+          <!-- Section 1: Origin, Tooling & Lore Provenance -->
+          <section class="section-box">
+            <div class="section-label">1. Origin, Tooling &amp; Lore Provenance</div>
+            <ul class="ack-list">
+              <li><strong>Creator &amp; Owner:</strong> Conceived, directed, and maintained by <strong>CarpoPyronite</strong>.</li>
+              <li><strong>Visual Conceptualization:</strong> Original relationship web layout and visual structure drafted in <strong>Canva</strong>.</li>
+              <li><strong>Vibe-Coded Implementation:</strong> Engineered through <strong>Antigravity</strong> using <strong>Gemini 3.8 Flash</strong>, translating the static Canva concept into a zero-dependency interactive HTML, CSS, SVG, and vanilla JavaScript archive.</li>
+              <li><strong>Partial Editorial Assistance:</strong> Additional partial assistance in prose refinement and ideation via <strong>Grok 4.7</strong>.</li>
+              <li><strong>Lore &amp; Narrative Sourcing:</strong> All character biographies, relationship dynamics, and historical lore entries are built from modified versions of <strong>CarpoPyronite</strong>'s original writing and synthesized digests of discussions, comments, and testimonies from <strong>aware and consented parties</strong>. Out of respect for privacy, individual discussion contributors remain anonymous.</li>
+            </ul>
+          </section>
+
+          <!-- Section 2: Engineering Time & Transaction Ledger -->
+          <section class="section-box" style="border-left: 3px solid #38bdf8;">
+            <div class="section-label" style="color: #38bdf8;">2. Engineering Time &amp; Transaction Ledger</div>
+            <div class="ack-metrics-grid">
+              <div class="ack-metric-card">
+                <span class="ack-metric-label">Back-and-Forth Transactions</span>
+                <span class="ack-metric-value">154+ Prompts</span>
+                <span class="ack-metric-note">154+ human prompts &amp; 148+ direct agent replies across 12 user-initiated Antigravity sessions (14 total transcripts including 2 subagent runs), driving 2,935+ automated tool invocations.</span>
+              </div>
+              <div class="ack-metric-card">
+                <span class="ack-metric-label">Engineering Span (Thailand Time, ICT)</span>
+                <span class="ack-metric-value">~14.4+ Hours</span>
+                <span class="ack-metric-note">Aggregated across 4 active git days (Nov 9–12, 2026) from each day's first commit to last commit—presuming continuous project work across those windows—plus the pre-commit Nov 8 build session (21:34–23:02 ICT) and earlier Canva drafting.</span>
+              </div>
+            </div>
+            <div class="ack-timeline-chips">
+              <div class="ack-day-chip"><strong>Nov 9:</strong> 21:44–23:35 ICT (1h 52m • 13 commits)</div>
+              <div class="ack-day-chip"><strong>Nov 10:</strong> 10:55–19:42 ICT (8h 46m • 21 commits)</div>
+              <div class="ack-day-chip"><strong>Nov 11:</strong> 09:20–11:46 ICT (2h 26m • 4 commits)</div>
+              <div class="ack-day-chip"><strong>Nov 12:</strong> 11:34–12:55+ ICT (1h 21m+ • 3+ commits)</div>
+            </div>
+            <p class="char-bio-p" style="font-size: 12px; color: var(--text-muted);">
+              Repo footprint ahead of this update: <strong>41+ git commits</strong> and <strong>5,062+ lines</strong> of hand-directed, AI-scaffolded code covering 11 characters, 22 relationships, and 16 shared lore chapters.
+            </p>
+          </section>
+
+          <!-- Section 3: Artwork Consent & Non-Training Boundary -->
+          <section class="section-box" style="border-left: 3px solid #22c55e;">
+            <div class="section-label" style="color: #22c55e;">3. Artwork Consent &amp; Non-Training Boundary</div>
+            <p class="char-bio-p">
+              All character portraits and master illustrations in this archive are <strong>human-created artworks</strong>, not AI-generated images. Artists remain anonymous in this general disclosure; dedicated artist credit links alongside <em>Master Character Artwork</em> inside individual character drawers are planned for a later update.
+            </p>
+            <div class="ack-callout ethics">
+              <strong>Explicit Artist Permission:</strong> Character artwork across the roster (Kai'nek, Carnak, Carpo, Brutus, Abrax, Ph'ya, Eidos, Rhidos, and Rathen) has been <strong>explicitly allowed by the respective artists</strong> for display in this app.
+            </div>
+            <div class="ack-callout beta">
+              <strong>Beta Pending Confirmation (Regal &amp; Zahra):</strong> Only the artworks currently used for <strong>Regal</strong> and <strong>Zahra</strong> remain <strong>pending artist confirmation</strong> in this beta release. Should either artist decline or request changes or removal, those assets will be updated or removed promptly.
+            </div>
+            <div class="ack-callout">
+              <strong>Zero Model Training / Improvement:</strong> The images provided to work with this application are <strong>not used to explicitly learn from, train, or improve any AI model</strong>—which CarpoPyronite regards as the most morally unacceptable misuse of artists' work. They exist strictly as static visual display assets within this project.
+            </div>
+          </section>
+
+          <!-- Section 4: Discussion — On Vibe-Coded Apps & AI Controversy -->
+          <section class="section-box" style="border-left: 3px solid #a855f7;">
+            <div class="section-label" style="color: #c084fc;">4. Discussion: Vibe-Coded Apps &amp; AI Controversy</div>
+            <p class="char-bio-p">
+              "Vibe-coded" and AI-assisted projects rightly draw skepticism across creative and technical communities. Common criticisms point to low-effort "AI slop" replacing real craft, obscured authorship claiming unverified credit, and—most seriously—generative models absorbing artists' work without consent.
+            </p>
+            <p class="char-bio-p">
+              This project takes a deliberate stance against those harms by separating <strong>creative authorship</strong> from <strong>engineering scaffolding</strong>. The characters, visual design direction, Canva architecture, worldbuilding rules, and lived testimonies did not come out of a prompt box—they belong to <strong>CarpoPyronite</strong> and consenting participants. Gemini 3.8 Flash (via Antigravity) and partial assistance from Grok 4.7 served purely to turn that human material into an interactive web interface across more than a hundred iterative back-and-forth passes.
+            </p>
+            <p class="char-bio-p">
+              Rather than concealing AI tooling or hand-waving asset provenance, this page documents the exact tools, transaction volume, engineering hours, consent boundaries, and pending beta permissions openly so visitors can engage with the project on honest terms.
+            </p>
+          </section>
+        </div>
       </div>
     </div>
   </div>

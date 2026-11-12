@@ -72,6 +72,9 @@ class DrawerManager {
       this.expandBtn.addEventListener('click', () => this.toggleExpand());
     }
     window.addEventListener('keydown', (e) => {
+      const ackBackdrop = document.getElementById('ack-modal-backdrop');
+      if (ackBackdrop && ackBackdrop.classList.contains('open')) return;
+
       if (e.key === 'Escape') this.close();
       if ((e.key === 'f' || e.key === 'F') && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
         if (this.drawer.classList.contains('open')) {
