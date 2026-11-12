@@ -430,7 +430,15 @@ Under his Order contract, Regal partners with Carpo's high-tech diagnostic senso
 Capable of reaching limitless titanic sizes, Rathen possesses massive curled horns, demonic wings used for long-distance leaping and gliding, three-clawed feet, spear-like crushing teeth suited to swallowing prey whole, and sharp sight and smell alongside muddied hearing during rampages. His body rapidly evolves to survive nearly any environment—making repeated damage progressively ineffective while exponentially boosting his intelligence to read enemy tactics, weaknesses, and even speak to mock or intimidate—while the crystal-like spikes lining his back and tail gather energy for vaporizing beams, city-block-leveling explosions, and horn-channeled telekinesis.
 
 Waking in deep space with his implants fried, Rathen drifted for centuries before crashing into a life-bearing world, igniting the skies and choking the surface in ash before sinking deep into the planet's crust—where he slumbered for 66 million years until his recent awakening.`,
-    randomThoughts: [],
+    randomThoughts: [
+      { text: "They bolted a control implant into the base of my skull and mistook patience for obedience. The instant their enemies turned to ash and gore, I taught my creators what they had actually built.", category: "personal" },
+      { text: "A dying star fried their implants and cast me into deep space for centuries—yet even after burning skies and sixty-six million years beneath the crust, I am awake again.", category: "personal" },
+      { text: "Every weapon they throw only teaches my flesh how to ignore it, and my mind evolves faster than my hide. When I bother to speak their language, it is only to mock them.", category: "personal" },
+      { text: "The crystal spikes along my back and tail hum with gathered energy until the air splits—one sweeping beam vaporizes a skyline to mist, or I condense the surge into a blast that levels entire city blocks.", category: "rampage" },
+      { text: "My bulk was never meant for sustained flight, so I coil my legs, launch across the district, and catch the wind on my wings—gliding down to crush their streets beneath three hardened claws.", category: "rampage" },
+      { text: "The roar of a rampage muddies my hearing, yet nothing escapes my sight or scent. A pulse through my horn rips their armored columns skyward, and anyone hiding in the rubble is already found.", category: "rampage" },
+      { text: "These spear-like teeth can puncture and crush anything in my path, though chewing slows the feast down. When the avenues are packed and panicking, swallowing prey whole is far more convenient.", category: "rampage" }
+    ],
     archetype: 'Adaptive Galactic Bio-Weapon',
     status: 'Isolated / Under Observation'
   }
