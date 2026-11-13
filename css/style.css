@@ -1694,6 +1694,462 @@ body {
 }
 
 /* ==========================================================================
+   Laptop & Compact Desktop Responsive Optimizations (e.g. 1366 × 768, 1280 × 800)
+   Optimized for screens with constrained height (<= 820px) or width (<= 1400px)
+   ========================================================================== */
+@media (max-width: 1400px), (max-height: 820px) {
+  :root {
+    --drawer-width: 420px;
+  }
+
+  /* Compact Navbar */
+  .navbar {
+    height: 52px;
+    padding: 0 18px;
+  }
+
+  .brand-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .brand-title {
+    font-size: 16px;
+  }
+
+  .brand-tag {
+    font-size: 10px;
+    padding: 1.5px 7px;
+  }
+
+  .search-box input {
+    height: 32px;
+    font-size: 12px;
+    width: 150px;
+    padding: 5px 12px 5px 28px;
+  }
+
+  .search-box input:focus {
+    width: 200px;
+  }
+
+  .filter-select {
+    height: 32px;
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .nav-btn {
+    height: 32px;
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  /* Compact Floating Legend Card: Prevents vertical overflow & zoom control collision */
+  .legend-card {
+    top: 64px;
+    left: 16px;
+    max-width: 260px;
+    padding: 10px 14px;
+    font-size: 11px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+
+  .legend-card::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .legend-card::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+  }
+
+  .legend-header {
+    margin-bottom: 8px;
+  }
+
+  .legend-title {
+    font-size: 12px;
+  }
+
+  .legend-toggle-hint {
+    font-size: 10px;
+  }
+
+  .legend-body {
+    gap: 6px;
+  }
+
+  .legend-item {
+    gap: 8px;
+  }
+
+  .legend-line {
+    width: 20px;
+    height: 2.5px;
+  }
+
+  .legend-triangle-badge {
+    width: 14px;
+    height: 14px;
+  }
+
+  .legend-globe-icon {
+    width: 14px;
+    height: 14px;
+    font-size: 10px;
+  }
+
+  .legend-toggle-item {
+    padding: 1px 0;
+    gap: 6px;
+  }
+
+  .legend-toggle-icon {
+    font-size: 12px;
+  }
+
+  .toggle-control {
+    font-size: 11px;
+  }
+
+  .toggle-switch {
+    width: 28px;
+    height: 16px;
+    margin-left: 6px;
+  }
+
+  .toggle-slider:before {
+    height: 10px;
+    width: 10px;
+    left: 2px;
+    bottom: 2px;
+  }
+
+  .toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(12px);
+  }
+
+  .legend-notes {
+    font-size: 9.5px;
+    line-height: 1.35;
+    padding-top: 6px;
+    margin-top: 2px;
+  }
+
+  .legend-footer {
+    padding-top: 6px;
+    margin-top: 6px;
+    font-size: 9.5px;
+  }
+
+  .legend-app-version {
+    font-size: 9px;
+    padding: 1px 5px;
+  }
+
+  .legend-last-updated {
+    font-size: 9px;
+  }
+
+  .legend-info-btn {
+    width: 14px;
+    height: 14px;
+    font-size: 9px;
+  }
+
+  /* Compact Zoom Controls */
+  .canvas-controls {
+    bottom: 16px;
+    left: 16px;
+    gap: 6px;
+  }
+
+  .control-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+
+  /* Compact Dossier Drawer */
+  .drawer {
+    width: var(--drawer-width);
+  }
+
+  .drawer-header {
+    padding: 14px 18px;
+  }
+
+  .drawer-header-title {
+    font-size: 11px;
+  }
+
+  .drawer-close,
+  .drawer-expand-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .drawer-content {
+    padding: 16px 18px 40px;
+    gap: 14px;
+  }
+
+  .char-hero {
+    gap: 12px;
+  }
+
+  .char-hero-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+  }
+
+  .char-hero-name {
+    font-size: 20px;
+    gap: 6px;
+  }
+
+  .char-hero-title {
+    font-size: 12px;
+  }
+
+  .char-hero-status {
+    font-size: 11px;
+  }
+
+  .section-box {
+    padding: 12px 14px;
+    gap: 8px;
+    border-radius: 10px;
+  }
+
+  .section-label {
+    font-size: 10.5px;
+  }
+
+  .char-bio-p {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  .timeline-item {
+    padding: 6px 10px;
+  }
+
+  .timeline-item .label {
+    font-size: 11px;
+  }
+
+  .timeline-item .val {
+    font-size: 12px;
+  }
+
+  .lore-card {
+    padding: 12px 14px;
+    gap: 8px;
+  }
+
+  .lore-card-title {
+    font-size: 14px;
+  }
+
+  .lore-card-content {
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+
+  .lore-cross-link {
+    font-size: 11.5px;
+    padding: 6px 10px;
+  }
+
+  .char-mini-pill {
+    font-size: 11.5px;
+    padding: 3px 8px;
+  }
+
+  .thought-item {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .thought-idx {
+    font-size: 11px;
+    min-width: 18px;
+  }
+
+  .thought-quote {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+  .rel-hero {
+    gap: 10px;
+    padding: 8px 0;
+  }
+
+  .rel-node img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .rel-node span {
+    font-size: 12px;
+  }
+
+  .rel-dialogue-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .rel-dialogue-text {
+    font-size: 12.5px;
+  }
+
+  .conn-card {
+    padding: 10px 12px;
+  }
+
+  img[src*="full_art"] {
+    max-height: 220px;
+  }
+
+  /* Compact Expanded Drawer & Expanded Modal on 768p displays */
+  .drawer.expanded .drawer-header,
+  .ack-modal.expanded .ack-modal-header {
+    padding-left: max(24px, calc((100% - 980px) / 2));
+    padding-right: max(24px, calc((100% - 980px) / 2));
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .drawer.expanded .drawer-content,
+  .ack-modal.expanded .ack-modal-body {
+    padding-left: max(24px, calc((100% - 980px) / 2));
+    padding-right: max(24px, calc((100% - 980px) / 2));
+    padding-top: 20px;
+    padding-bottom: 48px;
+    gap: 18px;
+  }
+
+  .drawer.expanded .char-hero {
+    gap: 16px;
+  }
+
+  .drawer.expanded .char-hero-avatar {
+    width: 85px;
+    height: 85px;
+    border-radius: 16px;
+  }
+
+  .drawer.expanded .char-hero-name {
+    font-size: 24px !important;
+  }
+
+  .drawer.expanded .char-hero-title {
+    font-size: 13.5px !important;
+  }
+
+  .drawer.expanded .section-box,
+  .ack-modal.expanded .section-box {
+    padding: 16px 20px !important;
+    gap: 12px !important;
+  }
+
+  .drawer.expanded .section-label,
+  .ack-modal.expanded .section-label {
+    font-size: 12px !important;
+  }
+
+  .drawer.expanded .char-bio-p,
+  .ack-modal.expanded .char-bio-p {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  .drawer.expanded p {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+  .drawer.expanded img[src*="full_art"] {
+    max-height: 380px !important;
+  }
+
+  /* Compact Acknowledgements Modal on 768p displays */
+  .ack-modal {
+    max-height: calc(100vh - 40px);
+  }
+
+  .ack-modal-header {
+    padding: 14px 18px;
+  }
+
+  .ack-modal-title {
+    font-size: 17px;
+  }
+
+  .ack-modal-subtitle {
+    font-size: 11.5px;
+  }
+
+  .ack-modal-body {
+    padding: 16px 18px;
+    gap: 12px;
+  }
+
+  .ack-metrics-grid {
+    gap: 8px;
+  }
+
+  .ack-metric-card {
+    padding: 10px 12px;
+  }
+
+  .ack-metric-value {
+    font-size: 15px;
+  }
+
+  .ack-metric-note {
+    font-size: 11px;
+  }
+
+  .ack-list {
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .ack-callout {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .ack-day-chip {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .ack-modal.expanded .ack-modal-title {
+    font-size: 22px;
+  }
+
+  .ack-modal.expanded .ack-list {
+    font-size: 13.5px;
+    line-height: 1.65;
+  }
+
+  .ack-modal.expanded .ack-callout {
+    font-size: 13.5px;
+    padding: 12px 16px;
+  }
+}
+
+/* ==========================================================================
    Mobile & Tablet Responsive Optimizations (iPhones, Android & Screens <= 768px)
    ========================================================================== */
 @media (max-width: 768px) {

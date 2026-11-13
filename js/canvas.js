@@ -814,9 +814,11 @@ class RelationshipCanvas {
       }
     }
 
-    // Since drawer opens on the right (taking 480px on desktop, 100vw on mobile), frame focus point
+    // Since drawer opens on the right (480px on 1080p+, 420px on laptop <= 1400px, 100vw on mobile), frame focus point
     const isMobile = window.innerWidth <= 768;
-    const targetX = Math.max(0, focusX - this.viewBox.width * (isMobile ? 0.5 : 0.38));
+    const isCompactDesktop = window.innerWidth <= 1400;
+    const horizontalFraction = isMobile ? 0.5 : (isCompactDesktop ? 0.35 : 0.38);
+    const targetX = Math.max(0, focusX - this.viewBox.width * horizontalFraction);
     const targetY = Math.max(-60, focusY - this.viewBox.height / 2);
 
     this.smoothPanTo(targetX, targetY);
