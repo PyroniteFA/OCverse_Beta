@@ -160,13 +160,17 @@
         <!-- Versioning: v1.x.y-beta (x increments only on major updates; y increments on every adjustment) -->
         <div class="legend-footer">
           <div class="legend-footer-meta">
-            <span class="legend-app-version">v1.8.0-beta</span>
-            <span class="legend-last-updated">Updated: Nov 12, 2026, 12:55 PM</span>
-          </div>
-          <div class="legend-footer-links">
-            <button type="button" id="btn-acknowledgements" class="legend-ack-link">
-              Acknowledgements, AI &amp; Art Disclosure ↗
-            </button>
+            <div class="legend-version-group">
+              <span class="legend-app-version">v1.8.6-beta</span>
+              <button
+                type="button"
+                id="btn-acknowledgements"
+                class="legend-info-btn"
+                title="Project info &amp; acknowledgements"
+                aria-label="Project info &amp; acknowledgements"
+              >i</button>
+            </div>
+            <span class="legend-last-updated">Updated: Nov 13, 2026, 6:24 PM</span>
           </div>
         </div>
       </aside>
@@ -210,7 +214,23 @@
             <h2 id="ack-modal-title" class="ack-modal-title">Acknowledgements &amp; AI / Art Discussion</h2>
             <div class="ack-modal-subtitle">Pyronite OC Verse — Created &amp; Curated by <strong style="color: #f8fafc;">CarpoPyronite</strong></div>
           </div>
-          <button type="button" id="ack-modal-close" class="drawer-close" title="Close Window (Esc)" aria-label="Close Acknowledgements">✕</button>
+          <div class="ack-modal-header-actions">
+            <button id="ack-modal-expand-btn" class="drawer-expand-btn" title="Expand to full page length (F)" aria-label="Toggle full page view">
+              <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" y1="3" x2="14" y2="10"></line>
+                <line x1="3" y1="21" x2="10" y2="14"></line>
+              </svg>
+              <svg class="collapse-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <polyline points="4 14 10 14 10 20"></polyline>
+                <polyline points="20 10 14 10 14 4"></polyline>
+                <line x1="14" y1="10" x2="21" y2="3"></line>
+                <line x1="10" y1="14" x2="3" y2="21"></line>
+              </svg>
+            </button>
+            <button type="button" id="ack-modal-close" class="drawer-close" title="Close Window (Esc)" aria-label="Close Acknowledgements">✕</button>
+          </div>
         </div>
 
         <div class="ack-modal-body">
@@ -232,23 +252,23 @@
             <div class="ack-metrics-grid">
               <div class="ack-metric-card">
                 <span class="ack-metric-label">Back-and-Forth Transactions</span>
-                <span class="ack-metric-value">154+ Prompts</span>
-                <span class="ack-metric-note">154+ human prompts &amp; 148+ direct agent replies across 12 user-initiated Antigravity sessions (14 total transcripts including 2 subagent runs), driving 2,935+ automated tool invocations.</span>
+                <span class="ack-metric-value">162+ Prompts</span>
+                <span class="ack-metric-note">162+ human prompts &amp; 156+ direct agent replies across 12 user-initiated Antigravity sessions (14 total transcripts including 2 subagent runs), driving 3,012+ automated tool invocations.</span>
               </div>
               <div class="ack-metric-card">
                 <span class="ack-metric-label">Engineering Span (Thailand Time, ICT)</span>
-                <span class="ack-metric-value">~14.4+ Hours</span>
-                <span class="ack-metric-note">Aggregated across 4 active git days (Nov 9–12, 2026) from each day's first commit to last commit—presuming continuous project work across those windows—plus the pre-commit Nov 8 build session (21:34–23:02 ICT) and earlier Canva drafting.</span>
+                <span class="ack-metric-value">~16.6+ Hours</span>
+                <span class="ack-metric-note">Aggregated across 4 active working days (Nov 9–12, 2026, crossing midnight into Nov 13) with conservative deductions of 3 hours from Nov 10 and 6 hours from Nov 12–13, plus the pre-commit Nov 8 session (21:34–23:02 ICT) and earlier Canva drafting.</span>
               </div>
             </div>
             <div class="ack-timeline-chips">
               <div class="ack-day-chip"><strong>Nov 9:</strong> 21:44–23:35 ICT (1h 52m • 13 commits)</div>
-              <div class="ack-day-chip"><strong>Nov 10:</strong> 10:55–19:42 ICT (8h 46m • 21 commits)</div>
+              <div class="ack-day-chip"><strong>Nov 10:</strong> 10:55–19:42 ICT (5h 46m est., −3h • 21 commits)</div>
               <div class="ack-day-chip"><strong>Nov 11:</strong> 09:20–11:46 ICT (2h 26m • 4 commits)</div>
-              <div class="ack-day-chip"><strong>Nov 12:</strong> 11:34–12:55+ ICT (1h 21m+ • 3+ commits)</div>
+              <div class="ack-day-chip"><strong>Nov 12–13:</strong> 11:34–00:11+ ICT (6h 37m+ est., −6h • 4+ commits)</div>
             </div>
             <p class="char-bio-p" style="font-size: 12px; color: var(--text-muted);">
-              Repo footprint ahead of this update: <strong>41+ git commits</strong> and <strong>5,062+ lines</strong> of hand-directed, AI-scaffolded code covering 11 characters, 22 relationships, and 16 shared lore chapters.
+              Current repo footprint: <strong>42+ git commits</strong> and <strong>5,560+ lines</strong> of hand-directed, AI-scaffolded code covering 11 characters, 22 relationships, and 16 shared lore chapters.
             </p>
           </section>
 
@@ -281,6 +301,18 @@
             <p class="char-bio-p">
               Rather than concealing AI tooling or hand-waving asset provenance, this page documents the exact tools, transaction volume, engineering hours, consent boundaries, and pending beta permissions openly so visitors can engage with the project on honest terms.
             </p>
+          </section>
+
+          <!-- Section 5: Author Context & Background -->
+          <section class="section-box">
+            <div class="section-label">5. Author Context &amp; Background</div>
+            <p class="char-bio-p">
+              For context on how this project was directed and why its art boundaries are stated explicitly:
+            </p>
+            <ul class="ack-list">
+              <li><strong>Technical Background:</strong> Holds a B.Eng. in Computer Engineering and an M.Sci. in Computing with Digital Media, with 13 years of prior work as a System Engineer—which shaped how the app's requirements, architecture, and constraints were specified rather than leaving design decisions unguided.</li>
+              <li><strong>Commissioning History:</strong> Has commissioned 600+ creative projects since 2012 (with 10+ currently active), which is why clear artist permission, pending-confirmation labeling, and strict non-training boundaries remain a practical priority here.</li>
+            </ul>
           </section>
         </div>
       </div>

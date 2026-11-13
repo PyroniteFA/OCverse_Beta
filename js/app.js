@@ -146,8 +146,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // Acknowledgements, AI & Art Disclosure Modal
   const ackBtn = document.getElementById('btn-acknowledgements');
   const ackBackdrop = document.getElementById('ack-modal-backdrop');
+  const ackModal = ackBackdrop ? ackBackdrop.querySelector('.ack-modal') : null;
+  const ackExpandBtn = document.getElementById('ack-modal-expand-btn');
   const ackCloseBtn = document.getElementById('ack-modal-close');
   const ackBody = ackBackdrop ? ackBackdrop.querySelector('.ack-modal-body') : null;
+  let isAckExpanded = false;
+
+  const toggleAckExpand = (forceState = null) => {
+    if (!ackBackdrop || !ackModal) return;
+    isAckExpanded = forceState !== null ? forceState : !isAckExpanded;
+    ackModal.classList.toggle('expanded', isAckExpanded);
+    ackBackdrop.classList.toggle('expanded', isAckExpanded);
+    if (ackExpandBtn) {
+      ackExpandBtn.title = isAckExpanded ? 'Restore standard width (F)' : 'Expand to full page length (F)';
+      const expIcon = ackExpandBtn.querySelector('.expand-icon');
+      const colIcon = ackExpandBtn.querySelector('.collapse-icon');
+      if (expIcon) expIcon.style.display = isAckExpanded ? 'none' : 'block';
+      if (colIcon) colIcon.style.display = isAckExpanded ? 'block' : 'none';
+    }
+  };
 
   const openAckModal = () => {
     if (!ackBackdrop) return;
@@ -170,6 +187,10 @@ document.addEventListener('DOMContentLoaded', () => {
       openAckModal();
     });
 
+    if (ackExpandBtn) {
+      ackExpandBtn.addEventListener('click', () => toggleAckExpand());
+    }
+
     if (ackCloseBtn) {
       ackCloseBtn.addEventListener('click', closeAckModal);
     }
@@ -181,9 +202,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && ackBackdrop.classList.contains('open')) {
+      if (!ackBackdrop.classList.contains('open')) return;
+      if (e.key === 'Escape') {
         e.preventDefault();
         closeAckModal();
+      }
+      if ((e.key === 'f' || e.key === 'F') && !['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
+        e.preventDefault();
+        toggleAckExpand();
       }
     });
   }
