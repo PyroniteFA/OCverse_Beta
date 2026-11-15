@@ -70,7 +70,6 @@ const LORE_FLOWCHART_ENTRIES = {
     summary: "Contracting outside physical titans for shared planetary rampages, harvesting surged life energy for redistributed boons, and Carpo serving as friendly recruiter.",
     nextIds: ['lore-order-armor'],
     crossLinks: [
-      { targetId: 'lore-order-armor', label: 'Combat Gear' },
       { targetId: 'lore-regal-first-contact', label: 'Regal Contract' }
     ]
   },
@@ -258,14 +257,14 @@ const STORYLINE_LANES = [
     nodeIds: ['lore-order-pact', 'lore-order-targets', 'lore-order-affiliates', 'lore-order-armor']
   },
   {
-    id: 'carnak',
-    name: "Carnak: The Twisted Sobek (Personal Origin)",
-    shortName: "Carnak Origin",
-    icon: '🐊',
-    themeColor: '#10b981',
-    description: "Carnak's personal genesis from residual Sobek power, bottomless hunger, genuine hatred for humanity, and brotherly dynamic with Kai'nek and the titans.",
+    id: 'kainek',
+    name: "Kai'nek: Primordial Genesis & Sovereign Philosophy",
+    shortName: "Kai'nek Genesis",
+    icon: '🐍',
+    themeColor: '#a855f7',
+    description: 'Awakening into eternity without origin memories, demiurge complex, temporary tail buffering mechanics, and code of never brainwashing peers.',
     layout: 'linear',
-    nodeIds: ['lore-carnak-twisted-sobek']
+    nodeIds: ['lore-kainek-origin', 'lore-kainek-philosophy']
   },
   {
     id: 'sanctuary',
@@ -282,14 +281,14 @@ const STORYLINE_LANES = [
     mergedNodeIds: ['lore-carpo-sanctuary', 'lore-sanctuary-trio']
   },
   {
-    id: 'kainek',
-    name: "Kai'nek: Primordial Genesis & Sovereign Philosophy",
-    shortName: "Kai'nek Genesis",
-    icon: '🐍',
-    themeColor: '#a855f7',
-    description: 'Awakening into eternity without origin memories, demiurge complex, temporary tail buffering mechanics, and code of never brainwashing peers.',
+    id: 'carnak',
+    name: "Carnak: The Twisted Sobek (Personal Origin)",
+    shortName: "Carnak Origin",
+    icon: '🐊',
+    themeColor: '#10b981',
+    description: "Carnak's personal genesis from residual Sobek power, bottomless hunger, genuine hatred for humanity, and brotherly dynamic with Kai'nek and the titans.",
     layout: 'linear',
-    nodeIds: ['lore-kainek-origin', 'lore-kainek-philosophy']
+    nodeIds: ['lore-carnak-twisted-sobek']
   },
   {
     id: 'affiliates',
@@ -371,12 +370,18 @@ class LoreFlowchartModal {
       }
     });
 
+    window.addEventListener('orientationchange', () => {
+      if (this.backdrop.classList.contains('open')) {
+        setTimeout(() => this.renderConnectors(), 150);
+      }
+    });
+
     if (this.canvasWrapper) {
       this.canvasWrapper.addEventListener('scroll', () => {
         if (this.backdrop.classList.contains('open')) {
           this.renderConnectors();
         }
-      });
+      }, { passive: true });
     }
 
     this.renderTabs();
@@ -400,6 +405,10 @@ class LoreFlowchartModal {
       setTimeout(() => {
         this.scrollToLoreNode(targetLoreId);
       }, 150);
+    } else {
+      setTimeout(() => {
+        this.renderConnectors();
+      }, 180);
     }
   }
 
@@ -455,8 +464,16 @@ class LoreFlowchartModal {
         this.currentTab = btn.getAttribute('data-tab');
         this.renderTabs();
         this.renderLanes();
+        if (this.canvasWrapper) {
+          this.canvasWrapper.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+        }
       });
     });
+
+    const activeBtn = this.tabsContainer.querySelector('.flowchart-tab-btn.active');
+    if (activeBtn) {
+      activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
   }
 
   renderNodeCard(loreId, roleBadge = null) {
@@ -692,7 +709,7 @@ class LoreFlowchartModal {
         setTimeout(() => {
           const card = this.drawer.contentEl.querySelector(`.lore-card[data-lore-id="${loreId}"]`);
           if (card) {
-            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
             card.classList.add('highlight-pulse');
             setTimeout(() => card.classList.remove('highlight-pulse'), 2500);
           }

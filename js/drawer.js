@@ -84,8 +84,76 @@ class DrawerManager {
     });
   }
 
+  getActiveReadingEntry() {
+    if (!this.contentEl) return null;
+
+    if (this.contentEl.scrollTop < 40) {
+      return null;
+    }
+
+    const containerRect = this.contentEl.getBoundingClientRect();
+    // Focal line: 60px below container top (where user reads below header padding)
+    const focalY = containerRect.top + 60;
+
+    // Check for lore cards first
+    const loreCards = Array.from(this.contentEl.querySelectorAll('.lore-card'));
+    if (loreCards.length > 0) {
+      // 1. Lore card intersecting focal reading line
+      const coveringCard = loreCards.find(card => {
+        const r = card.getBoundingClientRect();
+        return r.top <= focalY && r.bottom > focalY;
+      });
+      if (coveringCard) return coveringCard;
+
+      // 2. Otherwise lore card closest to focal line that is visible
+      let closestCard = null;
+      let minDistance = Infinity;
+      for (const card of loreCards) {
+        const r = card.getBoundingClientRect();
+        if (r.bottom > containerRect.top && r.top < containerRect.bottom) {
+          const dist = Math.abs(r.top - focalY);
+          if (dist < minDistance) {
+            minDistance = dist;
+            closestCard = card;
+          }
+        }
+      }
+      if (closestCard) return closestCard;
+    }
+
+    // Fallback for character / relationship profiles without lore cards or above lore cards
+    const sections = Array.from(this.contentEl.querySelectorAll('.section-box, .char-hero, .rel-hero'));
+    const coveringSection = sections.find(sec => {
+      const r = sec.getBoundingClientRect();
+      return r.top <= focalY && r.bottom > focalY;
+    });
+    if (coveringSection) return coveringSection;
+
+    let closestSection = null;
+    let minDistance = Infinity;
+    for (const sec of sections) {
+      const r = sec.getBoundingClientRect();
+      if (r.bottom > containerRect.top && r.top < containerRect.bottom) {
+        const dist = Math.abs(r.top - focalY);
+        if (dist < minDistance) {
+          minDistance = dist;
+          closestSection = sec;
+        }
+      }
+    }
+    return closestSection;
+  }
+
   toggleExpand(forceState = null) {
-    this.isExpanded = forceState !== null ? forceState : !this.isExpanded;
+    const wasExpanded = this.isExpanded;
+    const nextExpanded = forceState !== null ? forceState : !this.isExpanded;
+    if (wasExpanded === nextExpanded) return;
+
+    // Capture the entry the user is currently reading before reflowing
+    const activeEntry = this.getActiveReadingEntry();
+    const wasAtTop = this.contentEl ? this.contentEl.scrollTop < 40 : true;
+
+    this.isExpanded = nextExpanded;
     if (this.isExpanded) {
       this.drawer.classList.add('expanded');
       if (this.expandBtn) {
@@ -104,6 +172,18 @@ class DrawerManager {
         if (expIcon) expIcon.style.display = 'block';
         if (colIcon) colIcon.style.display = 'none';
       }
+    }
+
+    if (wasAtTop) {
+      if (this.contentEl) this.contentEl.scrollTop = 0;
+    } else if (activeEntry) {
+      // Re-anchor to the top of the entry being read (both expand & restore)
+      setTimeout(() => {
+        activeEntry.scrollIntoView({ behavior: 'auto', block: 'start' });
+      }, 50);
+      setTimeout(() => {
+        activeEntry.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 360);
     }
   }
 
@@ -905,11 +985,11 @@ class DrawerManager {
     setTimeout(() => {
       const targetCard = this.contentEl.querySelector(`.lore-card[data-lore-id="${loreId}"]`);
       if (targetCard) {
-        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
         targetCard.classList.add('highlight-pulse');
         setTimeout(() => targetCard.classList.remove('highlight-pulse'), 2500);
       }
-    }, 100);
+    }, 120);
   }
 
   bindDynamicLinks() {
@@ -964,7 +1044,7 @@ class DrawerManager {
         // If the linked lore card is already visible on the current drawer, scroll in place without reopening all lore
         const existingCard = this.contentEl.querySelector(`.lore-card[data-lore-id="${loreId}"]`);
         if (existingCard) {
-          existingCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          existingCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
           existingCard.classList.add('highlight-pulse');
           setTimeout(() => existingCard.classList.remove('highlight-pulse'), 2500);
           return;
@@ -975,11 +1055,11 @@ class DrawerManager {
         setTimeout(() => {
           const targetCard = this.contentEl.querySelector(`.lore-card[data-lore-id="${loreId}"]`);
           if (targetCard) {
-            targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
             targetCard.classList.add('highlight-pulse');
             setTimeout(() => targetCard.classList.remove('highlight-pulse'), 2500);
           }
-        }, 80);
+        }, 120);
       });
     });
     this.contentEl.querySelectorAll('.order-lore-link').forEach(el => {

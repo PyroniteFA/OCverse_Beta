@@ -944,6 +944,7 @@ body {
   display: flex;
   gap: 18px;
   align-items: center;
+  scroll-margin-top: 18px;
 }
 
 .char-hero-avatar {
@@ -990,6 +991,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  scroll-margin-top: 18px;
 }
 
 .char-bio-body {
@@ -1063,6 +1065,7 @@ body {
   flex-direction: column;
   gap: 10px;
   transition: all 0.2s;
+  scroll-margin-top: 18px;
 }
 
 .lore-card:hover {
@@ -1386,6 +1389,7 @@ body {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   border: 1px solid var(--border-color);
+  scroll-margin-top: 18px;
 }
 
 .rel-node {
@@ -3338,51 +3342,292 @@ body {
 /* Flowchart Responsive Adjustments */
 @media (max-width: 1024px) {
   .flowchart-modal {
-    max-width: 95vw;
-    height: 92vh;
+    max-width: 96vw;
+    height: 94vh;
+  }
+
+  .flowchart-canvas {
+    padding: 20px 22px 40px;
   }
 }
 
 @media (max-width: 768px) {
   .flowchart-modal-backdrop {
-    padding: 10px;
+    padding: 0;
   }
 
   .flowchart-modal {
-    max-height: 94vh;
-    border-radius: 14px;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    border-radius: 0;
+    border: none;
   }
 
   .flowchart-modal-header {
-    padding: 14px 16px;
-    flex-wrap: wrap;
+    padding: 10px 14px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "title actions"
+      "search search";
+    background: rgba(15, 23, 42, 0.95);
   }
 
-  .flowchart-toolbar {
-    padding: 8px 16px;
+  .flowchart-title-group {
+    grid-area: title;
+    min-width: 0;
+    gap: 2px;
   }
 
-  .flowchart-flow-legend {
-    display: none;
+  .flowchart-brand-row {
+    gap: 6px;
   }
 
-  .flowchart-search-box {
-    width: 100%;
+  .brand-tag {
+    font-size: 9.5px;
+    padding: 2px 6px;
+  }
+
+  .flowchart-badge-count {
+    font-size: 9.5px;
+    padding: 1px 6px;
+  }
+
+  .flowchart-modal-title {
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+
+  .flowchart-modal-subtitle {
+    display: none; /* Conserve vertical real-estate on mobile */
+  }
+
+  .flowchart-header-actions {
+    grid-area: actions;
+    gap: 8px;
+    align-self: center;
   }
 
   .flowchart-modal-expand-btn {
     display: none !important;
   }
 
+  .flowchart-modal-close {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .flowchart-search-box {
+    grid-area: search;
+    width: 100%;
+    padding: 6px 10px;
+    background: rgba(30, 41, 59, 0.7);
+    border-radius: 6px;
+  }
+
+  .flowchart-search-box input {
+    font-size: 12px;
+  }
+
+  .flowchart-toolbar {
+    padding: 6px 12px;
+    gap: 8px;
+    background: rgba(11, 17, 32, 0.96);
+  }
+
+  .flowchart-tabs-bar {
+    width: 100%;
+    gap: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+
+  .flowchart-tabs-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .flowchart-tab-btn {
+    padding: 6px 10px;
+    font-size: 11px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
+
+  .flowchart-flow-legend {
+    display: none;
+  }
+
+  .flowchart-canvas-wrapper {
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
+    overscroll-behavior: contain;
+  }
+
+  .flowchart-canvas {
+    padding: 14px 14px 48px;
+  }
+
+  .flowchart-board {
+    gap: 22px;
+    min-width: max-content;
+  }
+
+  .flowchart-swimlane {
+    padding: 12px 14px;
+    gap: 12px;
+    border-radius: 10px;
+  }
+
+  .lane-header {
+    padding-bottom: 8px;
+    gap: 2px;
+  }
+
+  .lane-icon {
+    font-size: 15px;
+  }
+
+  .lane-title {
+    font-size: 14px;
+  }
+
+  .lane-description {
+    font-size: 11px;
+    line-height: 1.35;
+    max-width: 620px;
+  }
+
+  /* Keep linear chronological flow horizontal for clean left-to-right reading */
   .lane-track-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
   }
 
   .fork-merge-layout {
-    flex-direction: column;
-    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .fork-branches-col {
+    gap: 14px;
+  }
+
+  .flowchart-node {
+    width: 250px;
+    padding: 12px;
+    gap: 7px;
+    border-radius: 10px;
+  }
+
+  .flowchart-node:active {
+    transform: scale(0.98);
+  }
+
+  .node-top-bar {
+    gap: 6px;
+  }
+
+  .node-arc-badge {
+    font-size: 9.5px;
+    padding: 2px 6px;
+  }
+
+  .node-seq-badge {
+    font-size: 10px;
+  }
+
+  .node-title {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .node-era {
+    font-size: 10.5px;
+  }
+
+  .node-summary {
+    font-size: 11px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .node-chars-row {
+    gap: 4px;
+  }
+
+  .node-char-chip {
+    font-size: 9.5px;
+    padding: 2px 5px;
+    gap: 4px;
+  }
+
+  .node-char-chip img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .node-cross-links-row {
+    gap: 5px;
+  }
+
+  .node-crossover-link {
+    font-size: 10px;
+    padding: 4px 7px;
+    border-radius: 5px;
+  }
+
+  .node-footer {
+    padding-top: 4px;
+  }
+
+  .node-instruction {
+    font-size: 10px;
+  }
+
+  .node-action-pill {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flowchart-modal-header {
+    padding: 8px 10px;
+  }
+
+  .flowchart-toolbar {
+    padding: 5px 8px;
+  }
+
+  .flowchart-tab-btn {
+    padding: 5px 8px;
+    font-size: 10.5px;
+  }
+
+  .flowchart-canvas {
+    padding: 10px 10px 40px;
+  }
+
+  .flowchart-node {
+    width: 236px;
+    padding: 11px;
+  }
+
+  .lane-track-row {
+    gap: 26px;
   }
 }
 

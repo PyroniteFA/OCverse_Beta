@@ -139,9 +139,7 @@ When Order members deploy alongside contracted associates with gear equipped, th
 - **Synergy with Geared & Indigenous Allies**: When trusted associates join the fray—whether bolstered by their own indigenous hardware or equipped with Kai'nek's tailored gear—they slot seamlessly into this offensive matrix. With Carpo securing the skies, Carnak shattering fortified barriers, Brutus clearing subterranean choke points, and Kai'nek neutralizing the power grid, contracted macro entities are given the ultimate destructive playground to unleash maximum devastation alongside their geared Order counterparts.
 
 8. Optional Deployment & The Primal Wild Beast:
-Under no circumstances are Order members or allied associates trapped by their equipment. All combat suits, gadgets, gas canisters, firearms, and sledgehammers are deployed strictly optionally for operations where enhanced tactical utility, hostile atmospheric conditions, or personal enjoyment call for them. Whenever an Order member or associate chooses, they freely shed every piece of gear to unleash and rampage as a raw, untamed wild beast—carnivorous, colossal, and primal.
-
-<a class="lore-cross-link" data-lore-id="lore-carnak-twisted-sobek">🐊 Related Chapter: The Twisted Sobek & The Writhing Masses →</a>`
+Under no circumstances are Order members or allied associates trapped by their equipment. All combat suits, gadgets, gas canisters, firearms, and sledgehammers are deployed strictly optionally for operations where enhanced tactical utility, hostile atmospheric conditions, or personal enjoyment call for them. Whenever an Order member or associate chooses, they freely shed every piece of gear to unleash and rampage as a raw, untamed wild beast—carnivorous, colossal, and primal.`
   },
   {
     id: 'lore-kainek-origin',
