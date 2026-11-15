@@ -128,6 +128,138 @@ class DrawerManager {
     return '#94a3b8';
   }
 
+  formatLoreContent(raw) {
+    if (!raw) return '';
+
+    let text = raw.trim();
+
+    // 1. Extract top cross-link if present
+    let topCrossLink = '';
+    const topLinkMatch = text.match(/^(\s*<a\s+class="lore-cross-link"[^>]*>[\s\S]*?<\/a>\s*)/i);
+    if (topLinkMatch) {
+      topCrossLink = topLinkMatch[1].trim();
+      text = text.substring(topLinkMatch[0].length).trim();
+    }
+
+    // 2. Extract bottom cross-link if present
+    let bottomCrossLink = '';
+    const bottomLinkMatch = text.match(/(\s*<a\s+class="lore-cross-link"[^>]*>[\s\S]*?<\/a>\s*)$/i);
+    if (bottomLinkMatch) {
+      bottomCrossLink = bottomLinkMatch[1].trim();
+      text = text.substring(0, text.length - bottomLinkMatch[0].length).trim();
+    }
+
+    // 3. Check for numbered points like "1. Title"
+    const hasNumberedPoints = /(?:^|\n)\s*[0-9]+\.\s+/.test(text);
+
+    if (!hasNumberedPoints) {
+      // Standard prose entry without points: format clean paragraphs
+      const paragraphs = text.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
+      const bodyHTML = paragraphs.map(p => {
+        let pText = p.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+        return `<p class="lore-body-p">${pText}</p>`;
+      }).join('');
+      return `
+        ${topCrossLink ? `<div class="lore-nav-top">${topCrossLink}</div>` : ''}
+        <div class="lore-prose-container">${bodyHTML}</div>
+        ${bottomCrossLink ? `<div class="lore-nav-bottom">${bottomCrossLink}</div>` : ''}
+      `;
+    }
+
+    // 4. Multi-point entry: separate lead-in intro from points
+    const firstPointMatch = text.match(/(?:^|\n)\s*1\.\s+/);
+    let introHTML = '';
+    let pointsText = text;
+
+    if (firstPointMatch && firstPointMatch.index > 0) {
+      const introText = text.substring(0, firstPointMatch.index).trim();
+      if (introText) {
+        const introParas = introText.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
+        introHTML = `<div class="lore-intro-lead">${introParas.map(p => {
+          let pText = p.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+          return `<p>${pText}</p>`;
+        }).join('')}</div>`;
+      }
+      pointsText = text.substring(firstPointMatch.index).trim();
+    }
+
+    // 5. Parse each numbered section (handles both "1. Title:\nBody" and "1. Title: Inline body")
+    const pointBlockRegex = /(?:^|\n)\s*([0-9]+)\.\s+([\s\S]*?)(?=(?:\n\s*[0-9]+\.\s+|$))/g;
+    let blockMatch;
+    let pointsHTML = '';
+
+    while ((blockMatch = pointBlockRegex.exec(pointsText)) !== null) {
+      const num = blockMatch[1];
+      const rawBlock = blockMatch[2].trim();
+
+      const lines = rawBlock.split('\n');
+      const firstLine = lines[0].trim();
+      let title = '';
+      let bodyText = '';
+
+      if (firstLine.endsWith(':') && lines.length > 1) {
+        title = firstLine.replace(/:+$/, '').trim();
+        bodyText = lines.slice(1).join('\n').trim();
+      } else if (firstLine.includes(':') && lines.length === 1) {
+        const colonIdx = firstLine.indexOf(':');
+        title = firstLine.substring(0, colonIdx).trim();
+        bodyText = firstLine.substring(colonIdx + 1).trim();
+      } else {
+        const colonIdx = firstLine.indexOf(':');
+        if (colonIdx !== -1 && colonIdx < 55) {
+          title = firstLine.substring(0, colonIdx).trim();
+          bodyText = firstLine.substring(colonIdx + 1).trim() + (lines.length > 1 ? '\n' + lines.slice(1).join('\n') : '');
+        } else {
+          title = firstLine.replace(/:+$/, '').trim();
+          bodyText = lines.length > 1 ? lines.slice(1).join('\n').trim() : '';
+        }
+      }
+
+      const paras = bodyText.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
+      const formattedParas = paras.map(p => {
+        // Check if paragraph is a bullet list (lines beginning with '- ' or '* ')
+        if (/^\s*[-*]\s+/m.test(p)) {
+          const bLines = p.split('\n').map(l => l.trim()).filter(Boolean);
+          const lis = bLines.map(line => {
+            let itemText = line.replace(/^\s*[-*]\s+/, '');
+            itemText = itemText.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+            return `<li class="lore-bullet-item">${itemText}</li>`;
+          }).join('');
+          return `<ul class="lore-bullet-list">${lis}</ul>`;
+        }
+
+        // Highlight subheads if paragraph begins with "Label: "
+        const subClauseMatch = p.match(/^([A-Za-z0-9\s/&'()—–-]+):\s*([\s\S]+)$/);
+        if (subClauseMatch && !subClauseMatch[1].startsWith('<')) {
+          let restText = subClauseMatch[2].replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+          return `<p class="lore-section-p"><strong class="lore-subhead">${subClauseMatch[1]}:</strong> ${restText}</p>`;
+        }
+
+        let normalText = p.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+        return `<p class="lore-section-p">${normalText}</p>`;
+      }).join('');
+
+      pointsHTML += `
+        <div class="lore-point-card">
+          <div class="lore-point-header">
+            <span class="lore-point-badge">${num}</span>
+            <span class="lore-point-title">${title}</span>
+          </div>
+          <div class="lore-point-body">
+            ${formattedParas}
+          </div>
+        </div>
+      `;
+    }
+
+    return `
+      ${topCrossLink ? `<div class="lore-nav-top">${topCrossLink}</div>` : ''}
+      ${introHTML}
+      <div class="lore-points-container">${pointsHTML}</div>
+      ${bottomCrossLink ? `<div class="lore-nav-bottom">${bottomCrossLink}</div>` : ''}
+    `;
+  }
+
   renderLoreCard(lore, activeChar = null) {
     const characters = this.getCharacters();
     const charMap = new Map(characters.map(c => [c.id, c]));
@@ -159,7 +291,7 @@ class DrawerManager {
           <span class="lore-card-title">${lore.title}</span>
           <span class="lore-card-era">${lore.era}</span>
         </div>
-        <p class="lore-card-content">${lore.content}</p>
+        <div class="lore-card-content">${this.formatLoreContent(lore.content)}</div>
         <div class="tag-pills">${tagsHTML}</div>
         ${otherCharsHTML}
       </div>
@@ -178,7 +310,7 @@ class DrawerManager {
     const charRels = allRelationships.filter(r => r.source === char.id || r.target === char.id);
 
     // Distinguish between the character's personal arc lore vs collective Order institutional lore
-    const orderInstitutionalIds = new Set(['lore-order-pact', 'lore-order-affiliates', 'lore-order-armor']);
+    const orderInstitutionalIds = new Set(['lore-order-pact', 'lore-order-targets', 'lore-order-affiliates', 'lore-order-armor']);
     const personalLore = taggedLore.filter(l => !orderInstitutionalIds.has(l.id));
     const orderLore = taggedLore.filter(l => orderInstitutionalIds.has(l.id));
 
@@ -395,7 +527,7 @@ class DrawerManager {
       (l.characterIds && l.characterIds.includes(rel.source) && l.characterIds.includes(rel.target))
     );
 
-    const orderInstitutionalIds = new Set(['lore-order-pact', 'lore-order-affiliates', 'lore-order-armor']);
+    const orderInstitutionalIds = new Set(['lore-order-pact', 'lore-order-targets', 'lore-order-affiliates', 'lore-order-armor']);
     const personalRelLore = taggedLore.filter(l => !orderInstitutionalIds.has(l.id));
     const orderRelLore = taggedLore.filter(l => orderInstitutionalIds.has(l.id));
 
@@ -531,7 +663,7 @@ class DrawerManager {
     });
 
     // Primary Order lore chapters (only show entries tied to associated characters when toggle is enabled)
-    const baseOrderLoreIds = ['lore-order-pact', 'lore-order-affiliates', 'lore-order-armor', 'lore-kainek-philosophy', 'lore-carnak-twisted-sobek'];
+    const baseOrderLoreIds = ['lore-order-pact', 'lore-order-targets', 'lore-order-affiliates', 'lore-order-armor', 'lore-kainek-origin', 'lore-kainek-philosophy', 'lore-carnak-twisted-sobek'];
     const sharedLore = this.getSharedLore();
     const orderLores = sharedLore.filter(l => baseOrderLoreIds.includes(l.id) || (l.tags && l.tags.includes('The Order')));
 
@@ -640,7 +772,7 @@ class DrawerManager {
             <span class="lore-card-title">${lore.title}</span>
             <span class="lore-card-era">${lore.era}</span>
           </div>
-          <p class="lore-card-content">${lore.content}</p>
+          <div class="lore-card-content">${this.formatLoreContent(lore.content)}</div>
           <div class="tag-pills">
             ${(lore.tags || []).filter(t => CANONICAL_LORE_TAGS.has(t)).map(t => `<span class="tag-pill ${t === selectedTag ? 'active' : ''}" data-lore-filter="${t}">#${t}</span>`).join('')}
           </div>
