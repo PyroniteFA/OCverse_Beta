@@ -841,8 +841,10 @@ body {
 }
 
 .drawer.expanded .lore-intro-lead p {
-  font-size: 14.5px !important;
-  line-height: 1.7 !important;
+  font-size: 15px !important;
+  font-style: normal !important;
+  color: #f1f5f9 !important;
+  line-height: 1.75 !important;
 }
 
 .drawer.expanded .lore-cross-link {
@@ -1113,21 +1115,25 @@ body {
   margin-bottom: 0;
 }
 
-/* Lead Intro */
+/* Lead Intro / Narrative Prologue */
 .lore-intro-lead {
-  background: rgba(56, 189, 248, 0.05);
-  border-left: 3px solid rgba(56, 189, 248, 0.45);
-  border-radius: 0 6px 6px 0;
-  padding: 8px 12px;
-  margin-bottom: 12px;
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.09) 0%, rgba(15, 23, 42, 0.5) 100%);
+  border-left: 3.5px solid #38bdf8;
+  border-top: 1px solid rgba(56, 189, 248, 0.14);
+  border-right: 1px solid rgba(56, 189, 248, 0.08);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.08);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 14px;
+  margin-bottom: 14px;
 }
 
 .lore-intro-lead p {
-  margin: 0 0 6px 0;
-  font-size: 12px;
-  font-style: italic;
-  color: #94a3b8;
-  line-height: 1.55;
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  font-style: normal;
+  color: #e2e8f0;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
 }
 
 .lore-intro-lead p:last-child {

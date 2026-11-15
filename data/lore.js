@@ -252,7 +252,9 @@ Living under the same roof, Zahra grew deeply fascinated with the dragon warrior
 Kai'nek then orchestrated the pivotal catalyst: he ensured court servants walked in on the lovers while they were being intimate. To protect Zahra and preserve royal face, the court insisted that Brutus had violated her. The King immediately sentenced Brutus to death.
 
 5. Escape & The Ancestral Revelation:
-As guards escorted Brutus out of town for execution, the dragon broke free and fled. Drawn by instinct to his ancestral homeland, he discovered the horrifying reality: humanity had systematically exterminated his entire species. There, Kai'nek's apparitions of dragon ancestors urged him to take vengeful retribution. Ascending into an avenging dragon beast, Brutus flew back and slaughtered the entire royal court—sparing only Zahra, and taking her with him into the wilderness.
+As guards escorted Brutus out of town for execution, the dragon broke free and killed the guards on the spot. Drawn by instinct to his ancestral homeland, he discovered the horrifying reality: humanity had systematically exterminated his entire species. There, Kai'nek's apparitions of dragon ancestors urged him to take vengeful retribution, igniting his ascension into an avenging dragon beast. 
+
+Brutus relentlessly made his way back, carving an unstoppable path of devastation leading directly up to the royal castle. By then completely impervious to human weaponries, he tore through every desperate effort mounted by defending forces, none of whom were able to stand against him. Breaching the fortifications, Brutus slaughtered the entire royal court—sparing only Zahra, and taking her with him into the wilderness.
 
 <a class="lore-cross-link" data-lore-id="lore-brutus-zahra-tragedy">📖 Continue to Next Arc: Ancestors, Angels & The 150-Year Sacrifice →</a>`
   },
