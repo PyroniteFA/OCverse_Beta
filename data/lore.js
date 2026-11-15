@@ -141,6 +141,82 @@ Under no circumstances are Order members or allied associates trapped by their e
 <a class="lore-cross-link" data-lore-id="lore-carnak-twisted-sobek">🐊 Related Chapter: The Twisted Sobek & The Writhing Masses →</a>`
   },
   {
+    id: 'lore-kainek-origin',
+    title: "Primordial Genesis & The Demiurge Complex: Kai'nek's Origin, Celestial Anatomy, and the Solitude of Eternity",
+    era: 'Primordial Genesis / Timeless (∞)',
+    tags: ["Kai'nek", "The Order", "Facilitation", "Friendship", "Observation"],
+    characterIds: ['kainek'],
+    relationshipIds: ['rel-kainek-carnak-facil', 'rel-kainek-carpo-facil', 'rel-kainek-brutus-facil'],
+    summary: "Kai'nek emerged into consciousness without memory of his origin, sensing reality unfolded outside and despite him. Incapable of creating life from scratch, he channeled his demiurge complex into ascending mortal candidates into authentic titan peers—shaping eternity on his own terms.",
+    content: `Before the Order, before the ruined skylines of a thousand harvested realities, Kai'nek simply existed—a primordial enigma standing at the intersection of eternity and cosmic solitude:
+
+1. The Blank Horizon: Awakening Without Origin Memory:
+Kai'nek commands no recollection of his own genesis. He remembers no gestation, no creator, no ancestral forebears, and no dawn of consciousness. While his instinct and celestial anatomy feel as ancient as reality itself, he awoke to an absolute ontological blank slate. He simply *was*—a fully realized, deity-level macro titan anchored in the multiversal void with inherent mastery over planar forces, yet possessing zero historical narrative of how his existence came to pass.
+
+2. The Demiurge Complex: Reality Outside & Despite Him:
+This complete absence of origin memory shaped Kai'nek's fundamental worldview: gazing across the multiverse, he harbored the deep, unsettling realization that reality had unfolded outside of him, and entirely despite him. Galaxies spun, cosmic laws crystallized, and mortal civilizations crawled out of primordial oceans without requiring his permission or acknowledging his existence.
+
+Rather than retreating into nihilistic detachment, this realization ignited a fierce demiurge complex. If the cosmos was not born of his sovereign design, he would refuse to remain a passive bystander. Reality would be bent, dominated, and rewritten by his direct intervention. What the universe constructed through indifferent aeons, Kai'nek would curate, challenge, and dismantle to suit his sovereign aesthetic.
+
+3. The Barren Divine: Inability to Create Life from Scratch:
+For all his staggering might—effortless spatial phasing, planet-cracking telekinesis, and psychic mastery across interstellar voids—Kai'nek is bound by an absolute ontological limit: he cannot generate life from scratch. He cannot spark organic vitality out of empty vacuum, nor can he breathe genuine mortal souls into barren dust. Barren planetary cores and burning nuclear stars are trivial to drain, yet completely incapable of yielding the living pulse he craves.
+
+This divine barrenness turned his gaze perpetually outward toward mortal realms. Mortals possessed the one enigmatic spark Kai'nek could never synthesize: genuine, fragile life, teeming with visceral emotion, ambition, and terrified sentience.
+
+4. Ascension as Sacred Genesis: Sculpting Peers Over Puppets:
+Because he cannot birth life from the void, ascending chosen mortal candidates across the multiverse is the closest act of creation available to him. When Kai'nek observes a mortal harboring extraordinary resilience, tragic resolve, or raw predatory spirit, he steps forward as facilitator—rewriting their biological scale into immortal, macro-form titans.
+
+This reality explains why Kai'nek strictly rejects sycophants and refuses to alter the memories of his circle: commanding mindless, brainwashed thralls carries zero emotional resonance. If ascension is his nearest brush with true genesis, he demands living masterpieces—conscious, authentic peers who choose to stand at his side willingly and challenge eternity together.
+
+5. Celestial Anatomy & The Tail Buffer Mechanics:
+In his unarmored native manifestation, Kai'nek stands as a towering, majestic primordial cobra titan. Enveloped in an oppressive light blue celestial aura, his scales bear intricate glyph-like conduits that ignite with a controllable, cool-toned bioluminescent glow spanning his hood, tongue, underbelly, and intimate anatomy. Endowed with infinite lived experience (∞) and instantaneous cellular regeneration, mortal armaments and high-yield thermonuclear warheads produce no lasting trauma upon his tissue, allowing him to endure throughout aeons without biological decay.
+
+Crucially, his celestial anatomy features a specialized biological energy buffering system within his tails: while waging destructive campaigns across distant realities, Kai'nek cannot instantly beam harvested power across planar space into his home domain. Instead, his tails serve as an active, temporary field containment buffer. When siphoning massive surges of mortal life-force and shattered electrical power grids during a siege, his celestial anatomy routes the raw current into his tails—causing them to physically lengthen, thicken, and illuminate as they absorb and insulate the staggering voltage. This elongation is strictly a temporary storage phase: once the campaign concludes, he withdraws to his sovereign sanctum where he discharges the energy into his realm's permanent reservoirs, whereupon his tails contract back to their standard, elegant proportions.
+
+6. The Solitude of the Sanctum & The Birth of the Order:
+Between campaigns, Kai'nek withdraws into his private sovereign sanctum—a tranquil extra-planar domain where he discharges the temporary reserves held within his tails into vast celestial reservoirs for long-term storage and redistribution. Yet the quiet halls of his realm revealed a chilling truth: boundless solitary power is profoundly hollow. The desire to banish cosmic boredom and share the thrill of multiversal ruin led him to establish the Order, transforming his solitary existence into an elite brotherhood of ascended equals.
+
+<a class="lore-cross-link" data-lore-id="lore-kainek-philosophy">⚡ Next Chapter: The Art of Ruin & The Price of Peers: Kai'nek's Sovereign Philosophy →</a>`
+  },
+  {
+    id: 'lore-kainek-philosophy',
+    title: "The Art of Ruin & The Price of Peers: Kai'nek's Sovereign Philosophy",
+    era: 'Centuries-Long Doctrine',
+    tags: ["Kai'nek", 'Carpo', 'Carnak', 'The Order', 'Friendship', 'Facilitation'],
+    characterIds: ['kainek', 'carpo', 'carnak'],
+    relationshipIds: ['rel-kainek-carpo-friend', 'rel-kainek-carnak-friend', 'rel-carnak-carpo-friend'],
+    summary: "The sovereign's hedonistic philosophy of ruin: relishing the 'delicious' terror of panic over sterile planetary cores, his temporary tail buffering and realm energy deposition, deity-level psychic dominance, and timeline exploration.",
+    content: `<a class="lore-cross-link" data-lore-id="lore-kainek-origin" style="margin-bottom:12px;">⬅️ Preceded by: Primordial Genesis & The Demiurge Complex: Kai'nek's Origin, Celestial Anatomy, and the Solitude of Eternity</a>
+
+Across centuries of planar campaigns, Kai'nek's operations have never been guided by mere cold efficiency, but by what he personally enjoys first:
+
+1. The 'Delicious' Taste of Panic vs. Sterile Harvesting:
+Technically, Kai'nek commands the power to effortlessly siphon immense energy directly from planetary molten cores and blazing nuclear stars. Yet he finds zero fun or satisfaction in feeding upon barren, inanimate stellar mass. Instead, he craves the vital life force of panicking, dominated lesser beings—finding the raw terror, despair, and psychological collapse of struggling civilizations uniquely 'delicious' to his celestial palate.
+
+This hedonistic taste defines his distinct rule of ruin: when destroying worlds, Kai'nek leaves before wiping out every last soul. Obliterating frightened survivors huddled inside subterranean bunkers offers no artistic thrill compared to watching an advanced civilization unravel mid-stride amidst their everyday routines and bustling streets. While Kai'nek casually eradicates millions in an afternoon—and Carnak can devour just as many in a single day—Kai'nek's harvest is savoring the drama of collapse. Furthermore, planar target selection is calculated with deliberate precision under the Order's campaign protocols: campaigns focus strictly on worlds unclaimed by other deities or macro entities, where civilizations can be subjected to the Titans' dominance and enduring legacy without cosmic interference.
+
+2. Siphoning Mechanics: The Temporary Tail Buffer & Realm Storage:
+When Kai'nek descends upon a metropolis, his devastation is dual-layered: he tears apart city infrastructure while simultaneously siphoning raw high-voltage electricity from municipal power grids and draining the life-forces of fleeing populations.
+
+Rather than instantly teleporting these massive forces across multiversal space into his cosmic realm, his celestial anatomy utilizes his tails as an active temporary storage buffer while in the field. As he siphons, his tails physically lengthen to contain and insulate the immense surging current. This temporary elongation allows him to operate as a self-contained energy capacitor throughout extended sieges. Crucially, the energy is not consumed or expended immediately; it remains securely held within his temporary tail buffer until he withdraws to rest in his sovereign sanctum, where he deposits the harvested vintage into his realm's permanent reservoirs for later empowerment and planar boons.
+
+3. High-Level Psychic Dominance & The Inviolable Code:
+Surrounded by an oppressive light blue aura, Kai'nek operates with staggering psychic mastery. He can enter, read, edit, and broadcast into minds across interstellar distances. When subjugating enemy worlds, he freely breaches mental barriers against hardened resistance, engineers mass hysteria, projects waking hallucinatory visions, and executes large-scale memory attribution or dream-layer manipulation. Furthermore, he maintains passive long-range observational sampling over vast populations without continuous physical presence, able to transmit live sensory feeds directly into the minds of others.
+
+Crucially, Kai'nek strictly abides by an inviolable personal code: never edit the memories of his Order candidates, peers, or ascended companions. While he freely rewrites minds and shatters cognitive will during planetary conquests, he flatly refuses to alter the memories of his circle. Kai'nek demands that his companions cooperate with him willingly; to a sovereign of his stature, commanding brainwashed drones carries zero fun or genuine satisfaction. He wants authentic, conscious minds standing at his side.
+
+4. Spatial Phasing, Telekinesis & Alternate Timeline Access:
+In the physical domain, Kai'nek commands effortless telekinesis and spatial manipulation: he phases seamlessly through solid matter and reinforced fortifications, relocates massive intact architectural structures across distance, and personally warps to remote multiversal coordinates to retrieve physical objects. Beyond space, he consciously explores alternate realities and branching timelines, retrieving multiversal records and lost intelligence. However, transferring such alternate timeline knowledge into a recipient is taxing, carrying a measurable draining cost.
+
+5. Celestial Durability & Unbroken Scale:
+Endowed with extreme physical resilience and instant cellular regeneration, conventional military firepower and high-yield orbital or thermonuclear strikes produce no lasting damage upon him. He operates effectively at enlarged macro scale for extended periods without exhaustion. When shedding his tactical armor, his bioluminescent traits become prominent—casting a controllable, cool-toned glow along his markings, tongue, and intimate anatomy.
+
+6. Cultivating Peers Over Sycophants & The Carpo Dynamic:
+Because Kai'nek came to exist without memory of his origin and cannot generate life from scratch, ascending candidates across the multiverse is the closest act of creation available to him. He rejects mindless worshipers and groveling sycophants, seeking only capable, compelling peers who need his facilitation.
+
+This inviolable code explains his complex, fraught dynamic with Carpo: although Kai'nek possesses psychic abilities that could effortlessly rewrite Carpo's thoughts or force total obedience, Kai'nek constantly wrestles, negotiates, and clashes with the Gryphon instead. To Kai'nek, controlling a mindless puppet would be utterly hollow; he genuinely respects Carpo as a sovereign, stubborn peer who chooses to stand with the Order on his own terms. Kai'nek willingly endures their friction as the necessary price of authentic respect. All Carpo asks is that Kai'nek's ruinous wastelands be wrought elsewhere across the endless multiverse, leaving Carpo a peaceful haven of his own while remaining on call whenever the Order needs his wings.`
+  },
+  {
     id: 'lore-brutus-zahra-origins',
     title: 'Dynasties of Ash: The Court, The Dragon Prince, and The Neglected Princess',
     era: 'Mortal Court Era (~1850s Equivalent)',
@@ -283,82 +359,6 @@ Kai'nek deliberately allows all three to learn the ropes by destroying their own
 Originally, Kai'nek wanted to dispatch Ph'ya and tasked Carpo with the mission. Instead of fighting, Carpo and Ph'ya befriended each other—much to Kai'nek's dismay at Carpo's independent streak. Ph'ya even helped Carpo locate a quiet refuge (though Ph'ya's realm is not the refuge itself). 
 
 Kai'nek considers Ph'ya an intriguing character but 'a bit too powerful for his likings,' so the two deities mutually agreed—without a single word spoken—to leave each other alone and avoid stepping on each other's toes. Furthermore, Kai'nek knows that should he ever have a falling out with Carpo, Ph'ya has Carpo's back.`
-  },
-  {
-    id: 'lore-kainek-origin',
-    title: "Primordial Genesis & The Demiurge Complex: Kai'nek's Origin, Celestial Anatomy, and the Solitude of Eternity",
-    era: 'Primordial Genesis / Timeless (∞)',
-    tags: ["Kai'nek", "The Order", "Facilitation", "Friendship", "Observation"],
-    characterIds: ['kainek'],
-    relationshipIds: ['rel-kainek-carnak-facil', 'rel-kainek-carpo-facil', 'rel-kainek-brutus-facil'],
-    summary: "Kai'nek emerged into consciousness without memory of his origin, sensing reality unfolded outside and despite him. Incapable of creating life from scratch, he channeled his demiurge complex into ascending mortal candidates into authentic titan peers—shaping eternity on his own terms.",
-    content: `Before the Order, before the ruined skylines of a thousand harvested realities, Kai'nek simply existed—a primordial enigma standing at the intersection of eternity and cosmic solitude:
-
-1. The Blank Horizon: Awakening Without Origin Memory:
-Kai'nek commands no recollection of his own genesis. He remembers no gestation, no creator, no ancestral forebears, and no dawn of consciousness. While his instinct and celestial anatomy feel as ancient as reality itself, he awoke to an absolute ontological blank slate. He simply *was*—a fully realized, deity-level macro titan anchored in the multiversal void with inherent mastery over planar forces, yet possessing zero historical narrative of how his existence came to pass.
-
-2. The Demiurge Complex: Reality Outside & Despite Him:
-This complete absence of origin memory shaped Kai'nek's fundamental worldview: gazing across the multiverse, he harbored the deep, unsettling realization that reality had unfolded outside of him, and entirely despite him. Galaxies spun, cosmic laws crystallized, and mortal civilizations crawled out of primordial oceans without requiring his permission or acknowledging his existence.
-
-Rather than retreating into nihilistic detachment, this realization ignited a fierce demiurge complex. If the cosmos was not born of his sovereign design, he would refuse to remain a passive bystander. Reality would be bent, dominated, and rewritten by his direct intervention. What the universe constructed through indifferent aeons, Kai'nek would curate, challenge, and dismantle to suit his sovereign aesthetic.
-
-3. The Barren Divine: Inability to Create Life from Scratch:
-For all his staggering might—effortless spatial phasing, planet-cracking telekinesis, and psychic mastery across interstellar voids—Kai'nek is bound by an absolute ontological limit: he cannot generate life from scratch. He cannot spark organic vitality out of empty vacuum, nor can he breathe genuine mortal souls into barren dust. Barren planetary cores and burning nuclear stars are trivial to drain, yet completely incapable of yielding the living pulse he craves.
-
-This divine barrenness turned his gaze perpetually outward toward mortal realms. Mortals possessed the one enigmatic spark Kai'nek could never synthesize: genuine, fragile life, teeming with visceral emotion, ambition, and terrified sentience.
-
-4. Ascension as Sacred Genesis: Sculpting Peers Over Puppets:
-Because he cannot birth life from the void, ascending chosen mortal candidates across the multiverse is the closest act of creation available to him. When Kai'nek observes a mortal harboring extraordinary resilience, tragic resolve, or raw predatory spirit, he steps forward as facilitator—rewriting their biological scale into immortal, macro-form titans.
-
-This reality explains why Kai'nek strictly rejects sycophants and refuses to alter the memories of his circle: commanding mindless, brainwashed thralls carries zero emotional resonance. If ascension is his nearest brush with true genesis, he demands living masterpieces—conscious, authentic peers who choose to stand at his side willingly and challenge eternity together.
-
-5. Celestial Anatomy & The Tail Buffer Mechanics:
-In his unarmored native manifestation, Kai'nek stands as a towering, majestic primordial cobra titan. Enveloped in an oppressive light blue celestial aura, his scales bear intricate glyph-like conduits that ignite with a controllable, cool-toned bioluminescent glow spanning his hood, tongue, underbelly, and intimate anatomy. Endowed with infinite lived experience (∞) and instantaneous cellular regeneration, mortal armaments and high-yield thermonuclear warheads produce no lasting trauma upon his tissue, allowing him to endure throughout aeons without biological decay.
-
-Crucially, his celestial anatomy features a specialized biological energy buffering system within his tails: while waging destructive campaigns across distant realities, Kai'nek cannot instantly beam harvested power across planar space into his home domain. Instead, his tails serve as an active, temporary field containment buffer. When siphoning massive surges of mortal life-force and shattered electrical power grids during a siege, his celestial anatomy routes the raw current into his tails—causing them to physically lengthen, thicken, and illuminate as they absorb and insulate the staggering voltage. This elongation is strictly a temporary storage phase: once the campaign concludes, he withdraws to his sovereign sanctum where he discharges the energy into his realm's permanent reservoirs, whereupon his tails contract back to their standard, elegant proportions.
-
-6. The Solitude of the Sanctum & The Birth of the Order:
-Between campaigns, Kai'nek withdraws into his private sovereign sanctum—a tranquil extra-planar domain where he discharges the temporary reserves held within his tails into vast celestial reservoirs for long-term storage and redistribution. Yet the quiet halls of his realm revealed a chilling truth: boundless solitary power is profoundly hollow. The desire to banish cosmic boredom and share the thrill of multiversal ruin led him to establish the Order, transforming his solitary existence into an elite brotherhood of ascended equals.
-
-<a class="lore-cross-link" data-lore-id="lore-kainek-philosophy">⚡ Next Chapter: The Art of Ruin & The Price of Peers: Kai'nek's Sovereign Philosophy →</a>`
-  },
-  {
-    id: 'lore-kainek-philosophy',
-    title: "The Art of Ruin & The Price of Peers: Kai'nek's Sovereign Philosophy",
-    era: 'Centuries-Long Doctrine',
-    tags: ["Kai'nek", 'Carpo', 'Carnak', 'The Order', 'Friendship', 'Facilitation'],
-    characterIds: ['kainek', 'carpo', 'carnak'],
-    relationshipIds: ['rel-kainek-carpo-friend', 'rel-kainek-carnak-friend', 'rel-carnak-carpo-friend'],
-    summary: "The sovereign's hedonistic philosophy of ruin: relishing the 'delicious' terror of panic over sterile planetary cores, his temporary tail buffering and realm energy deposition, deity-level psychic dominance, and timeline exploration.",
-    content: `<a class="lore-cross-link" data-lore-id="lore-kainek-origin" style="margin-bottom:12px;">⬅️ Preceded by: Primordial Genesis & The Demiurge Complex: Kai'nek's Origin, Celestial Anatomy, and the Solitude of Eternity</a>
-
-Across centuries of planar campaigns, Kai'nek's operations have never been guided by mere cold efficiency, but by what he personally enjoys first:
-
-1. The 'Delicious' Taste of Panic vs. Sterile Harvesting:
-Technically, Kai'nek commands the power to effortlessly siphon immense energy directly from planetary molten cores and blazing nuclear stars. Yet he finds zero fun or satisfaction in feeding upon barren, inanimate stellar mass. Instead, he craves the vital life force of panicking, dominated lesser beings—finding the raw terror, despair, and psychological collapse of struggling civilizations uniquely 'delicious' to his celestial palate.
-
-This hedonistic taste defines his distinct rule of ruin: when destroying worlds, Kai'nek leaves before wiping out every last soul. Obliterating frightened survivors huddled inside subterranean bunkers offers no artistic thrill compared to watching an advanced civilization unravel mid-stride amidst their everyday routines and bustling streets. While Kai'nek casually eradicates millions in an afternoon—and Carnak can devour just as many in a single day—Kai'nek's harvest is savoring the drama of collapse. Furthermore, planar target selection is calculated with deliberate precision under the Order's campaign protocols: campaigns focus strictly on worlds unclaimed by other deities or macro entities, where civilizations can be subjected to the Titans' dominance and enduring legacy without cosmic interference.
-
-2. Siphoning Mechanics: The Temporary Tail Buffer & Realm Storage:
-When Kai'nek descends upon a metropolis, his devastation is dual-layered: he tears apart city infrastructure while simultaneously siphoning raw high-voltage electricity from municipal power grids and draining the life-forces of fleeing populations.
-
-Rather than instantly teleporting these massive forces across multiversal space into his cosmic realm, his celestial anatomy utilizes his tails as an active temporary storage buffer while in the field. As he siphons, his tails physically lengthen to contain and insulate the immense surging current. This temporary elongation allows him to operate as a self-contained energy capacitor throughout extended sieges. Crucially, the energy is not consumed or expended immediately; it remains securely held within his temporary tail buffer until he withdraws to rest in his sovereign sanctum, where he deposits the harvested vintage into his realm's permanent reservoirs for later empowerment and planar boons.
-
-3. High-Level Psychic Dominance & The Inviolable Code:
-Surrounded by an oppressive light blue aura, Kai'nek operates with staggering psychic mastery. He can enter, read, edit, and broadcast into minds across interstellar distances. When subjugating enemy worlds, he freely breaches mental barriers against hardened resistance, engineers mass hysteria, projects waking hallucinatory visions, and executes large-scale memory attribution or dream-layer manipulation. Furthermore, he maintains passive long-range observational sampling over vast populations without continuous physical presence, able to transmit live sensory feeds directly into the minds of others.
-
-Crucially, Kai'nek strictly abides by an inviolable personal code: never edit the memories of his Order candidates, peers, or ascended companions. While he freely rewrites minds and shatters cognitive will during planetary conquests, he flatly refuses to alter the memories of his circle. Kai'nek demands that his companions cooperate with him willingly; to a sovereign of his stature, commanding brainwashed drones carries zero fun or genuine satisfaction. He wants authentic, conscious minds standing at his side.
-
-4. Spatial Phasing, Telekinesis & Alternate Timeline Access:
-In the physical domain, Kai'nek commands effortless telekinesis and spatial manipulation: he phases seamlessly through solid matter and reinforced fortifications, relocates massive intact architectural structures across distance, and personally warps to remote multiversal coordinates to retrieve physical objects. Beyond space, he consciously explores alternate realities and branching timelines, retrieving multiversal records and lost intelligence. However, transferring such alternate timeline knowledge into a recipient is taxing, carrying a measurable draining cost.
-
-5. Celestial Durability & Unbroken Scale:
-Endowed with extreme physical resilience and instant cellular regeneration, conventional military firepower and high-yield orbital or thermonuclear strikes produce no lasting damage upon him. He operates effectively at enlarged macro scale for extended periods without exhaustion. When shedding his tactical armor, his bioluminescent traits become prominent—casting a controllable, cool-toned glow along his markings, tongue, and intimate anatomy.
-
-6. Cultivating Peers Over Sycophants & The Carpo Dynamic:
-Because Kai'nek came to exist without memory of his origin and cannot generate life from scratch, ascending candidates across the multiverse is the closest act of creation available to him. He rejects mindless worshipers and groveling sycophants, seeking only capable, compelling peers who need his facilitation.
-
-This inviolable code explains his complex, fraught dynamic with Carpo: although Kai'nek possesses psychic abilities that could effortlessly rewrite Carpo's thoughts or force total obedience, Kai'nek constantly wrestles, negotiates, and clashes with the Gryphon instead. To Kai'nek, controlling a mindless puppet would be utterly hollow; he genuinely respects Carpo as a sovereign, stubborn peer who chooses to stand with the Order on his own terms. Kai'nek willingly endures their friction as the necessary price of authentic respect. All Carpo asks is that Kai'nek's ruinous wastelands be wrought elsewhere across the endless multiverse, leaving Carpo a peaceful haven of his own while remaining on call whenever the Order needs his wings.`
   },
   {
     id: 'lore-sanctuary-trio',
