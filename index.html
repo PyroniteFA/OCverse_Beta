@@ -147,6 +147,17 @@
               </span>
             </label>
           </div>
+
+          <div class="legend-divider"></div>
+
+          <!-- Lore Flowchart Action Button -->
+          <div class="legend-flowchart-box">
+            <button type="button" id="btn-legend-lore-flowchart" class="legend-flowchart-btn" title="Open interactive Lore Flowchart modal">
+              <span class="flowchart-btn-icon">🗺️</span>
+              <span class="flowchart-btn-text">Lore Flowchart</span>
+              <span class="flowchart-btn-badge">Full View</span>
+            </button>
+          </div>
         </div>
 
         <div class="legend-notes">
@@ -161,7 +172,7 @@
         <div class="legend-footer">
           <div class="legend-footer-meta">
             <div class="legend-version-group">
-              <span class="legend-app-version">v1.9.3-beta</span>
+              <span class="legend-app-version">v1.10.0-beta</span>
               <button
                 type="button"
                 id="btn-acknowledgements"
@@ -170,7 +181,7 @@
                 aria-label="Project info &amp; acknowledgements"
               >i</button>
             </div>
-            <span class="legend-last-updated">Updated: Nov 15, 2026, 8:49 PM</span>
+            <span class="legend-last-updated">Updated: Nov 15, 2026, 9:34 PM</span>
           </div>
         </div>
       </aside>
@@ -252,12 +263,12 @@
             <div class="ack-metrics-grid">
               <div class="ack-metric-card">
                 <span class="ack-metric-label">Back-and-Forth Transactions</span>
-                <span class="ack-metric-value">182+ Prompts</span>
-                <span class="ack-metric-note">182+ human prompts &amp; 176+ direct agent replies across 14 user-initiated Antigravity sessions (16 total transcripts including 2 subagent runs), driving 3,280+ automated tool invocations.</span>
+                <span class="ack-metric-value">195+ Prompts</span>
+                <span class="ack-metric-note">195+ human prompts &amp; 189+ direct agent replies across 16 user-initiated Antigravity sessions (18 total transcripts including 2 subagent runs), driving 3,580+ automated tool invocations.</span>
               </div>
               <div class="ack-metric-card">
                 <span class="ack-metric-label">Engineering Span (Thailand Time, ICT)</span>
-                <span class="ack-metric-value">~18.0+ Hours</span>
+                <span class="ack-metric-value">~19.0+ Hours</span>
                 <span class="ack-metric-note">Aggregated across 5 active working periods (Nov 9–15, 2026) with conservative deductions of 3 hours from Nov 10 and 6 hours from Nov 12–13, plus the pre-commit Nov 8 session (21:34–23:02 ICT) and earlier Canva drafting.</span>
               </div>
             </div>
@@ -266,10 +277,10 @@
               <div class="ack-day-chip"><strong>Nov 10:</strong> 10:55–19:42 ICT (5h 46m est., −3h • 21 commits)</div>
               <div class="ack-day-chip"><strong>Nov 11:</strong> 09:20–11:46 ICT (2h 26m • 4 commits)</div>
               <div class="ack-day-chip"><strong>Nov 12–13:</strong> 11:34–20:06 ICT (6h 37m+ est., −6h • 6 commits)</div>
-              <div class="ack-day-chip"><strong>Nov 15:</strong> 15:44–17:05+ ICT (1h 21m • 1 commit)</div>
+              <div class="ack-day-chip"><strong>Nov 15:</strong> 15:44–21:34+ ICT (2h+ • 2 commits)</div>
             </div>
             <p class="char-bio-p" style="font-size: 12px; color: var(--text-muted);">
-              Current repo footprint: <strong>44 git commits</strong> and <strong>6,230+ lines</strong> of hand-directed, AI-scaffolded code covering 11 characters, 22 relationships, and 18 shared lore chapters.
+              Current repo footprint: <strong>45 git commits</strong> and <strong>7,810+ lines</strong> of hand-directed, AI-scaffolded code covering 11 characters, 22 relationships, 18 shared lore chapters, and an interactive Lore Flowchart visualizer.
             </p>
           </section>
 
@@ -280,10 +291,10 @@
               All character portraits and master illustrations in this archive are <strong>human-created artworks</strong>, not AI-generated images. Artists remain anonymous in this general disclosure; dedicated artist credit links alongside <em>Master Character Artwork</em> inside individual character drawers are planned for a later update.
             </p>
             <div class="ack-callout ethics">
-              <strong>Explicit Artist Permission:</strong> Character artwork across the roster (Kai'nek, Carnak, Carpo, Brutus, Abrax, Ph'ya, Eidos, Rhidos, and Rathen) has been <strong>explicitly allowed by the respective artists</strong> for display in this app.
+              <strong>Explicit Artist Permission:</strong> Character artwork across the roster (Kai'nek, Carnak, Carpo, Brutus, Abrax, Ph'ya, Eidos, Rhidos, Rathen, and Regal) has been <strong>explicitly allowed by the respective artists</strong> for display in this app.
             </div>
             <div class="ack-callout beta">
-              <strong>Beta Pending Confirmation (Regal &amp; Zahra):</strong> Only the artworks currently used for <strong>Regal</strong> and <strong>Zahra</strong> remain <strong>pending artist confirmation</strong> in this beta release. Should either artist decline or request changes or removal, those assets will be updated or removed promptly.
+              <strong>Beta Pending Confirmation (Zahra):</strong> Only the artwork currently used for <strong>Zahra</strong> remains <strong>pending artist confirmation</strong> in this beta release. Should the artist decline or request changes or removal, that asset will be updated or removed promptly.
             </div>
             <div class="ack-callout">
               <strong>Zero Model Training / Improvement:</strong> The images provided to work with this application are <strong>not used to explicitly learn from, train, or improve any AI model</strong>—which CarpoPyronite regards as the most morally unacceptable misuse of artists' work. They exist strictly as static visual display assets within this project.
@@ -318,6 +329,72 @@
         </div>
       </div>
     </div>
+
+    <!-- Interactive Lore Flowchart Modal -->
+    <div id="flowchart-modal-backdrop" class="flowchart-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="flowchart-modal-title" aria-hidden="true">
+      <div class="flowchart-modal">
+        <div class="flowchart-modal-header">
+          <div class="flowchart-title-group">
+            <div class="flowchart-brand-row">
+              <span class="brand-tag">Chronology &amp; Narrative Web</span>
+              <span class="flowchart-badge-count">18 Lore Chapters</span>
+            </div>
+            <h2 id="flowchart-modal-title" class="flowchart-modal-title">Lore Flowchart Visualizer</h2>
+            <div class="flowchart-modal-subtitle">Trace narrative order, story arc progressions, and causal links. Click any entry to open full dossier in drawer.</div>
+          </div>
+
+          <!-- Header Actions -->
+          <div class="flowchart-header-actions">
+            <!-- Search in Flowchart -->
+            <div class="flowchart-search-box">
+              <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+              <input type="text" id="flowchart-search-input" placeholder="Search lore or titan..." />
+            </div>
+
+            <!-- Expand / Fullscreen Button -->
+            <button id="flowchart-modal-expand-btn" class="drawer-expand-btn" title="Expand to full screen (F)" aria-label="Toggle full screen view">
+              <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" y1="3" x2="14" y2="10"></line>
+                <line x1="3" y1="21" x2="10" y2="14"></line>
+              </svg>
+              <svg class="collapse-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <polyline points="4 14 10 14 10 20"></polyline>
+                <polyline points="20 10 14 10 14 4"></polyline>
+                <line x1="14" y1="10" x2="21" y2="3"></line>
+                <line x1="10" y1="14" x2="3" y2="21"></line>
+              </svg>
+            </button>
+
+            <!-- Close Button -->
+            <button type="button" id="flowchart-modal-close" class="drawer-close" title="Close Flowchart (Esc)" aria-label="Close Lore Flowchart">✕</button>
+          </div>
+        </div>
+
+        <!-- Storyline Tabs Navigation Bar -->
+        <div class="flowchart-toolbar">
+          <div class="flowchart-tabs-bar" id="flowchart-tabs">
+            <!-- Dynamically populated via js/flowchart.js -->
+          </div>
+          <div class="flowchart-flow-legend">
+            <span class="legend-indicator seq"><span class="legend-line-sample seq"></span> Chronological Chapter (→)</span>
+            <span class="legend-indicator cross"><span class="legend-line-sample cross"></span> Crossover Link (⇢)</span>
+            <span class="legend-indicator conv"><span class="legend-line-sample conv"></span> Sanctuary Convergence (⇢)</span>
+          </div>
+        </div>
+
+        <!-- Flowchart Canvas / Scroll Area -->
+        <div class="flowchart-canvas-wrapper" id="flowchart-canvas-wrapper">
+          <div class="flowchart-canvas" id="flowchart-canvas">
+            <svg class="flowchart-svg-layer" id="flowchart-svg-layer"></svg>
+            <div class="flowchart-board" id="flowchart-board">
+              <!-- Dynamically rendered timeline swimlanes & node cards -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Zero-dependency data and logic scripts (Runs anywhere, including direct double-click!) -->
@@ -326,6 +403,7 @@
   <script src="data/lore.js"></script>
   <script src="js/canvas.js"></script>
   <script src="js/drawer.js"></script>
+  <script src="js/flowchart.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

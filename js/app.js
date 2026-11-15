@@ -214,5 +214,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Lore Flowchart Modal Initializer & Legend Box Trigger
+  let loreFlowchart;
+  if (window.LoreFlowchartModal) {
+    loreFlowchart = new window.LoreFlowchartModal(drawer);
+    window.loreFlowchartInstance = loreFlowchart;
+  }
+
+  const legendFlowchartBtn = document.getElementById('btn-legend-lore-flowchart');
+  if (legendFlowchartBtn && loreFlowchart) {
+    legendFlowchartBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      loreFlowchart.open();
+    });
+  }
+
   // Ready! Start with the full canvas visible and all characters un-dimmed.
 });

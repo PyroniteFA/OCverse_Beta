@@ -12,7 +12,9 @@ const sharedLore = [
     characterIds: ['kainek', 'carnak', 'carpo', 'brutus'],
     relationshipIds: ['rel-kainek-carnak-facil', 'rel-kainek-carpo-facil', 'rel-carnak-carpo-friend', 'rel-kainek-brutus-facil', 'rel-carnak-brutus-friend'],
     summary: "The Order is an informal tactical pact where Kai'nek coordinates ascended titans, cultivating genuine personal connections while harvesting life-force energy from their campaigns.",
-    content: `The Order is not a rigid military bureaucracy, but an informal tactical pact centered around Kai'nek. Rejecting mindless sycophants, altered drones, and blind worshipers, Kai'nek strictly keeps to a code of never editing the memories of his candidates, peers, or ascended companions—demanding that they cooperate with him willingly, as commanding hollow drones offers him zero thrill. He cultivates chosen, capable peers across the multiverse who require his aid and share in his campaigns of planetary ruin.
+    content: `<a class="lore-cross-link" data-lore-id="lore-kainek-philosophy" style="margin-bottom:12px;">⬅️ Preceded by: The Art of Ruin & The Price of Peers: Kai'nek's Sovereign Philosophy</a>
+
+The Order is not a rigid military bureaucracy, but an informal tactical pact centered around Kai'nek. Rejecting mindless sycophants, altered drones, and blind worshipers, Kai'nek strictly keeps to a code of never editing the memories of his candidates, peers, or ascended companions—demanding that they cooperate with him willingly, as commanding hollow drones offers him zero thrill. He cultivates chosen, capable peers across the multiverse who require his aid and share in his campaigns of planetary ruin.
 
 Kai'nek cannot create life from scratch; ascending chosen individuals is the closest he comes. Because of this, he does not ascend masses willy-nilly—he requires genuine personal and emotional connections with his circle. As Order titans wage battle across chosen realms, Kai'nek tears through cities alongside them, relishing the panic and siphoning vast power from electrical grids and vital life-forces, capturing the energy to be stored within his sovereign realm for later use.
 
@@ -93,7 +95,8 @@ The success of this affiliate network rests largely on Carpo. Throughout his 2,1
 
 Notably, Carpo possessed this diplomatic knack long before Kai'nek ever revealed himself to the Gryphon. This history explains why Carpo famously befriended the autonomous solar deity Ph'ya on his own terms instead of simply obeying Kai'nek's orders to dispatch him—an act of independent camaraderie that occurred back before Kai'nek had established any non-member associations with the Order. Recognizing Carpo's unique intuition and charm, Kai'nek came to view the Gryphon not merely as an aerial vanguard, but as the Order's premier pathfinder and recruiter—the friendliest, most trustworthy face capable of scouting uncharted realities and recruiting potential titan allies into the Order's fold. A hallmark of Carpo's recruiter modus operandi is his situational presentation: when scouting and making first contact with unarmored, raw physical entities, Carpo deliberately approaches them bare with zero gear or technology, matching their primal state to build mutual trust without intimidating or alienating them; conversely, when encountering entities that already utilize technological armor or cultural hardware, Carpo meets them proudly in his own bespoke combat gear.
 
-<a class="lore-cross-link" data-lore-id="lore-order-armor">🛡️ Next Chapter: Futuristic Combat Gear & Gadgets of the Order: Specialized Tools, Weaponry, and the Wild Beast →</a>`
+<a class="lore-cross-link" data-lore-id="lore-order-armor" style="margin-bottom:8px;">🛡️ Next Chapter: Futuristic Combat Gear & Gadgets of the Order: Specialized Tools, Weaponry, and the Wild Beast →</a>
+<a class="lore-cross-link" data-lore-id="lore-regal-first-contact">🤝 Contracted Titan: First Contact & The Verified Extermination (Regal) →</a>`
   },
   {
     id: 'lore-order-armor',
@@ -214,7 +217,10 @@ Endowed with extreme physical resilience and instant cellular regeneration, conv
 6. Cultivating Peers Over Sycophants & The Carpo Dynamic:
 Because Kai'nek came to exist without memory of his origin and cannot generate life from scratch, ascending candidates across the multiverse is the closest act of creation available to him. He rejects mindless worshipers and groveling sycophants, seeking only capable, compelling peers who need his facilitation.
 
-This inviolable code explains his complex, fraught dynamic with Carpo: although Kai'nek possesses psychic abilities that could effortlessly rewrite Carpo's thoughts or force total obedience, Kai'nek constantly wrestles, negotiates, and clashes with the Gryphon instead. To Kai'nek, controlling a mindless puppet would be utterly hollow; he genuinely respects Carpo as a sovereign, stubborn peer who chooses to stand with the Order on his own terms. Kai'nek willingly endures their friction as the necessary price of authentic respect. All Carpo asks is that Kai'nek's ruinous wastelands be wrought elsewhere across the endless multiverse, leaving Carpo a peaceful haven of his own while remaining on call whenever the Order needs his wings.`
+This inviolable code explains his complex, fraught dynamic with Carpo: although Kai'nek possesses psychic abilities that could effortlessly rewrite Carpo's thoughts or force total obedience, Kai'nek constantly wrestles, negotiates, and clashes with the Gryphon instead. To Kai'nek, controlling a mindless puppet would be utterly hollow; he genuinely respects Carpo as a sovereign, stubborn peer who chooses to stand with the Order on his own terms. Kai'nek willingly endures their friction as the necessary price of authentic respect. All Carpo asks is that Kai'nek's ruinous wastelands be wrought elsewhere across the endless multiverse, leaving Carpo a peaceful haven of his own while remaining on call whenever the Order needs his wings.
+
+<a class="lore-cross-link" data-lore-id="lore-order-pact" style="margin-bottom:8px;">🎯 Crossover Arc: The Order: The Sovereign's Informal Tactical Pact →</a>
+<a class="lore-cross-link" data-lore-id="lore-sanctuary-trio">🏰 Crossover Arc: The Sanctuary Trio & Carpo's Validated Fear →</a>`
   },
   {
     id: 'lore-brutus-zahra-origins',
@@ -272,7 +278,9 @@ Faced with the imminent loss of his premier candidates, Kai'nek was forced to st
 
 Crucially, Zahra is the only one in their entire circle who is not the rampaging type. To protect the status quo and the devoted life they fought through centuries of agony to win, Zahra learned to make peace with her lover's actions and turn a blind eye to the destruction he leaves on distant worlds—choosing instead to serve as his eternal anchor, emotional ground, and the gentle heart of their reconstructed sanctuary castle.
 
-Following this revelation, the couple established their sanctuary in a partially modernized rebuild of the old royal castle where they were born and spent their youth, with Brutus spending as much downtime as possible with Zahra in devoted seclusion.`
+Following this revelation, the couple established their sanctuary in a partially modernized rebuild of the old royal castle where they were born and spent their youth, with Brutus spending as much downtime as possible with Zahra in devoted seclusion.
+
+<a class="lore-cross-link" data-lore-id="lore-carpo-sanctuary">🏰 Continue to Next Arc: Sanctuary in Exile: How Brutus & Zahra Took Carpo In →</a>`
   },
   {
     id: 'lore-carpo-curse-broken',
@@ -309,7 +317,10 @@ Today, Carpo serves as the aerial sentinel of the Order under an informal pact, 
     characterIds: ['carpo', 'brutus', 'zahra'],
     relationshipIds: ['rel-carpo-brutus-friend', 'rel-carpo-zahra-friend', 'rel-brutus-zahra-lovers'],
     summary: "Sheltered by Brutus and Zahra during his 200-year Macro era, Carpo regained his faculties in their sanctuary before his hesitation about intruding prompted his departure.",
-    content: `After Kai'nek tore Carpo across the dimensional veil to spare his homeworld, the accursed Gryphon rampaged through an unfamiliar realm for years in blind madness. Upon calming down, Carpo realized he was no longer home and could not remember how to return—unknowingly sparing his world from the catastrophic doom of his curse. Displaced and volatile, he traveled and rampaged across other worlds for tens of years until Kai'nek finally revealed himself and asked the duo lovers, Brutus and Zahra, to take the lost titan into their care.
+    content: `<a class="lore-cross-link" data-lore-id="lore-carpo-curse-broken" style="margin-bottom:8px;">⬅️ Preceded by (Carpo's Journey): From Ambitious Centurion to Agent of Doom: The 2,100-Year Crucible of Carpo</a>
+<a class="lore-cross-link" data-lore-id="lore-brutus-zahra-tragedy" style="margin-bottom:12px;">⬅️ Preceded by (Haven Hosts): Ancestors, Angels & The 150-Year Sacrifice: The Mortal Strike and Mutual Surrender</a>
+
+After Kai'nek tore Carpo across the dimensional veil to spare his homeworld, the accursed Gryphon rampaged through an unfamiliar realm for years in blind madness. Upon calming down, Carpo realized he was no longer home and could not remember how to return—unknowingly sparing his world from the catastrophic doom of his curse. Displaced and volatile, he traveled and rampaged across other worlds for tens of years until Kai'nek finally revealed himself and asked the duo lovers, Brutus and Zahra, to take the lost titan into their care.
 
 Welcoming Carpo into their secluded haven—established within a partially modernized rebuild of the old royal castle where they were born—the dragonkin warrior and Enfield princess offered the battered Gryphon sanctuary, patience, and shelter, giving him the grounding he desperately needed to recover his faculties and mind. This healing took place within the space of his 200-year Macro era—though the sanctuary stay itself did not last the full two centuries, as Carpo rampaged for decades prior, healed, and eventually chose to depart.
 
@@ -344,7 +355,9 @@ Yet Carpo's hesitation and deliberate self-restraint set the stage for a bitter,
 
 2. Abrax (The Awakened Extraterrestrial): Carrying 50 years of lived experience from elsewhere across the cosmos, Abrax crashed into Earth in his home universe and lay dormant for thousands of years. Discovering this target of opportunity where conditions were already ripe, Kai'nek orchestrated subtle cosmic shifts to awaken the slumbering colossus. Once awakened, Abrax emerged to rampage across the Earth above ground for the past year in solitary, primal fury, matching the raw physical might and sheer destructive presence Kai'nek seeks.
 
-Kai'nek deliberately allows all three to learn the ropes by destroying their own worlds first, occasionally nudging conditions in their favor from afar. Once their worlds are cleared, Kai'nek plans to step forward with offers they can't resist: granting them access to his stockpile of harvested power in exchange for doing his bidding.`
+Kai'nek deliberately allows all three to learn the ropes by destroying their own worlds first, occasionally nudging conditions in their favor from afar. Once their worlds are cleared, Kai'nek plans to step forward with offers they can't resist: granting them access to his stockpile of harvested power in exchange for doing his bidding.
+
+<a class="lore-cross-link" data-lore-id="lore-order-affiliates">🤝 Prospective Outreach: External Affiliates & Multiversal Rampage Contracts →</a>`
   },
   {
     id: 'lore-phya-independent-deity',
@@ -358,7 +371,10 @@ Kai'nek deliberately allows all three to learn the ropes by destroying their own
 
 Originally, Kai'nek wanted to dispatch Ph'ya and tasked Carpo with the mission. Instead of fighting, Carpo and Ph'ya befriended each other—much to Kai'nek's dismay at Carpo's independent streak. Ph'ya even helped Carpo locate a quiet refuge (though Ph'ya's realm is not the refuge itself). 
 
-Kai'nek considers Ph'ya an intriguing character but 'a bit too powerful for his likings,' so the two deities mutually agreed—without a single word spoken—to leave each other alone and avoid stepping on each other's toes. Furthermore, Kai'nek knows that should he ever have a falling out with Carpo, Ph'ya has Carpo's back.`
+Kai'nek considers Ph'ya an intriguing character but 'a bit too powerful for his likings,' so the two deities mutually agreed—without a single word spoken—to leave each other alone and avoid stepping on each other's toes. Furthermore, Kai'nek knows that should he ever have a falling out with Carpo, Ph'ya has Carpo's back.
+
+<a class="lore-cross-link" data-lore-id="lore-carpo-curse-broken" style="margin-bottom:8px;">🕊️ Related Arc: From Ambitious Centurion to Agent of Doom (Aiding Carpo's Refuge) →</a>
+<a class="lore-cross-link" data-lore-id="lore-order-affiliates">🤝 Related Chapter: External Affiliates & Multiversal Rampage Contracts (Autonomous Truce) →</a>`
   },
   {
     id: 'lore-sanctuary-trio',
@@ -368,7 +384,8 @@ Kai'nek considers Ph'ya an intriguing character but 'a bit too powerful for his 
     characterIds: ['kainek', 'brutus', 'zahra', 'carpo'],
     relationshipIds: ['rel-kainek-brutus-friend', 'rel-kainek-zahra-friend', 'rel-kainek-carpo-friend', 'rel-carpo-brutus-friend', 'rel-brutus-zahra-lovers'],
     summary: "Kai'nek softened from aloof sovereign to intimate partner with Brutus and Zahra—proving Carpo's fears right and fueling Carpo's secret disdain.",
-    content: `<a class="lore-cross-link" data-lore-id="lore-carpo-sanctuary" style="margin-bottom:12px;">⬅️ Preceded by: Sanctuary in Exile: How Brutus & Zahra Took Carpo In</a>
+    content: `<a class="lore-cross-link" data-lore-id="lore-carpo-sanctuary" style="margin-bottom:8px;">⬅️ Preceded by (Sanctuary Haven): Sanctuary in Exile: How Brutus & Zahra Took Carpo In</a>
+<a class="lore-cross-link" data-lore-id="lore-kainek-philosophy" style="margin-bottom:12px;">⬅️ Preceded by (Sovereign Genesis): The Art of Ruin & The Price of Peers: Kai'nek's Sovereign Philosophy</a>
 
 Following his forced revelation to the lovers, Kai'nek's initial relationship with them was cold, distant, and aloof. While Brutus rampaged on active city campaigns whenever Kai'nek called upon him to harvest life-force—spending all his personal downtime in quiet devotion with Zahra in their sanctuary (a partially modernized rebuild of the old castle where they were born)—Kai'nek was exacting of Brutus's efficiency, and held little respect for Zahra in her fragile human form. 
 
@@ -385,7 +402,7 @@ While Carpo honors his pact with the Order on the surface, he carries a deep, se
     id: 'lore-carnak-twisted-sobek',
     title: "The Twisted Sobek & The Writhing Masses: Carnak's Hunger, Hatred, and Brotherhood",
     era: 'Ascended Vanguard Era (150 yrs)',
-    tags: ['Carnak', "Kai'nek", 'Carpo', 'Brutus', 'The Order', 'Facilitation', 'Friendship'],
+    tags: ['Carnak', "Kai'nek", 'Carpo', 'Brutus', 'Facilitation', 'Friendship'],
     characterIds: ['carnak', 'kainek', 'carpo', 'brutus'],
     relationshipIds: ['rel-kainek-carnak-facil', 'rel-kainek-carnak-friend', 'rel-carnak-carpo-friend', 'rel-carnak-brutus-friend'],
     summary: "Awakened from ancient residual power as a twisted Sobek, Carnak harbors an innate, lucid hatred and ravenous hunger for humanity, serving as Kai'nek's disciplined 'good soldier' and the Order's drama-free 'bro.'",
@@ -449,7 +466,9 @@ For their next scheduled deployment, Carpo arrived outfitted in his full Order c
 4. The Heartbeat Sensor & The Shift in Worldview:
 Unfazed by the mockery, Carpo set out to demonstrate the gear's lethal practical benefits. Directing his optical scanner and wrist telemetry toward the pulverized ruins of their latest target metropolis, Carpo activated a live population counter and an acoustic heartbeat sensor—revealing to Regal that despite his apocalyptic sweep, pockets of mortal survivors were still clinging to life in deep subterranean bunkers beneath the slag.
 Refusing to leave any conquest half-done, Regal utilized Carpo's high-tech diagnostic tools to track down and obliterate every last bunker, finally achieving his true goal of total, verified one-hundred-percent population eradication.
-Experiencing the diagnostic precision firsthand, Regal was completely won over. High-tech telemetry was no longer a laughable gimmick, but the ultimate multiplier for absolute ruin. Thoroughly warmed up to the Order's gear and Kai'nek's resources, Regal eagerly solidified his multiversal rampage covenant, ready for an endless line of worlds to extinguish with guaranteed zero survivor rates.`
+Experiencing the diagnostic precision firsthand, Regal was completely won over. High-tech telemetry was no longer a laughable gimmick, but the ultimate multiplier for absolute ruin. Thoroughly warmed up to the Order's gear and Kai'nek's resources, Regal eagerly solidified his multiversal rampage covenant, ready for an endless line of worlds to extinguish with guaranteed zero survivor rates.
+
+<a class="lore-cross-link" data-lore-id="lore-order-affiliates">🤝 Crossover Chapter: External Affiliates & Multiversal Rampage Contracts: Energy Harvesting and Carpo the Pathfinder →</a>`
   },
   {
     id: 'lore-rathen-origin',

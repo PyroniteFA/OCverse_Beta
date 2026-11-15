@@ -133,21 +133,31 @@ class DrawerManager {
 
     let text = raw.trim();
 
-    // 1. Extract top cross-link if present
-    let topCrossLink = '';
-    const topLinkMatch = text.match(/^(\s*<a\s+class="lore-cross-link"[^>]*>[\s\S]*?<\/a>\s*)/i);
-    if (topLinkMatch) {
-      topCrossLink = topLinkMatch[1].trim();
-      text = text.substring(topLinkMatch[0].length).trim();
+    // 1. Extract all top cross-links if present
+    const topCrossLinks = [];
+    while (true) {
+      const match = text.match(/^(\s*<a\s+class="lore-cross-link"[^>]*>[\s\S]*?<\/a>\s*)/i);
+      if (match) {
+        topCrossLinks.push(match[1].trim());
+        text = text.substring(match[0].length).trim();
+      } else {
+        break;
+      }
     }
+    const topCrossLink = topCrossLinks.join('\n');
 
-    // 2. Extract bottom cross-link if present
-    let bottomCrossLink = '';
-    const bottomLinkMatch = text.match(/(\s*<a\s+class="lore-cross-link"[^>]*>[\s\S]*?<\/a>\s*)$/i);
-    if (bottomLinkMatch) {
-      bottomCrossLink = bottomLinkMatch[1].trim();
-      text = text.substring(0, text.length - bottomLinkMatch[0].length).trim();
+    // 2. Extract all bottom cross-links if present
+    const bottomCrossLinks = [];
+    while (true) {
+      const match = text.match(/(\s*<a\s+class="lore-cross-link"[^>]*>[\s\S]*?<\/a>\s*)$/i);
+      if (match) {
+        bottomCrossLinks.unshift(match[1].trim());
+        text = text.substring(0, text.length - match[0].length).trim();
+      } else {
+        break;
+      }
     }
+    const bottomCrossLink = bottomCrossLinks.join('\n');
 
     // 3. Check for numbered points like "1. Title"
     const hasNumberedPoints = /(?:^|\n)\s*[0-9]+\.\s+/.test(text);
@@ -687,7 +697,7 @@ class DrawerManager {
     });
 
     // Primary Order lore chapters (only show entries tied to associated characters when toggle is enabled)
-    const baseOrderLoreIds = ['lore-order-pact', 'lore-order-targets', 'lore-order-affiliates', 'lore-order-armor', 'lore-kainek-origin', 'lore-kainek-philosophy', 'lore-carnak-twisted-sobek'];
+    const baseOrderLoreIds = ['lore-order-pact', 'lore-order-targets', 'lore-order-affiliates', 'lore-order-armor', 'lore-kainek-origin', 'lore-kainek-philosophy'];
     const sharedLore = this.getSharedLore();
     const orderLores = sharedLore.filter(l => baseOrderLoreIds.includes(l.id) || (l.tags && l.tags.includes('The Order')));
 
@@ -869,6 +879,39 @@ class DrawerManager {
     this.bindDynamicLinks();
   }
 
+  showLoreDetail(loreId, fromFlowchart = false) {
+    this.showLoreArchive();
+
+    if (fromFlowchart) {
+      const returnBanner = document.createElement('div');
+      returnBanner.className = 'drawer-flowchart-return-banner';
+      returnBanner.innerHTML = `
+        <button type="button" class="btn-return-flowchart" id="btn-return-flowchart" title="Return to Lore Flowchart">
+          <span>↩</span> <span>Back to Lore Flowchart</span>
+        </button>
+      `;
+      this.contentEl.prepend(returnBanner);
+      const returnBtn = returnBanner.querySelector('#btn-return-flowchart');
+      if (returnBtn) {
+        returnBtn.addEventListener('click', () => {
+          this.close();
+          if (window.loreFlowchartInstance) {
+            window.loreFlowchartInstance.open('all', loreId);
+          }
+        });
+      }
+    }
+
+    setTimeout(() => {
+      const targetCard = this.contentEl.querySelector(`.lore-card[data-lore-id="${loreId}"]`);
+      if (targetCard) {
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        targetCard.classList.add('highlight-pulse');
+        setTimeout(() => targetCard.classList.remove('highlight-pulse'), 2500);
+      }
+    }, 100);
+  }
+
   bindDynamicLinks() {
     const allCharacters = window.characters || [];
     const allRelationships = window.relationships || [];
@@ -917,6 +960,17 @@ class DrawerManager {
         e.stopPropagation();
         e.preventDefault();
         const loreId = el.getAttribute('data-lore-id');
+
+        // If the linked lore card is already visible on the current drawer, scroll in place without reopening all lore
+        const existingCard = this.contentEl.querySelector(`.lore-card[data-lore-id="${loreId}"]`);
+        if (existingCard) {
+          existingCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          existingCard.classList.add('highlight-pulse');
+          setTimeout(() => existingCard.classList.remove('highlight-pulse'), 2500);
+          return;
+        }
+
+        // Only reopen the full archive drawer if the linked lore is not on the current drawer
         this.showLoreArchive();
         setTimeout(() => {
           const targetCard = this.contentEl.querySelector(`.lore-card[data-lore-id="${loreId}"]`);
