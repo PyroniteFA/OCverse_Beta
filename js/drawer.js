@@ -792,7 +792,7 @@ class DrawerManager {
         <h2 style="font-size: 22px; font-weight: 800; color: #f8fafc; margin: 0 0 4px 0;">The Order</h2>
         <div style="font-size: 13px; font-weight: 600; color: #38bdf8; margin-bottom: 8px;">The Order Core Members</div>
         <p style="font-size: 12.5px; line-height: 1.6; color: #cbd5e1; margin: 0;">
-          An informal tactical pact centered around Kai'nek. Rejecting mindless sycophants and blind worshipers, the cosmic sovereign coordinates chosen, capable peers across the multiverse—outfitting them in bespoke futuristic combat gear and specialized gadgets to assist planetary campaigns, while harvesting life-force energy from worlds they extinguish.
+          An informal tactical pact centered around Kai'nek. Rejecting mindless sycophants and blind worshipers, the cosmic sovereign coordinates chosen, capable peers across the multiverse—outfitting them in bespoke futuristic combat gear and specialized gadgets to assist planetary campaigns, while harvesting life-force energy from worlds they extinguish to be stored in his domain above multiversal space and shared among his circle.
         </p>
       </div>
 

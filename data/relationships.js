@@ -18,7 +18,7 @@ const relationships = [
     summary: "Kai'nek awakened Abrax after thousands of years dormant on Earth, setting loose an extraterrestrial titan on a 1-year above-ground rampage (50+1).",
     details: `Kai'nek found a world with already a lot of the right pieces in place. Abrax, an extraterrestrial titan carrying 50 years of lived experience from elsewhere in the cosmos, had crashed into Earth in his universe and lay dormant beneath the surface for thousands of years.
 
-Matching the raw physical traits Kai'nek seeks, Kai'nek merely orchestrated subtle nudges to ensure Abrax woke up. Upon waking, Abrax emerged to rampage across the Earth above ground for the past year, while Kai'nek observes his solitary destruction from across the veil until the time is right to offer him access to his realm's power.`,
+Matching the raw physical traits Kai'nek seeks, Kai'nek merely orchestrated subtle nudges to ensure Abrax woke up. Upon waking, Abrax emerged to rampage across the Earth above ground for the past year, while Kai'nek observes his solitary destruction from across the veil until the time is right to offer him access to the stored energy of his home realm above multiversal space—sharing the reserves he once aimlessly hoarded to empower a new peer.`,
     tags: ['Facilitation', "Kai'nek", 'Abrax']
   },
   {
@@ -422,7 +422,7 @@ The two deities mutually agreed—without a single word spoken—to leave each o
     color: '#94a3b8',
     offset: 0,
     summary: "Kai'nek maintains silent cosmic telemetry on Eidos as he rampages across his isolated realm.",
-    details: `Eidos has no idea he is being watched from across the veil. Kai'nek monitors his superhuman strength and destruction, planning to offer him access to his collected stock of power once their world is wiped out.`,
+    details: `Eidos has no idea he is being watched from across the veil. Kai'nek monitors his superhuman strength and destruction, planning to offer him access to the vast energy stored within his home domain above multiversal space—sharing the font he once hoarded without purpose—once their world is wiped out.`,
     tags: ['Observation', "Kai'nek", 'Eidos']
   },
   {
@@ -469,10 +469,10 @@ Because the forced supernova that defeated him fried his teleportation implant a
     bidirectional: false,
     color: '#c084fc',
     offset: 0,
-    summary: "A formal multiversal rampage contract: Kai'nek provides target coordinates and telemetry while harvesting released life-force, redistributing energy to fuel Regal's magical onslaught.",
+    summary: "A formal multiversal rampage contract: operating under covenant for 5 years after 30 years of solitary rampages (35 + 30 + 5). Kai'nek provides target coordinates and telemetry while harvesting released life-force, redistributing energy to fuel Regal's magical onslaught.",
     details: `A strategic multiversal contract between the sovereign architect of the Order and the shapeshifting colossus. Introduced through Carpo's pathfinding and recruiter charm, Regal willingly entered a formal association with Kai'nek. Under their pact, Kai'nek directs Regal toward unclaimed, unprotected mortal worlds that lack any ability to mount defensive resistance.
 
-In exchange for targeting telemetry, favors, and cosmic coordinates, Regal pledges the massive stores of mortal life-force released during his exterminations to Kai'nek. Because Regal possesses no native ability to harvest or store ambient life energy on his own—leaving vast vitality to dissipate and go wasted—Kai'nek captures and harvests the released energy to be stored within his realm, redistributing it back in empowered forms to fuel Regal's horn magic, mass levitation, and crystal-shouldered Kaiju forms, forming an immensely productive cycle of verified planetary ruin.`,
+In exchange for targeting telemetry, favors, and cosmic coordinates, Regal pledges the massive stores of mortal life-force released during his exterminations to Kai'nek. Because Regal possesses no native ability to harvest or store ambient life energy on his own—leaving vast vitality to dissipate and go wasted—Kai'nek captures and harvests the released energy to be stored within his home domain above multiversal space, before redistributing it back in empowered forms from his shared reserves to fuel Regal's horn magic, mass levitation, and crystal-shouldered Kaiju forms, forming an immensely productive cycle of verified planetary ruin.`,
     speechBubbles: [
       {
         speakerId: 'kainek',
@@ -497,7 +497,7 @@ In exchange for targeting telemetry, favors, and cosmic coordinates, Regal pledg
     bidirectional: true,
     color: '#22c55e',
     offset: 0,
-    summary: "Veteran comrades (Tier-1): Approached bare by Carpo during primal first contact, Regal bonded through joint rampages before Kai'nek approved revealing the Order's gear. Though Regal initially scoffed, Carpo's heartbeat sensors proved their lethal value, cementing a steadfast partnership.",
+    summary: "Veteran comrades (Tier-1): Operating together for 5 years following Regal's 30 years of solitary conquests (35 + 30 + 5). Approached bare by Carpo during primal first contact, Regal bonded through joint rampages before Kai'nek approved revealing the Order's gear, cementing a steadfast partnership.",
     details: `An authentic bond of mutual respect forged amidst planetary ruin. Adhering to his recruiter modus operandi—approaching unarmored titans with zero gear—Carpo initially met Regal completely bare after the changeling woke from a post-metropolis nap. Regal was astonished to meet a fellow colossal giant, and the two embarked on joint rampages in their raw, primal physical forms.
 
 Once Regal proved his devastating reliability and earned the Order's trust, Carpo received Kai'nek's approval to rendezvous in full futuristic combat gear. While Regal initially scoffed and laughed at the sight of an all-powerful titan wearing high-tech clothing, Carpo demonstrated the gear's benefits by deploying population counters and heartbeat sensors to reveal survivors hiding in deep subterranean bunkers. Refusing to leave any job half-done, Regal used the telemetry to achieve a verified 100% eradication, warming up completely to the technology. The two now share an easy, high-respect Tier-1 camaraderie, coordinating combined-arms rampages where Carpo's aerial recon and telemetry perfectly complement Regal's horn magic and Kaiju transformations.`,

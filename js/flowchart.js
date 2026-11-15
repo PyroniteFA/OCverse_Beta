@@ -14,7 +14,7 @@ const LORE_FLOWCHART_ENTRIES = {
     shortTitle: "Primordial Genesis",
     era: "Primordial Genesis / Timeless (∞)",
     characterIds: ['kainek'],
-    summary: "Kai'nek awakens into eternity with no memory of his origin; driven by a demiurge complex, he chooses to ascend mortal peers rather than mindless drones.",
+    summary: "Kai'nek awakens into eternity with no memory of his origin; presiding over his home domain above multiversal space, he shifts from aimless solitary hoarding to sharing stored energy with chosen peers.",
     nextIds: ['lore-kainek-philosophy']
   },
   'lore-kainek-philosophy': {
@@ -168,10 +168,10 @@ const LORE_FLOWCHART_ENTRIES = {
     step: '1',
     title: "Primal Awakening & The Horned Devastator",
     shortTitle: "Regal's Awakening",
-    era: "Primal Solitary Conquest",
+    era: "Primal Solitary Conquest (35 + 30)",
     associated: true,
     characterIds: ['regal'],
-    summary: "Waking already massive with no past memories, Regal conquers worlds with devastating horn magic, mass levitation, and crystal-shouldered Kaiju forms.",
+    summary: "Carrying 35 years of undetermined lived experience, Regal wakes already massive, spending 30 years conquering worlds alone before joining the Order for 5 years.",
     nextIds: ['lore-regal-first-contact']
   },
   'lore-regal-first-contact': {
@@ -180,10 +180,10 @@ const LORE_FLOWCHART_ENTRIES = {
     step: '2',
     title: "First Contact & The Verified Extermination",
     shortTitle: "Regal's Contract",
-    era: "Multiversal Convergence",
+    era: "Multiversal Convergence (5 yrs)",
     associated: true,
     characterIds: ['regal', 'carpo', 'kainek'],
-    summary: "Carpo approaches bare to build primal trust; diagnostic heartbeat sensors prove high-tech gear leaves zero survivors, sealing Regal's Order covenant.",
+    summary: "Carpo approaches bare to build primal trust; diagnostic heartbeat sensors prove high-tech gear leaves zero survivors, sealing Regal's 5-year Order covenant.",
     nextIds: [],
     crossLinks: [
       { targetId: 'lore-order-affiliates', label: 'Order Covenant' }
