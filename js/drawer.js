@@ -314,6 +314,30 @@ class DrawerManager {
     const personalLore = taggedLore.filter(l => !orderInstitutionalIds.has(l.id));
     const orderLore = taggedLore.filter(l => orderInstitutionalIds.has(l.id));
 
+    // Prioritize spotlight/origin lore entries at the top of the character's personal drawer
+    const personalPriorityMap = {
+      kainek: ['lore-kainek-origin', 'lore-kainek-philosophy'],
+      carnak: ['lore-carnak-twisted-sobek'],
+      carpo: ['lore-carpo-curse-broken', 'lore-carpo-sanctuary'],
+      brutus: ['lore-brutus-zahra-origins', 'lore-brutus-zahra-tragedy'],
+      zahra: ['lore-brutus-zahra-origins', 'lore-brutus-zahra-tragedy'],
+      rathen: ['lore-rathen-origin', 'lore-order-rathen-observation'],
+      regal: ['lore-regal-origin', 'lore-regal-first-contact'],
+      phya: ['lore-phya-independent-deity']
+    };
+
+    if (personalPriorityMap[char.id]) {
+      const priorityList = personalPriorityMap[char.id];
+      personalLore.sort((a, b) => {
+        const aIdx = priorityList.indexOf(a.id);
+        const bIdx = priorityList.indexOf(b.id);
+        if (aIdx !== -1 && bIdx !== -1) return aIdx - bIdx;
+        if (aIdx !== -1) return -1;
+        if (bIdx !== -1) return 1;
+        return 0;
+      });
+    }
+
     let timelineHTML = '';
     if (char.livedExperience.breakdown && char.livedExperience.breakdown.length > 0) {
       timelineHTML = char.livedExperience.breakdown.map(stage => `
