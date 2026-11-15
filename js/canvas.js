@@ -47,6 +47,20 @@ class RelationshipCanvas {
     return false;
   }
 
+  isCharacterVisible(char) {
+    if (!char) return false;
+    const isAssoc = this.isAssociatedCharacter(char);
+    if (isAssoc && !this.enableAssociatedCharacters) return false;
+
+    const filterType = this.activeFilter || 'all';
+    if (filterType === 'all') return true;
+    if (filterType === 'order') return Boolean(char.orderMember);
+    if (filterType === 'associated') return isAssoc;
+
+    const relationships = this.getRelationships();
+    return relationships.some(r => r.type === filterType && (r.source === char.id || r.target === char.id));
+  }
+
   getCharacters() {
     return window.characters || [];
   }
@@ -897,7 +911,7 @@ class RelationshipCanvas {
 
     rel.speechBubbles.forEach(bubble => {
       const char = characters.find(c => c.id === bubble.speakerId);
-      if (!char || !char.canvasPos) return;
+      if (!char || !char.canvasPos || !this.isCharacterVisible(char)) return;
 
       const bubbleEl = this.createSpeechBubbleElement(char, bubble, rel.color || '#22c55e');
       if (bubbleEl) {
@@ -1112,12 +1126,12 @@ class RelationshipCanvas {
 
     if (this.selectedNodeId) {
       const selectedChar = characters.find(c => c.id === this.selectedNodeId);
-      if (selectedChar && (this.enableAssociatedCharacters || !this.isAssociatedCharacter(selectedChar)) && selectedChar.randomThoughts && selectedChar.randomThoughts.length > 0) {
+      if (selectedChar && this.isCharacterVisible(selectedChar) && selectedChar.randomThoughts && selectedChar.randomThoughts.length > 0) {
         candidates = [selectedChar];
       }
     } else {
       candidates = characters.filter(c => {
-        if (!this.enableAssociatedCharacters && this.isAssociatedCharacter(c)) return false;
+        if (!this.isCharacterVisible(c)) return false;
         return c.randomThoughts && c.randomThoughts.length > 0;
       });
     }
@@ -1189,6 +1203,7 @@ class RelationshipCanvas {
 
   showRandomThoughtBubble(char, thought) {
     if (!this.enableRandomThoughts || this.selectedEdgeId) return;
+    if (!this.isCharacterVisible(char)) return;
 
     const thoughtLayer = this.svg.querySelector('#random-thoughts-layer');
     if (!thoughtLayer) return;
@@ -1442,16 +1457,8 @@ class RelationshipCanvas {
         }
       }
 
-      if (filterType === 'all') {
-        node.style.display = 'block';
-      } else if (filterType === 'order') {
-        node.style.display = char.orderMember ? 'block' : 'none';
-      } else if (filterType === 'associated') {
-        node.style.display = isAssoc ? 'block' : 'none';
-      } else {
-        const hasRel = relationships.some(r => r.type === filterType && (r.source === char.id || r.target === char.id));
-        node.style.display = hasRel ? 'block' : 'none';
-      }
+      const visible = this.isCharacterVisible(char);
+      node.style.display = visible ? 'block' : 'none';
     });
 
     // 2. Edges
@@ -1471,13 +1478,22 @@ class RelationshipCanvas {
         }
       }
 
+      // An edge MUST NEVER be displayed if either connected node is hidden
+      const srcVisible = this.isCharacterVisible(srcChar);
+      const tgtVisible = this.isCharacterVisible(tgtChar);
+      if (!srcVisible || !tgtVisible) {
+        edge.style.display = 'none';
+        return;
+      }
+
       if (filterType === 'all') {
         edge.style.display = 'block';
       } else if (filterType === 'order') {
         const isOrderEdge = srcChar && srcChar.orderMember && tgtChar && tgtChar.orderMember;
         edge.style.display = isOrderEdge ? 'block' : 'none';
       } else if (filterType === 'associated') {
-        edge.style.display = isAssocEdge ? 'block' : 'none';
+        // Both src and tgt are already verified visible (which under 'associated' filter means both are associated characters)
+        edge.style.display = 'block';
       } else {
         edge.style.display = (filterType === type) ? 'block' : 'none';
       }
@@ -1493,6 +1509,32 @@ class RelationshipCanvas {
         hull.classList.add('dimmed');
       }
     });
+
+    // 4. Ensure active thought bubble is dismissed if its speaker is no longer visible
+    if (this.activeThoughtSpeakerId) {
+      const activeChar = charMap.get(this.activeThoughtSpeakerId);
+      if (!this.isCharacterVisible(activeChar)) {
+        this.clearRandomThoughtBubble(false);
+      }
+    }
+
+    // 5. Ensure active selection & speech bubbles are dismissed if selected node or edge is no longer visible
+    if (this.selectedNodeId) {
+      const selChar = charMap.get(this.selectedNodeId);
+      if (!this.isCharacterVisible(selChar)) {
+        this.resetSelection();
+      }
+    }
+    if (this.selectedEdgeId) {
+      const rel = relationships.find(r => r.id === this.selectedEdgeId);
+      if (rel) {
+        const srcChar = charMap.get(rel.source);
+        const tgtChar = charMap.get(rel.target);
+        if (!this.isCharacterVisible(srcChar) || !this.isCharacterVisible(tgtChar)) {
+          this.resetSelection();
+        }
+      }
+    }
   }
 
   setupEvents() {
