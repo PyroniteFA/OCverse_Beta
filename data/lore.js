@@ -225,7 +225,7 @@ Because Kai'nek came to exist without memory of his origin and cannot generate l
 This inviolable code explains his complex, fraught dynamic with Carpo: although Kai'nek possesses psychic abilities that could effortlessly rewrite Carpo's thoughts or force total obedience, Kai'nek constantly wrestles, negotiates, and clashes with the Gryphon instead. To Kai'nek, controlling a mindless puppet would be utterly hollow; he genuinely respects Carpo as a sovereign, stubborn peer who chooses to stand with the Order on his own terms. Kai'nek willingly endures their friction as the necessary price of authentic respect. All Carpo asks is that Kai'nek's ruinous wastelands be wrought elsewhere across the endless multiverse, leaving Carpo a peaceful haven of his own while remaining on call whenever the Order needs his wings.
 
 <a class="lore-cross-link" data-lore-id="lore-order-pact" style="margin-bottom:8px;">🎯 Crossover Arc: The Order: The Sovereign's Informal Tactical Pact →</a>
-<a class="lore-cross-link" data-lore-id="lore-sanctuary-trio">🏰 Crossover Arc: The Sanctuary Trio & Carpo's Validated Fear →</a>`
+<a class="lore-cross-link" data-lore-id="lore-sanctuary-trio">🏰 Crossover Arc: The Sanctuary Trio & Carpo's Lingering Sting →</a>`
   },
   {
     id: 'lore-brutus-zahra-origins',
@@ -283,7 +283,7 @@ After a century and a half of constant blood, death, and resurrection, Zahra fin
 Confronted with her truth, Brutus's love for Zahra completely overshadowed his desire for vengeance. Understanding that abandoning their bargains meant they would both die, Brutus laid down his wrath and chose to waste away together with her—even as the unfulfilled hunger burned and actively harmed him from within.
 Faced with the imminent loss of his premier candidates, Kai'nek was forced to step in, drop his divine disguises, and reveal his true sovereign form. Kai'nek struck a new deal with the lovers: he extinguished the burning hunger that had tormented Brutus, freeing him from compulsive frenzy. In exchange, Brutus agreed to deploy on active city rampages whenever Kai'nek calls upon him for planar harvesting—a task Brutus still genuinely enjoys, like the other titans—while securing the preserved status quo and peaceful life they share. 
 
-Crucially, Zahra is the only one in their entire circle who is not the rampaging type. To protect the status quo and the devoted life they fought through centuries of agony to win, Zahra learned to make peace with her lover's actions and turn a blind eye to the destruction he leaves on distant worlds—choosing instead to serve as his eternal anchor, emotional ground, and the gentle heart of their reconstructed sanctuary castle.
+Crucially, Zahra is the only one in their entire circle who is not the rampaging type. To protect the sanctuary and the devoted life they fought through centuries of agony to win, Zahra accepted the monstrous reality of titans—choosing to preserve their secluded haven and stand as the unwavering heart of their reconstructed castle.
 
 Following this revelation, the couple established their sanctuary in a partially modernized rebuild of the old royal castle where they were born and spent their youth, with Brutus spending as much downtime as possible with Zahra in devoted seclusion.
 
@@ -319,34 +319,34 @@ Today, Carpo serves as the aerial sentinel of the Order under an informal pact, 
   {
     id: 'lore-carpo-sanctuary',
     title: "Sanctuary in Exile: How Brutus & Zahra Took Carpo In",
-    era: 'Post-Rescue Healing Era',
+    era: 'The Sanctuary Years',
     tags: ['Carpo', 'Brutus', 'Zahra', 'Friendship', 'Committed Lovers'],
     characterIds: ['carpo', 'brutus', 'zahra'],
     relationshipIds: ['rel-carpo-brutus-friend', 'rel-carpo-zahra-friend', 'rel-brutus-zahra-lovers'],
-    summary: "Sheltered by Brutus and Zahra during his 200-year Macro era, Carpo regained his faculties in their sanctuary before his hesitation about intruding prompted his departure.",
+    summary: "Sheltered by Brutus and Zahra during his 200-year Macro era, Carpo calmed his faculties in their sanctuary before his personal hesitation prompted his departure.",
     content: `<a class="lore-cross-link" data-lore-id="lore-carpo-curse-broken" style="margin-bottom:8px;">⬅️ Preceded by (Carpo's Journey): From Ambitious Centurion to Agent of Doom: The 2,100-Year Crucible of Carpo</a>
 <a class="lore-cross-link" data-lore-id="lore-brutus-zahra-tragedy" style="margin-bottom:12px;">⬅️ Preceded by (Haven Hosts): Ancestors, Angels & The 150-Year Sacrifice: The Mortal Strike and Mutual Surrender</a>
 
 After Kai'nek tore Carpo across the dimensional veil to spare his homeworld, the accursed Gryphon rampaged through an unfamiliar realm for years in blind madness. Upon calming down, Carpo realized he was no longer home and could not remember how to return—unknowingly sparing his world from the catastrophic doom of his curse. Displaced and volatile, he traveled and rampaged across other worlds for tens of years until Kai'nek finally revealed himself and asked the duo lovers, Brutus and Zahra, to take the lost titan into their care.
 
-Welcoming Carpo into their secluded haven—established within a partially modernized rebuild of the old royal castle where they were born—the dragonkin warrior and Enfield princess offered the battered Gryphon sanctuary, patience, and shelter, giving him the grounding he desperately needed to recover his faculties and mind. This healing took place within the space of his 200-year Macro era—though the sanctuary stay itself did not last the full two centuries, as Carpo rampaged for decades prior, healed, and eventually chose to depart.
+Welcoming Carpo into their secluded haven—established within a partially modernized rebuild of the old royal castle where they were born—the dragonkin warrior and Enfield princess offered the battered Gryphon sanctuary, patience, and shelter, allowing him to calm his frenzy and regain his clarity. This recovery took place within the space of his 200-year Macro era—though the sanctuary stay itself did not last the full two centuries, as Carpo rampaged for decades prior, found peace, and eventually chose to depart.
 
 Four crucial dynamics shaped this sanctuary arc:
-1. Zahra's Non-Judgmental Care & The Non-Rampaging Soul:
-Among all the colossal titans and sovereign entities in their orbit, Zahra stands as the only one who is not the rampaging type. Having endured 150 years of mortal strife, she had learned to make peace with her lover Brutus's destructive nature and consciously turn a blind eye to the violent campaigns he wages for Kai'nek. Because Zahra had already reconciled that moral reality within herself, she was uniquely suited to care for Carpo with profound patience and zero judgment about his past—sheltering the traumatized Gryphon without a trace of condemnation for the cataclysmic rampages he had wrought while consumed by the deities' curse.
+1. Zahra's Quiet Acceptance & The Castle Hearth:
+Among all the colossal titans and sovereign entities in their orbit, Zahra stands as the only one who is not the rampaging type. Having endured 150 years of mortal strife, her loyalty to Brutus was forged in blood and survival, accepting the monstrous dragon nature within him. Because of this unwavering resolve, she welcomed Carpo into their halls with quiet grace, offering the exhausted Gryphon shelter and hospitality without questioning the bloody wreckage of his past or condemning the cataclysms he had wrought while consumed by the deities' curse.
 2. The Human-Harmful Pathogen: During those early years, Carpo carried a lingering pathogen harmful to humans. Because of this, Zahra was required to remain in her Enfield form whenever in Carpo's presence to protect herself—a condition Carpo finally amended and cured years later.
 3. Drawing Energies from the Outside (Teaching the Macro Arts): During his first 150 conflict years under ancestral deception, Brutus had to force his macro growth with great difficulty, drawing power strictly from within his own inward reserves. In gratitude for their shelter, Carpo taught Brutus and Zahra (in her Enfield form) the vital art of channeling ambient energy from the outside environment rather than burning through their own internal life force. This instruction enabled both of them to achieve and sustain giant size without tiring themselves out.
-4. Hidden Longings, Unspoken Tension, and Self-Imposed Distance:
-While Brutus made it known with open arms that Carpo would always be welcomed to stay with them anytime, living in such close quarters with the couple stirred complex, conflicting emotions that the Gryphon struggled to handle as his mind cleared:
-- Attraction to Brutus's Physique & Palpable Tension: Carpo developed an intense physical attraction toward Brutus's formidable, muscular dragonkin physique. Despite his seasoned soldier's discipline, Carpo was desperately bad at hiding it—his flustered glances, hesitations, and guarded posture created an unmistakable undercurrent of tension directed from Carpo toward Brutus whenever they shared space. Yet bound by deep honor, Carpo fiercely refused to ever act on his desires or betray Zahra. For his part, Brutus remained warm, easygoing, and completely welcoming—reassuring Carpo that their home was always his—even as Carpo quietly burned under the awkward, unresolved friction between them.
-- Reverence for Zahra's Kind Soul & The Kept Secret: By contrast, Carpo grew profoundly enamored with Zahra's gentle spirit—drawn to her kindness, quiet wisdom, and the unconditional grace she showed him when he arrived broken. While his physical attraction toward Brutus was painfully transparent, Carpo proved remarkably adept at keeping his feelings for Zahra completely secret. In their outward interactions, their dynamic appeared entirely smooth, normal, and respectfully applicable: a gracious host princess extending hospitality, and a grateful wandering warrior offering eternal courtesy. Zahra never suspected the depth of quiet reverence Carpo held for her soul.
-- The Inevitable Departure: Caught between an undeniable physical pull toward Brutus that he could neither conceal nor indulge, and a silent reverence for Zahra that forbade him from disrupting their sacred union, Carpo felt an agonizing guilt. Terrified that his permanent presence as a third colossus would inevitably intrude between them, he chose to withdraw from the sanctuary, establishing a self-imposed distance and visiting only on rare occasions.
+4. Tangled Longings, Soldier Honor, and the Open Sky:
+While Brutus made it clear with open arms that their castle was always open to Carpo, sharing their daily life stirred conflicting feelings that the Gryphon wrestled to control as his faculties cleared:
+- Attraction to Brutus's Strength & Guarded Posture: Carpo developed an intense physical attraction toward Brutus's formidable dragonkin physique. Despite two millennia of discipline, Carpo was notoriously clumsy at hiding it—his stiff posture, guarded glances, and awkward hesitations betrayed his tension whenever they shared space. Yet bound by deep soldier honor, Carpo refused to ever act on his desires or compromise their home. For his part, Brutus remained warm and easygoing, consistently assuring Carpo that their gates were open to him anytime without making a fuss over the Gryphon's guarded nature.
+- Reverence for Zahra & The Kept Secret: By contrast, Carpo grew profoundly enamored with Zahra's quiet spirit—drawn to her perceptive wisdom, her calmness, and the steadfast hospitality she showed him when he arrived half-mad from the curse. While his attraction toward Brutus was awkwardly transparent, Carpo kept his deep reverence for Zahra entirely to himself, maintaining flawless courtesy and respect as a grateful guest before a gracious hostess.
+- The Inevitable Departure: Torn between an unspoken desire for Brutus that he could neither suppress nor indulge, and a profound reverence for Zahra that forbade him from intruding upon their union, Carpo felt an overwhelming personal confusion. Fearing that staying permanently would crowd their home, the stubborn soldier chose to withdraw into the clouds, establishing distance and returning only as an occasional visitor.
 
 This shared sanctuary arc forged profound, enduring bonds between Carpo and his hosts: a martial camaraderie fraught with lingering, unspoken tension toward Brutus, and a quiet, respectful kinship of mutual understanding and concealed reverence with Zahra.
 
 Yet Carpo's hesitation and deliberate self-restraint set the stage for a bitter, tragic irony:
 
-<a class="lore-cross-link" data-lore-id="lore-sanctuary-trio">📖 Continue to Next Arc: The Sanctuary Trio & Carpo's Validated Fear: Love, Intrusion, and Secret Disdain →</a>`
+<a class="lore-cross-link" data-lore-id="lore-sanctuary-trio">📖 Continue to Next Arc: The Sanctuary Trio & Carpo's Lingering Sting: Kinship, Intrusion, and Secret Disdain →</a>`
   },
   {
     id: 'lore-isolated-three-telemetry',
@@ -385,25 +385,25 @@ Kai'nek considers Ph'ya an intriguing character but 'a bit too powerful for his 
   },
   {
     id: 'lore-sanctuary-trio',
-    title: "The Sanctuary Trio & Carpo's Validated Fear: Love, Intrusion, and Secret Disdain",
+    title: "The Sanctuary Trio & Carpo's Lingering Sting: Kinship, Intrusion, and Secret Disdain",
     era: 'Post-Revelation Macro Era',
     tags: ["Kai'nek", 'Brutus', 'Zahra', 'Carpo', 'The Sanctuary Trio', 'Committed Lovers', 'Friendship'],
     characterIds: ['kainek', 'brutus', 'zahra', 'carpo'],
     relationshipIds: ['rel-kainek-brutus-friend', 'rel-kainek-zahra-friend', 'rel-kainek-carpo-friend', 'rel-carpo-brutus-friend', 'rel-brutus-zahra-lovers'],
-    summary: "Kai'nek softened from aloof sovereign to intimate partner with Brutus and Zahra—proving Carpo's fears right and fueling Carpo's secret disdain.",
+    summary: "Kai'nek grew close with Brutus and Zahra in their sanctuary, forming a devoted triad that left Carpo nursing a quiet, bitter resentment.",
     content: `<a class="lore-cross-link" data-lore-id="lore-carpo-sanctuary" style="margin-bottom:8px;">⬅️ Preceded by (Sanctuary Haven): Sanctuary in Exile: How Brutus & Zahra Took Carpo In</a>
 <a class="lore-cross-link" data-lore-id="lore-kainek-philosophy" style="margin-bottom:12px;">⬅️ Preceded by (Sovereign Genesis): The Art of Ruin & The Price of Peers: Kai'nek's Sovereign Philosophy</a>
 
 Following his forced revelation to the lovers, Kai'nek's initial relationship with them was cold, distant, and aloof. While Brutus rampaged on active city campaigns whenever Kai'nek called upon him to harvest life-force—spending all his personal downtime in quiet devotion with Zahra in their sanctuary (a partially modernized rebuild of the old castle where they were born)—Kai'nek was exacting of Brutus's efficiency, and held little respect for Zahra in her fragile human form. 
 
-Over the decades, however, Kai'nek began spending extensive time with them in their secluded sanctuary. The aloof deity gradually became personable:
-1. Zahra the Sage: Despite her human nature, Kai'nek came to recognize Zahra's profound depth, insight, and grounding presence, eventually thinking of her as a true sage. As the only figure in their realm who was not the rampaging type, Zahra's ability to make peace with her lover's violence, turn a blind eye to multiversal slaughter, and harbor zero judgment toward destructive titans gave her an extraordinary emotional clarity that the cosmic sovereign found deeply compelling.
-2. The Bloom of Love: Through shared vulnerability and sanctuary life, an intimate love formed between Kai'nek and Brutus (cementing an unbreakable bond forged in warfare and genuine devotion), which naturally blossomed to embrace Zahra as well. The couple became a dedicated trio bound by deep, reciprocal affection.
+Over the decades, however, Kai'nek began spending extensive time with them in their secluded sanctuary. The aloof deity gradually grew genuinely attached:
+1. Zahra the Sage: Despite her human nature, Kai'nek came to recognize Zahra's remarkable, penetrating perception. As an acute and quiet listener, Zahra would cut through the sovereign's cosmic arrogance with simple, grounded truths that routinely perplexed and disarmed him. Her steady presence and sharp clarity earned Kai'nek's rare intellectual reverence, leading him to regard the Enfield princess as a true sage.
+2. The Bloom of Devotion: Through shared quietude and sanctuary life, an intimate bond deepened between Kai'nek and Brutus—forged in warfare and mutual devotion—which naturally blossomed to embrace Zahra as well. The couple became a dedicated triad bound by deep, reciprocal affection.
 
 This evolution carried a bitter, tragic sting for Carpo:
-Having painfully restrained himself and withdrawn from their sanctuary out of hesitation and guilt—fearing that his continued presence would intrude between the two lovers, while struggling to suppress the blatant physical attraction he felt toward Brutus and his secret reverence for Zahra—Carpo watched as Kai'nek stepped into their haven and did the exact thing Carpo had agonized over avoiding. Kai'nek entered Brutus and Zahra's intimate life to form a devoted trio, proving Carpo's deepest fears completely right. 
+Having painfully restrained himself and taken to the skies out of personal confusion and hesitation—fearing that his presence would crowd the lovers, while wrestling with his unspoken attraction toward Brutus and his reverence for Zahra—Carpo watched as Kai'nek stepped into their castle and effortlessly claimed the closeness Carpo had denied himself. Kai'nek entered Brutus and Zahra's intimate life to form a devoted triad, leaving the solitary Gryphon feeling that his own hesitation had cost him a place in the home he loved.
 
-While Carpo honors his pact with the Order on the surface, he carries a deep, secret disdain toward Kai'nek for intruding upon the sanctuary Carpo revered too much to disrupt.`
+While Carpo honors his pact with the Order on the surface, he carries a deep, secret disdain toward Kai'nek for easily stepping into the sanctuary Carpo held too sacred to disturb.`
   },
   {
     id: 'lore-carnak-twisted-sobek',
@@ -412,7 +412,7 @@ While Carpo honors his pact with the Order on the surface, he carries a deep, se
     tags: ['Carnak', "Kai'nek", 'Carpo', 'Brutus', 'Facilitation', 'Friendship'],
     characterIds: ['carnak', 'kainek', 'carpo', 'brutus'],
     relationshipIds: ['rel-kainek-carnak-facil', 'rel-kainek-carnak-friend', 'rel-carnak-carpo-friend', 'rel-carnak-brutus-friend'],
-    summary: "Awakened from ancient residual power as a twisted Sobek, Carnak harbors an innate, lucid hatred and ravenous hunger for humanity, serving as Kai'nek's disciplined 'good soldier' and the Order's drama-free 'bro.'",
+    summary: "Awakened from ancient residual power as a twisted Sobek, Carnak harbors an innate, lucid hatred and ravenous hunger for humanity, serving as Kai'nek's disciplined 'good soldier' and an uncomplicated, crafty peer among the Order's titans.",
     content: `Carnak's origin and worldview diverge sharply from the other colossi of the Order:
 
 1. Creation from Residual Power & The Twisted Sobek:
@@ -421,13 +421,13 @@ Carnak did not arise from nothing, nor was he an ordinary mortal elevated by cha
 2. Intense Hunger & Cold Hatred for Humanity:
 Upon his awakening, Carnak was immediately consumed by two defining traits: an intense, bottomless hunger, and a deep-seated hatred for humanity. To Carnak, humans are not tragic rivals or misunderstood beings; he experiences pure, visceral disgust at the very thought of them as 'squirming, writhing masses.' 
 
-Crucially, his hostility is fundamentally distinct from Carpo's: whereas Carpo suffered a blind, frenzied curse of hunger that required finding sanctuary within his 200-year Macro era to overcome, Carnak's drive is fueled by cold, lucid, genuine hatred. Similarly, unlike Brutus—whose vengeance was born from generational betrayal and the genocide of his dragonkin race after living among humans—Carnak's revulsion is innate and uncompromising.
+Crucially, his hostility is fundamentally distinct from Carpo's: whereas Carpo suffered a blind, frenzied curse of hunger that required finding sanctuary within his 200-year Macro era to overcome, Carnak's drive is fueled by cold, lucid, genuine hatred. Similarly, unlike Brutus—whose vengeance was born from generational betrayal and the genocide of his dragonkin race after living among humans—Carnak'revulsion is innate and uncompromising.
 
 3. Kai'nek's Quintessential 'Good Soldier' & Frontline Bruiser:
 Because of his boundless appetite and active disgust for humans, Carnak became Kai'nek's premier 'good soldier' for planetary energy harvesting. Equipped optionally as the Order's frontline bruiser—sporting his matte-black pouch-laden plate carrier, red-lit cranial headset and forearm wrist console, flecktarn camouflage trousers with black thigh and knee armor plates, open-toed laced combat boots, and wielding a tactical breaching sledgehammer or, at times, his personal heavily modified Browning Auto-5—or deploying in his raw, predatory crocodilian form, Carnak devours millions of mortals in a single day, possessing an insatiable, terrifyingly rapid digestion that processes entire urban populations while funneling vast stores of harvested life-force energy directly into Kai'nek's realm above multiversal space, swelling the collective reservoirs Kai'nek shares with his titans to fuel their enduring might.
 
-4. The 'Bro' Among Peers:
-Despite his terrifying voracity and absolute contempt for humanity, Carnak's interpersonal dynamic with his fellow Order members is remarkably relaxed and grounded. On a peer-to-peer level, Carnak is a cool, likable guy—a steady, drama-free 'bro' among giants. When brought together by Kai'nek for shared planar operations, Carnak rampaged alongside Brutus, and was similarly brought together with Carpo for an operation, executing devastating campaigns while keeping their connections straightforward, reliable, and free of emotional baggage.`
+4. Crafty Cunning & Uncomplicated Kinship:
+Despite his terrifying voracity and absolute contempt for humanity, Carnak is an intellectual and tactical equal to his titan peers, possessing a devastating predatory craftiness that decodes structural fault lines and defensive chokepoints in seconds. Yet unlike sovereigns who drape their actions in grand rhetoric, Carnak communicates plainly without high words, speaking in an uncomplicated, clipped cadence that frequently drops articles. Untroubled by the existential brooding that weighs upon Carpo or Brutus, Carnak shares a dependable, uncomplicated camaraderie with his fellow titans—keeping his focus on clean breaches, rich harvests, and shared strength.`
   },
   {
     id: 'lore-regal-origin',

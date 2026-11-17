@@ -129,18 +129,18 @@ Over decades spent visiting them in their sanctuary (a partially modernized rebu
     bidirectional: true,
     color: '#22c55e',
     offset: 16,
-    summary: "A warm Tier-2 bond: initially dismissive, Kai'nek came to revere Zahra as a sage, blooming into mutual love.",
-    details: `Part of an intricate multi-era relationship. When Kai'nek first unmasked himself following her 150-year struggle as Brutus's counter-anchor, he was aloof and held little respect for Zahra in her fragile human form.
+    summary: "A warm Tier-2 bond: initially dismissive, Kai'nek came to revere Zahra as a profound sage, blooming into mutual devotion.",
+    details: `Part of an intricate multi-era relationship. When Kai'nek first unmasked himself following her 150-year struggle beside Brutus, he was aloof and held little respect for Zahra in her fragile human form.
 
-Over decades spent living in their sanctuary, however, Kai'nek's perception transformed: he came to recognize and revere Zahra as a profound sage whose insight and emotional grounding became indispensable to him. The love Kai'nek formed with Brutus naturally carried over to Zahra as well, creating an intimate sanctuary dynamic where Zahra meets his gaze with knowing confidence and assumes her towering Enfield form in his prolonged presence.`,
+Over decades spent living in their sanctuary, however, Kai'nek's perception transformed: he came to recognize Zahra as an acute, disarming listener whose simple, piercing perspective cuts through cosmic arrogance and routinely perplexes him. The devotion Kai'nek formed with Brutus naturally carried over to Zahra as well, creating an intimate sanctuary dynamic where Zahra meets his gaze with knowing confidence and assumes her towering Enfield form in his prolonged presence.`,
     speechBubbles: [
       {
         speakerId: 'zahra',
-        text: "Thank you for the life I have with Brutus"
+        text: "You conquered whole realities, Kai'nek, yet you come here just to sit quietly by the fire."
       },
       {
         speakerId: 'kainek',
-        text: "Please keep Brutus loved, take care of him the way I cannot"
+        text: "Do not presume to read me, mortal... though perhaps that is why I find myself listening to you."
       }
     ],
     tags: ['Friendship', 'The Sanctuary Trio', "Kai'nek", 'Zahra']
@@ -155,10 +155,10 @@ Over decades spent living in their sanctuary, however, Kai'nek's perception tran
     bidirectional: true,
     color: '#22c55e',
     offset: 16,
-    summary: "A solid Tier-2 veteran camaraderie: Kai'nek's dependable 'good soldier' and energy harvester, loyal and drama-free.",
+    summary: "A solid Tier-2 veteran camaraderie: Kai'nek's dependable 'good soldier' and energy harvester, loyal and uncomplicated.",
     details: `Built over 150 years of tactical planar deployment under the Order's pact. Ascended from residual power and reshaped with elements of a twisted Sobek, Carnak awoke with an intense hunger and visceral disgust for humanity, viewing mortals as squirming, writhing masses. Channelling this genuine hatred rather than mindless rage, Carnak became Kai'nek's quintessential 'good soldier,' devouring millions in a single day to sate his appetite while efficiently channeling harvested planetary energy into the sovereign's realm.
 
-Beyond the battlefield, Carnak maintains a cool, likable 'bro' rapport with Kai'nek—loyal, steady, and drama-free—trusting Kai'nek's strategic deployment while serving as the Order's unyielding bulwark.`,
+Beyond the battlefield, Carnak maintains a steady, uncomplicated rapport with Kai'nek—loyal, dependable, and untroubled by brooding—trusting Kai'nek's strategic deployment while serving as the Order's unyielding bulwark.`,
     speechBubbles: [
       {
         speakerId: 'kainek',
@@ -191,11 +191,11 @@ Beneath this tactical alliance, however, lies an unspoken, bitter rift: Carpo ha
     speechBubbles: [
       {
         speakerId: 'carpo',
-        text: "As much as I am grateful to your rescue, I just want this one thing for myself, is it so much to ask?"
+        text: "I owe you my sanity, Kai'nek, but I need my own sky. Keep your devastation far from my roost."
       },
       {
         speakerId: 'kainek',
-        text: "I do as I please, but understand that I still want you here"
+        text: "Your haven remains untouched, gryphon. I did not pull a willful soldier from the void only to cage him."
       }
     ],
     tags: ['Friendship', 'The Order', "Kai'nek", 'Carpo']
@@ -210,18 +210,18 @@ Beneath this tactical alliance, however, lies an unspoken, bitter rift: Carpo ha
     bidirectional: true,
     color: '#22c55e',
     offset: 0,
-    summary: "Veteran comrades (Tier-1): brought together for an operation by Kai'nek, sharing cool peer respect between fellow titans.",
-    details: `A veteran peer bond established when Kai'nek brought Carnak and Carpo together for a shared Order operation. While their scales and origins differ—Carpo having overcome the blind destructive curse that Kai'nek broke, and Carnak driven by cold, lucid hatred of humanity—Carnak relates to Carpo on a cool, likable 'bro' level.
+    summary: "Veteran comrades (Tier-1): brought together for an operation by Kai'nek, sharing solid peer respect between fellow titans.",
+    details: `A veteran peer bond established when Kai'nek brought Carnak and Carpo together for a shared Order operation. While their scales and origins differ—Carpo wrestling with ancient curses and personal confusion, and Carnak possessing an uncomplicated, crafty focus on demolition and devouring—Carnak relates to Carpo with straightforward warrior camaraderie.
 
-Reliable, relaxed, and devoid of friction, they operate effectively together as fellow titans under Kai'nek's banner.`,
+Reliable, relaxed, and devoid of pretense, they operate devastatingly together as fellow titans under Kai'nek's banner.`,
     speechBubbles: [
       {
         speakerId: 'carpo',
-        text: "It's always a fun time with you"
+        text: "It's always a reliable run with you, Carnak."
       },
       {
         speakerId: 'carnak',
-        text: "With flying beast over the city's heads, I like how panicked you make them become"
+        text: "With big winged beast in sky, mortals panic twice as fast. Makes sorting meal very easy."
       }
     ],
     tags: ['Friendship', 'The Order', 'Carnak', 'Carpo']
@@ -239,7 +239,7 @@ Reliable, relaxed, and devoid of friction, they operate effectively together as 
     summary: "Frontline veterans (Tier-1): brought together for an operation by Kai'nek, rampaging side-by-side with mutual peer respect.",
     details: `A solid warrior kinship between two colossal destroyers of humanity. Brought together by Kai'nek for a shared operation, Brutus and Carnak rampaged alongside one another across the battlefield.
 
-While both harbor uncompromising hostility toward human civilization, their roots differ: Brutus seeks retribution for the betrayal and genocide of his dragonkin race, whereas Carnak was awakened with innate, cold hatred and disgust for humans as squirming masses. Carnak interacts with Brutus on a cool, likable 'bro' level—reliable, relaxed, and keeping their connection straightforward without complex emotional baggage.`,
+While both harbor uncompromising hostility toward human civilization, their roots differ: Brutus seeks retribution for the betrayal and genocide of his dragonkin race, whereas Carnak was awakened with innate, cold hatred and disgust for humans as squirming masses. Carnak interacts with Brutus with uncomplicated, straightforward camaraderie—reliable, relaxed, and keeping their connection centered on the battlefield.`,
     speechBubbles: [
       {
         speakerId: 'carnak',
@@ -247,7 +247,7 @@ While both harbor uncompromising hostility toward human civilization, their root
       },
       {
         speakerId: 'brutus',
-        text: "Any time, Gaytor"
+        text: "Any time, Gaytor. Just leave some of the city standing for the rest of us."
       }
     ],
     tags: ['Friendship', 'The Order', 'Carnak', 'Brutus']
@@ -262,20 +262,20 @@ While both harbor uncompromising hostility toward human civilization, their root
     bidirectional: true,
     color: '#22c55e',
     offset: 0,
-    summary: "A warm yet tension-filled sanctuary bond: Brutus warmly welcomes Carpo anytime, while Carpo struggles with an intense attraction to Brutus's physique that he is desperately bad at hiding.",
-    details: `Forged during Carpo's post-rescue sanctuary era and sustained by deep warrior respect. After Kai'nek tore Carpo away from his doomed homeworld—and after Carpo spent tens of years wandering and rampaging across realms before Kai'nek revealed himself and asked the duo lovers to shelter him—Brutus and Zahra welcomed the battered Gryphon into their sanctuary. During his stay, Carpo imparted an invaluable cosmic technique: teaching Brutus how to become giant-sized sustainably by drawing ambient energies from the outside environment rather than burning through internal reserves.
+    summary: "A warm sanctuary bond: Brutus warmly keeps their castle open to Carpo anytime, while Carpo wrestles with personal feelings and soldier hesitation he struggles to hide.",
+    details: `Forged during Carpo's sanctuary years and sustained by deep warrior respect. After Kai'nek tore Carpo away from his doomed homeworld—and after Carpo spent tens of years wandering and rampaging across realms before Kai'nek revealed himself and asked the duo lovers to shelter him—Brutus and Zahra welcomed the battered Gryphon into their sanctuary. During his stay, Carpo imparted an invaluable cosmic technique: teaching Brutus how to become giant-sized sustainably by drawing ambient energies from the outside environment rather than burning through internal reserves.
 
-Yet living in close quarters stirred complex feelings: Carpo developed an intense physical attraction toward Brutus's dragonkin physique that he was desperately bad at hiding, creating noticeable tension on Carpo's part whenever they were near. While Brutus remained warm, easygoing, and completely welcoming—telling Carpo their doors were always open—Carpo was tormented by the fear of intruding between Brutus and Zahra, fiercely refusing to betray her trust.
+Yet living in close quarters stirred complex feelings: Carpo developed an intense physical attraction toward Brutus's dragonkin physique that he was clumsy at hiding, creating awkward tension on Carpo's part whenever they were near. While Brutus remained warm, easygoing, and completely welcoming—telling Carpo their doors were always open—Carpo wrestled with the fear of intruding between Brutus and Zahra, stubbornly refusing to cross that line.
 
-This unbearable friction and guilt prompted Carpo's self-imposed distance, which was bitterly validated when Kai'nek later entered their sanctuary.`,
+This tangled hesitation prompted Carpo's retreat back to the skies, only to feel a bitter sting when Kai'nek later entered their sanctuary.`,
     speechBubbles: [
       {
         speakerId: 'carpo',
-        text: "I can't describe how much I find you attractive, but I am not going to be betray Zahra like that"
+        text: "Being here with you two... it gets complicated for me. I respect what you and Zahra have too much to ever cross that line."
       },
       {
         speakerId: 'brutus',
-        text: "Don't worry about such thing, come to us any time when you need"
+        text: "You don't have to worry about that, Carpo. Our gates are always open to you, whenever you need a place to rest."
       }
     ],
     tags: ['Friendship', 'Carpo', 'Brutus']
@@ -290,12 +290,12 @@ This unbearable friction and guilt prompted Carpo's self-imposed distance, which
     bidirectional: true,
     color: '#22c55e',
     offset: 0,
-    summary: "A respectful sanctuary bond: as the only non-rampager who made peace with Brutus's rampages, Zahra cared for Carpo with zero judgment, while Carpo secretly revered her kind soul.",
-    details: `Rooted in Carpo's post-rescue recovery era when Kai'nek revealed himself after Carpo's decades of multiversal wandering and asked the duo lovers to take him in. Crucially, Zahra is the only figure across the circle who is not the rampaging type; having learned to make peace with her lover Brutus's actions and turn a blind eye to planetary destruction, she was uniquely suited to care for Carpo with unconditional patience and zero judgment about his bloody past or the cataclysms he had wrought under the deities' curse.
+    summary: "A respectful sanctuary bond: Zahra welcomed the battered Gryphon with quiet grace and hospitality, while Carpo secretly revered her wise, serene spirit.",
+    details: `Rooted in Carpo's sanctuary years when Kai'nek revealed himself after Carpo's decades of multiversal wandering and asked the duo lovers to take him in. Crucially, Zahra is the only figure across the circle who is not the rampaging type; having survived 150 years of mortal strife alongside Brutus, she accepted the monstrous nature of titans and welcomed Carpo with unconditional hospitality, offering him shelter without questioning the bloody wreckage of his past.
 
 During those early sanctuary decades, Zahra needed to stay in her Enfield form in Carpo's presence because he carried an ancient pathogen harmful to humans (which Carpo amended years later). In return for their shelter, Carpo taught Zahra (in her Enfield form) alongside Brutus how to achieve and sustain giant size without tiring themselves out—instructing them to channel ambient energies from the outside rather than drawing solely from inwards.
 
-Outwardly, their interactions appear completely normal, smooth, and naturally applicable, with Carpo expressing flawless courtesy and gratitude; inwardly, Carpo developed a deep, quiet attraction toward Zahra's kind soul, which he proved remarkably adept at keeping entirely secret to protect her peace and honor her union with Brutus. Fearing his presence would disrupt their love, Carpo chose to withdraw, visiting only on rare occasions.`,
+Outwardly, their dynamic was one of courteous guest and gracious hostess, with Carpo expressing deep gratitude; inwardly, Carpo developed a quiet reverence for Zahra's serene, penetrating spirit, which he kept entirely to himself to honor her union with Brutus. Fearing his presence would crowd their castle, Carpo chose to withdraw, visiting only on rare occasions.`,
     speechBubbles: [
       {
         speakerId: 'carpo',
@@ -325,11 +325,11 @@ Ph'ya helped Carpo locate a quiet personal refuge during his travels (though Ph'
     speechBubbles: [
       {
         speakerId: 'phya',
-        text: "trust me that I have your back if Kai'nek tries to vanquish you"
+        text: "If that cosmic serpent ever forgets himself and comes after you, he'll have to answer to my sun."
       },
       {
         speakerId: 'carpo',
-        text: "You had helped me found my peace"
+        text: "I appreciate it, Ph'ya. Having at least one corner of the sky I can breathe in means everything."
       }
     ],
     tags: ['Friendship', 'Carpo', "Ph'ya"]
@@ -350,7 +350,7 @@ Ph'ya helped Carpo locate a quiet personal refuge during his travels (though Ph'
 
 When Zahra warned villagers to flee, Brutus struck her down in the snow; resurrected by angelic decree, Zahra returned to a mournful Brutus, who joyfully embraced her. For 150 years, Zahra repeatedly offered herself intimately to stay his burning hunger, regenerating in secret after near-fatal wounds, until she gave up. Rather than continue without her, Brutus agreed to waste away, even as the unfulfilled hunger burned and actively harmed him.
 
-This forced Kai'nek to step in, lifting the burning compulsion in exchange for Brutus deploying on rampages when called. Crucially, Zahra is the only one who is not the rampaging type; having learned to make peace with her lover's actions and turn a blind eye to the destruction he inflicts across distant realms, she preserves their status quo and quiet haven, spending all their downtime together in their reconstructed castle sanctuary while grounding his colossal dragon wrath.`,
+This forced Kai'nek to step in, lifting the burning compulsion in exchange for Brutus deploying on rampages when called. Crucially, Zahra is the only one who is not the rampaging type; having survived 150 years of mortal strife alongside Brutus, she accepted the monstrous nature of titans, choosing to preserve their hard-won haven and spend all their downtime together in their reconstructed castle sanctuary.`,
     speechBubbles: [
       {
         speakerId: 'brutus',
