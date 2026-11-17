@@ -417,7 +417,7 @@ class LoreFlowchartModal {
     this.backdrop.classList.remove('open');
     this.backdrop.setAttribute('aria-hidden', 'true');
 
-    const triggerBtn = document.getElementById('btn-legend-lore-flowchart');
+    const triggerBtn = document.getElementById('btn-lore-flowchart') || document.getElementById('btn-legend-lore-flowchart');
     if (triggerBtn) {
       triggerBtn.focus();
     }

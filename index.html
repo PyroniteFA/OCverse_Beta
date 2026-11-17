@@ -22,28 +22,37 @@
       </div>
 
       <div class="nav-actions">
-        <!-- Search -->
-        <div class="search-box">
-          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-          <input type="text" id="search-input" placeholder="Search character or tag..." />
+        <div class="search-filter-group">
+          <!-- Search -->
+          <div class="search-box">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" id="search-input" placeholder="Search character or tag..." />
+          </div>
+
+          <!-- Filter Select -->
+          <select id="filter-select" class="filter-select">
+            <option value="all">All Dynamics</option>
+            <option value="friendship">Friendships (n)</option>
+            <option value="lovers">Committed Lovers</option>
+            <option value="facil">Rise Facilitation</option>
+            <option value="observation">Observation Only</option>
+            <option value="contracted">Contracted (Rampage Pact)</option>
+            <option value="order">Order Members Only</option>
+            <option value="associated">Associated Characters</option>
+          </select>
         </div>
 
-        <!-- Filter Select -->
-        <select id="filter-select" class="filter-select">
-          <option value="all">All Dynamics</option>
-          <option value="friendship">Friendships (n)</option>
-          <option value="lovers">Committed Lovers</option>
-          <option value="facil">Rise Facilitation</option>
-          <option value="observation">Observation Only</option>
-          <option value="contracted">Contracted (Rampage Pact)</option>
-          <option value="order">Order Members Only</option>
-          <option value="associated">Associated Characters</option>
-        </select>
+        <div class="nav-btn-group">
+          <!-- Lore Flowchart Button -->
+          <button id="btn-lore-flowchart" class="nav-btn flowchart-btn" title="Open interactive Lore Flowchart visualizer">
+            <span>🗺️</span> <span class="nav-btn-text-full">Lore Flowchart</span><span class="nav-btn-text-short">Flowchart</span>
+          </button>
 
-        <!-- Lore Archive Button -->
-        <button id="btn-lore-archive" class="nav-btn primary">
-          <span>📖</span> <span class="nav-btn-text-full">Lore Archive</span><span class="nav-btn-text-short">Lore</span>
-        </button>
+          <!-- Lore Archive Button -->
+          <button id="btn-lore-archive" class="nav-btn primary">
+            <span>📖</span> <span class="nav-btn-text-full">Lore Archive</span><span class="nav-btn-text-short">Lore</span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -147,17 +156,6 @@
               </span>
             </label>
           </div>
-
-          <div class="legend-divider"></div>
-
-          <!-- Lore Flowchart Action Button -->
-          <div class="legend-flowchart-box">
-            <button type="button" id="btn-legend-lore-flowchart" class="legend-flowchart-btn" title="Open interactive Lore Flowchart modal">
-              <span class="flowchart-btn-icon">🗺️</span>
-              <span class="flowchart-btn-text">Lore Flowchart</span>
-              <span class="flowchart-btn-badge">Full View</span>
-            </button>
-          </div>
         </div>
 
         <div class="legend-notes">
@@ -172,7 +170,7 @@
         <div class="legend-footer">
           <div class="legend-footer-meta">
             <div class="legend-version-group">
-              <span class="legend-app-version">v1.11.10-beta</span>
+              <span class="legend-app-version">v1.11.11-beta</span>
               <button
                 type="button"
                 id="btn-acknowledgements"
@@ -181,7 +179,7 @@
                 aria-label="Project info &amp; acknowledgements"
               >i</button>
             </div>
-            <span class="legend-last-updated">Updated: Nov 16, 2026, 12:02 AM</span>
+            <span class="legend-last-updated">Updated: Nov 17, 2026, 6:42 PM</span>
           </div>
         </div>
       </aside>

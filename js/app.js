@@ -214,11 +214,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Lore Flowchart Modal Initializer & Legend Box Trigger
+  // Lore Flowchart Modal Initializer & Navigation Triggers
   let loreFlowchart;
   if (window.LoreFlowchartModal) {
     loreFlowchart = new window.LoreFlowchartModal(drawer);
     window.loreFlowchartInstance = loreFlowchart;
+  }
+
+  const topbarFlowchartBtn = document.getElementById('btn-lore-flowchart');
+  if (topbarFlowchartBtn && loreFlowchart) {
+    topbarFlowchartBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      loreFlowchart.open();
+    });
   }
 
   const legendFlowchartBtn = document.getElementById('btn-legend-lore-flowchart');
