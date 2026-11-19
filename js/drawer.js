@@ -10,6 +10,8 @@ class DrawerManager {
     this.contentEl = this.drawer.querySelector('.drawer-content');
     this.closeBtn = this.drawer.querySelector('.drawer-close');
     this.expandBtn = this.drawer.querySelector('#drawer-expand-btn');
+    this.flowchartReturnBtn = this.drawer.querySelector('#drawer-return-flowchart');
+    this.currentFlowchartLoreId = null;
     this.isExpanded = false;
 
     this.init();
@@ -70,6 +72,16 @@ class DrawerManager {
     this.closeBtn.addEventListener('click', () => this.close());
     if (this.expandBtn) {
       this.expandBtn.addEventListener('click', () => this.toggleExpand());
+    }
+    if (this.flowchartReturnBtn) {
+      this.flowchartReturnBtn.addEventListener('click', () => {
+        const returnLoreId = this.currentFlowchartLoreId;
+        this.setFlowchartReturnButton(false);
+        this.close();
+        if (window.loreFlowchartInstance) {
+          window.loreFlowchartInstance.open('all', returnLoreId);
+        }
+      });
     }
     window.addEventListener('keydown', (e) => {
       const ackBackdrop = document.getElementById('ack-modal-backdrop');
@@ -193,8 +205,17 @@ class DrawerManager {
 
   close() {
     this.drawer.classList.remove('open');
+    this.setFlowchartReturnButton(false);
     if (this.canvas && (this.canvas.selectedNodeId || this.canvas.selectedEdgeId)) {
       this.canvas.resetSelection();
+    }
+  }
+
+  setFlowchartReturnButton(visible, loreId = null) {
+    this.currentFlowchartLoreId = visible ? loreId : null;
+    this.drawer.classList.toggle('has-flowchart-return', Boolean(visible));
+    if (this.flowchartReturnBtn) {
+      this.flowchartReturnBtn.style.display = visible ? 'inline-flex' : 'none';
     }
   }
 
@@ -389,6 +410,7 @@ class DrawerManager {
   }
 
   showCharacter(char) {
+    this.setFlowchartReturnButton(false);
     this.open();
     this.currentView = 'character';
     const allCharacters = window.characters || [];
@@ -628,6 +650,7 @@ class DrawerManager {
   }
 
   showRelationship(rel) {
+    this.setFlowchartReturnButton(false);
     this.open();
     this.currentView = 'relationship';
     const allCharacters = window.characters || [];
@@ -753,6 +776,7 @@ class DrawerManager {
   }
 
   showOrderLore() {
+    this.setFlowchartReturnButton(false);
     this.open();
     this.currentView = 'order';
     if (this.canvas) {
@@ -862,6 +886,7 @@ class DrawerManager {
   }
 
   showLoreArchive(selectedTag = null) {
+    this.setFlowchartReturnButton(false);
     this.open();
     const characters = this.getCharacters();
     const sharedLore = this.getSharedLore();
@@ -961,26 +986,7 @@ class DrawerManager {
 
   showLoreDetail(loreId, fromFlowchart = false) {
     this.showLoreArchive();
-
-    if (fromFlowchart) {
-      const returnBanner = document.createElement('div');
-      returnBanner.className = 'drawer-flowchart-return-banner';
-      returnBanner.innerHTML = `
-        <button type="button" class="btn-return-flowchart" id="btn-return-flowchart" title="Return to Lore Flowchart">
-          <span>↩</span> <span>Back to Lore Flowchart</span>
-        </button>
-      `;
-      this.contentEl.prepend(returnBanner);
-      const returnBtn = returnBanner.querySelector('#btn-return-flowchart');
-      if (returnBtn) {
-        returnBtn.addEventListener('click', () => {
-          this.close();
-          if (window.loreFlowchartInstance) {
-            window.loreFlowchartInstance.open('all', loreId);
-          }
-        });
-      }
-    }
+    this.setFlowchartReturnButton(fromFlowchart, loreId);
 
     setTimeout(() => {
       const targetCard = this.contentEl.querySelector(`.lore-card[data-lore-id="${loreId}"]`);
@@ -1041,6 +1047,10 @@ class DrawerManager {
         e.preventDefault();
         const loreId = el.getAttribute('data-lore-id');
 
+        if (this.currentFlowchartLoreId) {
+          this.currentFlowchartLoreId = loreId;
+        }
+
         // If the linked lore card is already visible on the current drawer, scroll in place without reopening all lore
         const existingCard = this.contentEl.querySelector(`.lore-card[data-lore-id="${loreId}"]`);
         if (existingCard) {
@@ -1051,7 +1061,11 @@ class DrawerManager {
         }
 
         // Only reopen the full archive drawer if the linked lore is not on the current drawer
+        const wasFromFlowchart = Boolean(this.currentFlowchartLoreId);
         this.showLoreArchive();
+        if (wasFromFlowchart) {
+          this.setFlowchartReturnButton(true, loreId);
+        }
         setTimeout(() => {
           const targetCard = this.contentEl.querySelector(`.lore-card[data-lore-id="${loreId}"]`);
           if (targetCard) {

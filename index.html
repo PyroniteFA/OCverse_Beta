@@ -170,7 +170,7 @@
         <div class="legend-footer">
           <div class="legend-footer-meta">
             <div class="legend-version-group">
-              <span class="legend-app-version">v1.12.0-beta</span>
+              <span class="legend-app-version">v1.12.3-beta</span>
               <button
                 type="button"
                 id="btn-acknowledgements"
@@ -179,7 +179,7 @@
                 aria-label="Project info &amp; acknowledgements"
               >i</button>
             </div>
-            <span class="legend-last-updated">Updated: Nov 17, 2026, 10:16 PM</span>
+            <span class="legend-last-updated">Updated: Nov 19, 2026, 9:10 PM</span>
           </div>
         </div>
       </aside>
@@ -188,8 +188,18 @@
     <!-- Slide-over Drawer for Characters, Relationships & Shared Lore -->
     <div id="details-drawer" class="drawer">
       <div class="drawer-header">
-        <div class="drawer-header-title">
-          Dossier & Dynamic Inspector
+        <div class="drawer-header-left">
+          <button id="drawer-return-flowchart" class="drawer-header-back-btn" title="Return to Lore Flowchart" style="display: none;">
+            <svg class="return-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 14 4 9 9 4"></polyline>
+              <path d="M20 20v-7a4 4 0 0 0-4-4H4"></path>
+            </svg>
+            <span class="back-label-expanded">Back to Lore Flowchart</span>
+            <span class="back-label-compact">Flowchart</span>
+          </button>
+          <div class="drawer-header-title">
+            Dossier & Dynamic Inspector
+          </div>
         </div>
         <div class="drawer-header-actions">
           <button id="drawer-expand-btn" class="drawer-expand-btn" title="Expand to full page length (F)" aria-label="Toggle full page view">
@@ -261,13 +271,13 @@
             <div class="ack-metrics-grid">
               <div class="ack-metric-card">
                 <span class="ack-metric-label">Back-and-Forth Transactions</span>
-                <span class="ack-metric-value">214+ Prompts</span>
-                <span class="ack-metric-note">214+ human prompts &amp; 208+ direct agent replies across 17 user-initiated Antigravity sessions (19 total transcripts including 2 subagent runs), driving 3,930+ automated tool invocations.</span>
+                <span class="ack-metric-value">228+ Prompts</span>
+                <span class="ack-metric-note">228+ human prompts &amp; 222+ direct agent replies across 18 user-initiated Antigravity sessions (20 total transcripts including 2 subagent runs), driving 4,210+ automated tool invocations.</span>
               </div>
               <div class="ack-metric-card">
                 <span class="ack-metric-label">Engineering Span (Thailand Time, ICT)</span>
-                <span class="ack-metric-value">~21.0+ Hours</span>
-                <span class="ack-metric-note">Aggregated across 5 active working periods (Nov 9–15, 2026, crossing midnight into Nov 16) with conservative deductions of 3 hours from Nov 10 and 6 hours from Nov 12–13, plus the pre-commit Nov 8 session (21:34–23:02 ICT) and earlier Canva drafting.</span>
+                <span class="ack-metric-value">~23.8+ Hours</span>
+                <span class="ack-metric-note">Aggregated across 7 active working periods (Nov 9–19, 2026) with conservative deductions of 3 hours from Nov 10 and 6 hours from Nov 12–13, plus the pre-commit Nov 8 session (21:34–23:02 ICT) and earlier Canva drafting.</span>
               </div>
             </div>
             <div class="ack-timeline-chips">
@@ -276,9 +286,11 @@
               <div class="ack-day-chip"><strong>Nov 11:</strong> 09:20–11:46 ICT (2h 26m • 4 commits)</div>
               <div class="ack-day-chip"><strong>Nov 12–13:</strong> 11:34–20:06 ICT (6h 37m+ est., −6h • 6 commits)</div>
               <div class="ack-day-chip"><strong>Nov 15–16:</strong> 15:44–00:02+ ICT (4h 30m+ est. • 10 commits)</div>
+              <div class="ack-day-chip"><strong>Nov 17:</strong> 18:35–22:18 ICT (2h+ est. • 2 commits)</div>
+              <div class="ack-day-chip"><strong>Nov 19:</strong> 20:19–21:10+ ICT (~50m • 1 commit)</div>
             </div>
             <p class="char-bio-p" style="font-size: 12px; color: var(--text-muted);">
-              Current repo footprint: <strong>54 git commits</strong> and <strong>8,110+ lines</strong> of hand-directed, AI-scaffolded code covering 11 characters, 22 relationships, 18 shared lore chapters, and an interactive Lore Flowchart visualizer.
+              Current repo footprint: <strong>57 git commits</strong> and <strong>8,210+ lines</strong> of hand-directed, AI-scaffolded code covering 11 characters, 22 relationships, 18 shared lore chapters, and an interactive Lore Flowchart visualizer.
             </p>
           </section>
 
