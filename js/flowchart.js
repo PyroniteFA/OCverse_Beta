@@ -542,7 +542,6 @@ class LoreFlowchartModal {
         ${allShortcutsHTML}
 
         <div class="node-footer">
-          <span class="node-instruction">Click node to open</span>
           <span class="node-action-pill">
             <span>Read Dossier</span>
             <span class="arrow-indicator">↗</span>

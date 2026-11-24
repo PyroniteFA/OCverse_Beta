@@ -64,11 +64,13 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
 }
 
 .brand-icon {
   width: 32px;
   height: 32px;
+  flex-shrink: 0;
   background: linear-gradient(135deg, #0284c7, #38bdf8);
   border-radius: 8px;
   display: flex;
@@ -2890,7 +2892,8 @@ body {
 .flowchart-brand-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .flowchart-badge-count {
@@ -3368,15 +3371,10 @@ body {
 .node-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-top: 8px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   margin-top: 2px;
-}
-
-.node-instruction {
-  font-size: 10.5px;
-  color: var(--text-dim);
 }
 
 .node-action-pill {
@@ -3674,10 +3672,6 @@ body {
 
   .node-footer {
     padding-top: 4px;
-  }
-
-  .node-instruction {
-    font-size: 10px;
   }
 
   .node-action-pill {

@@ -534,9 +534,6 @@ class DrawerManager {
             <span>💭</span>
             <span>Character Monologues & Random Thoughts (${char.randomThoughts.length})</span>
           </div>
-          <div style="font-size:11.5px; color:var(--text-dim); margin-top:-6px; margin-bottom:6px; font-style:italic;">
-            Internal reflections, private convictions, and lived philosophies spoken across planar campaigns.
-          </div>
           <div style="display: flex; flex-direction: column; gap: 9px;">
             ${char.randomThoughts.map((thought, idx) => {
               const text = typeof thought === 'object' ? thought.text : thought;
@@ -809,12 +806,10 @@ class DrawerManager {
 
     this.contentEl.innerHTML = `
       <div style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.22), rgba(15, 23, 42, 0.92)); border: 1.5px solid rgba(56, 189, 248, 0.45); border-radius: 14px; padding: 18px; margin-bottom: 14px; position:relative; overflow:hidden;">
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
           <div class="legend-triangle-badge" style="width:20px; height:20px;"></div>
-          <span style="font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #38bdf8;">Tactical Pact & Sovereignty</span>
+          <h2 style="font-size: 22px; font-weight: 800; color: #f8fafc; margin: 0;">The Order</h2>
         </div>
-        <h2 style="font-size: 22px; font-weight: 800; color: #f8fafc; margin: 0 0 4px 0;">The Order</h2>
-        <div style="font-size: 13px; font-weight: 600; color: #38bdf8; margin-bottom: 8px;">The Order Core Members</div>
         <p style="font-size: 12.5px; line-height: 1.6; color: #cbd5e1; margin: 0;">
           An informal tactical pact centered around Kai'nek. Rejecting mindless sycophants and blind worshipers, the cosmic sovereign coordinates chosen, capable peers across the multiverse—outfitting them in bespoke futuristic combat gear and specialized gadgets to assist planetary campaigns, while harvesting life-force energy from worlds they extinguish to be stored in his domain above multiversal space and shared among his circle.
         </p>
@@ -930,9 +925,6 @@ class DrawerManager {
     this.contentEl.innerHTML = `
       <div style="margin-bottom:8px;">
         <h2 style="font-size:20px; font-weight:700;">Multi-Tagged Lore Archive</h2>
-        <p style="font-size:12px; color:var(--text-muted); margin-top:4px;">
-          Shared historical events, ascension records, and relational backstories.
-        </p>
       </div>
 
       <div class="section-box">
